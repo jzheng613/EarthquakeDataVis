@@ -4,4 +4,24 @@
 // === GLOBAL DATA VARIABLES ===
 
 // Raw data tables and objects
-Table fullTable;
+Table dataTable;
+PImage img;
+
+// === DATA PROCESSING ROUTINES ===
+
+void loadRawDataTables() {
+  dataTable = loadTable("EarthquakeData.csv", "header");
+  println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount()); 
+  
+}
+
+void setup() {
+  size(1600,900);
+  img = loadImage("earth.png");
+  loadRawDataTables();
+}
+
+void draw() {
+  background(230);
+  image(img, 0, 0);
+}
