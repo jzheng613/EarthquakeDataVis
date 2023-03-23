@@ -11,6 +11,7 @@ https://www.gicentre.net/geomap/using
 You may need to: drag .jar file (in geoMap libraries folder) and world.dhp/shp files onto the sketch; add jar file or geomap file to your libraries folder in processing
 I'm not sure what combination of these allowed this to run
 */
+//HI THISIS A CHANGE
 import org.gicentre.geomap.*;
 
 // Raw data tables and objects
