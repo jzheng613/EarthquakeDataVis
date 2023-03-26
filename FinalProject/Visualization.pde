@@ -111,15 +111,18 @@ void draw() {
   fill(230);
   rect(0, 739, 1312, 162);
   
-  
-  TableRow first = dataTable.getRow(1); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
-  float lat = first.getFloat("latitude"); //Rounded to 60
-  float lon = first.getFloat("longitude"); //Rounded to -160
+  //getting data from CSV
+  TableRow first = dataTable.getRow(6); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
+  float lat = first.getFloat("latitude"); 
+  //System.out.println(lat);
+  float lon = first.getFloat("longitude"); 
   //System.out.println(lon);
   
-  circle(lat,lon, 20);  //For first: Need the -1 bc the lon was negative 
-  //What does it mean when the longitude is negative/positive? How to translate this into geomaps coordinates. 
+ 
+  PVector coord = geoMap.geoToScreen(lon, lat);
+  circle(coord.x, coord.y, 20);
   
+
 // === LEGEND BOX THINGS ===
   float filterYear = cp5.getController("Earthquake Year").getValue();
   int yearValue = (int) filterYear; // cast type float to int for Year
