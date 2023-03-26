@@ -104,6 +104,8 @@ void draw() {
   geoMap.draw();
   fill(235,55,52);
   
+  highlightedQuake= getUnderMouse();
+  
   // drawing legend box (right)
   stroke(0);
   fill(200);
@@ -143,8 +145,9 @@ void draw() {
     TableRow second = dataTable.getRow(i);
     float magnitude = second.getFloat("magnitude");
     String place = second.getString("place");
-    float mag = second.getFloat("magnitude");
-    float mag_01 = (magnitude - 7) / (7.95 - 7);
+   // float mag = second.getFloat("magnitude");
+    float mag_01 = (magnitude - 7) / (8.33 - 7);
+//    System.out.println(mag_01);
     float radius = lerp(minRadius, maxRadius, mag_01);
     float lat2 = second.getFloat("latitude");
     float lon2 = second.getFloat("longitude");
@@ -157,7 +160,7 @@ void draw() {
       fill(255,255,255);
       rect(mouseX+5,mouseY-20, 300, 45);
       fill(0);
-      text("Place: " + place + "\nMagnitude: " + mag,  mouseX+10, mouseY-5);
+      text("Place: " + place + "\nMagnitude: " + magnitude,  mouseX+10, mouseY-5);
       fill(5,250,38);
     }
     circle(coord2.x, coord2.y, radius);
@@ -180,7 +183,8 @@ float getRadius (float mag){
 String getUnderMouse() {
   float smallestRadiusSquared = Float.MAX_VALUE;
   String underMouse = "";
-  for (int i=0; i<dataTable.getRowCount(); i++) {
+//  for (int i=0; i<dataTable.getRowCount(); i++) {
+  for(int i = 11; i<31; i++){
     TableRow rowData = dataTable.getRow(i);
     String place = rowData.getString("place");
     float mag = rowData.getFloat("magnitude");
@@ -190,9 +194,16 @@ String getUnderMouse() {
     float screenX = screenXY.x;
     float screenY = screenXY.y;
     float distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
+//    System.out.println("mouseX: " + mouseX + " Mousey: " + mouseY);
+//    System.out.println("screenX: " + screenX + " screeny: " + screenY);
+    
+//    System.out.println("Dist: " + distSquared);
     float radius = getRadius(mag);
+//    System.out.println("rad: " + radius);
     float radiusSquared = constrain(radius*radius, 1, height);
+//    System.out.println("rad2: " + radiusSquared +"\n");
     if ((distSquared <= radiusSquared) && (radiusSquared < smallestRadiusSquared)) {
+      //System.out.println("Yes\n");
       underMouse = place;
       smallestRadiusSquared = radiusSquared;
     }
