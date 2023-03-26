@@ -111,6 +111,15 @@ void draw() {
   fill(230);
   rect(0, 739, 1312, 162);
   
+  // === LEGEND BOX THINGS ===
+  float filterYear = cp5.getController("Earthquake Year").getValue();
+  int yearValue = (int) filterYear; // cast type float to int for Year
+  float magnitudeValue = cp5.getController("Earthquake Magnitude").getValue();
+  fill(0);
+  textSize(28);
+  text("Year: " + yearValue, 1350, 75);
+  text("Magnitude: " + magnitudeValue, 1350, 110);
+  
   //getting data from CSV
   TableRow first = dataTable.getRow(6); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
   float lat = first.getFloat("latitude"); 
@@ -124,6 +133,8 @@ void draw() {
   //circle(coord.x, coord.y, 20);
 //=======
 
+  fill(50, 127, 212);
+  stroke(200);
   circle(lat,lon, 20);  //For first: Need the -1 bc the lon was negative 
   //What does it mean when the longitude is negative/positive? How to translate this into geomaps coordinates. 
 //>>>>>>> Stashed changes
@@ -143,15 +154,6 @@ void draw() {
     PVector coord2 = geoMap.geoToScreen(lon2, lat2);
     circle(coord2.x, coord2.y, radius);
   }
-
-// === LEGEND BOX THINGS ===
-  float filterYear = cp5.getController("Earthquake Year").getValue();
-  int yearValue = (int) filterYear; // cast type float to int for Year
-  float magnitudeValue = cp5.getController("Earthquake Magnitude").getValue();
-  fill(0);
-  textSize(28);
-  text("Year: " + yearValue, 1350, 75);
-  text("Magnitude: " + magnitudeValue, 1350, 110);
   
   
 }
