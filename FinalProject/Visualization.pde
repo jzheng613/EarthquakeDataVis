@@ -22,6 +22,8 @@ GeoMap geoMap;
 ControlP5 cp5;
 int controlColor = color(0, 0, 0);
 
+String highlightedQuake = "";
+
 // === DATA PROCESSING ROUTINES ===
 
 void loadRawDataTables() {
@@ -129,9 +131,6 @@ void draw() {
    
 //  PVector coord = geoMap.geoToScreen(lon, lat);
   //circle(coord.x, coord.y, 20);
-
-  //circle(lon, lat, 20);
-  
   
   // mapping circles for all earthquakes in 1905 (hard-coded)
   int minRadius = 15;
@@ -143,14 +142,60 @@ void draw() {
   for (int i = 11; i < 31; i++) { 
     TableRow second = dataTable.getRow(i);
     int magnitude = second.getInt("magnitude");//NEW
+    String place = second.getString("place");
+    float mag = second.getFloat("magnitude");
     float mag_01 = (magnitude - 7) / (7.95 - 7);//NEW
     float radius = lerp(minRadius, maxRadius, mag_01);//NEW
     float lat2 = second.getFloat("latitude");
     float lon2 = second.getFloat("longitude");
     PVector coord2 = geoMap.geoToScreen(lon2, lat2);
+    
+    //Details on Demand
+    if(highlightedQuake.equals(place)){
+      System.out.println(place);
+      textSize(14);
+      fill(255,255,255);
+      rect(mouseX+5,mouseY-20, 300, 45);
+      fill(0);
+      text("Place: " + place + "\nMagnitude: " + mag,  mouseX+10, mouseY-5);
+      fill(5,250,38);
+    }
     circle(coord2.x, coord2.y, radius);
+    fill(255,0,0);
   }
 
+}
 
+//Implementing Details on Demand
+//Revised from Keefe's Paafu code
 
+float getRadius (float mag){
+  int minRadius = 15;
+  int maxRadius = 40;
+  mag = (mag-7)/(7.95-7);
+  float radius = lerp(minRadius, maxRadius, mag);
+  return radius;
+}
+
+String getUnderMouse() {
+  float smallestRadiusSquared = Float.MAX_VALUE;
+  String underMouse = "";
+  for (int i=0; i<dataTable.getRowCount(); i++) {
+    TableRow rowData = dataTable.getRow(i);
+    String place = rowData.getString("place");
+    float mag = rowData.getFloat("magnitude");
+    float latitude = rowData.getFloat("latitude");
+    float longitude = rowData.getFloat("longitude");
+    PVector screenXY = geoMap.geoToScreen(longitude,latitude);
+    float screenX = screenXY.x;
+    float screenY = screenXY.y;
+    float distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
+    float radius = getRadius(mag);
+    float radiusSquared = constrain(radius*radius, 1, height);
+    if ((distSquared <= radiusSquared) && (radiusSquared < smallestRadiusSquared)) {
+      underMouse = place;
+      smallestRadiusSquared = radiusSquared;
+    }
+  }
+  return underMouse;  
 }
