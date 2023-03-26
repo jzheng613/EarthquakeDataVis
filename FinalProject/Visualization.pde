@@ -141,11 +141,11 @@ void draw() {
   // for (int i = 0; i < dataTable.getRowCount(); i++) { //for all years
   for (int i = 11; i < 31; i++) { 
     TableRow second = dataTable.getRow(i);
-    int magnitude = second.getInt("magnitude");//NEW
+    float magnitude = second.getFloat("magnitude");
     String place = second.getString("place");
     float mag = second.getFloat("magnitude");
-    float mag_01 = (magnitude - 7) / (7.95 - 7);//NEW
-    float radius = lerp(minRadius, maxRadius, mag_01);//NEW
+    float mag_01 = (magnitude - 7) / (7.95 - 7);
+    float radius = lerp(minRadius, maxRadius, mag_01);
     float lat2 = second.getFloat("latitude");
     float lon2 = second.getFloat("longitude");
     PVector coord2 = geoMap.geoToScreen(lon2, lat2);
