@@ -118,10 +118,31 @@ void draw() {
   float lon = first.getFloat("longitude"); 
   //System.out.println(lon);
   
+//<<<<<<< Updated upstream
  
   PVector coord = geoMap.geoToScreen(lon, lat);
-  circle(coord.x, coord.y, 20);
+  //circle(coord.x, coord.y, 20);
+//=======
+
+  circle(lat,lon, 20);  //For first: Need the -1 bc the lon was negative 
+  //What does it mean when the longitude is negative/positive? How to translate this into geomaps coordinates. 
+//>>>>>>> Stashed changes
   
+//mapping circles for all earthquakes in 1905 (hard-coded)
+  int minRadius = 15;
+  int maxRadius = 40;
+
+  //for (int i = 0; i < dataTable.getRowCount(); i++) { //for all years
+  for (int i = 11; i < 31; i++) { 
+    TableRow second = dataTable.getRow(i);
+    int magnitude = second.getInt("magnitude");//NEW
+    float mag_01 = (magnitude - 7) / (7.95 - 7);//NEW
+    float radius = lerp(minRadius, maxRadius, mag_01);//NEW
+    float lat2 = second.getFloat("latitude");
+    float lon2 = second.getFloat("longitude");
+    PVector coord2 = geoMap.geoToScreen(lon2, lat2);
+    circle(coord2.x, coord2.y, radius);
+  }
 
 // === LEGEND BOX THINGS ===
   float filterYear = cp5.getController("Earthquake Year").getValue();
