@@ -121,15 +121,15 @@ void draw() {
   text("Magnitude: " + magnitudeValue, 1350, 110);
   
   //getting data from CSV
-  TableRow first = dataTable.getRow(6); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
-  float lat = first.getFloat("latitude"); 
+ // TableRow first = dataTable.getRow(6); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
+  //float lat = first.getFloat("latitude"); 
   //System.out.println(lat);
-  float lon = first.getFloat("longitude"); 
+  //float lon = first.getFloat("longitude"); 
   //System.out.println(lon);
   
 //<<<<<<< Updated upstream
  
-  PVector coord = geoMap.geoToScreen(lon, lat);
+//  PVector coord = geoMap.geoToScreen(lon, lat);
   //circle(coord.x, coord.y, 20);
 //=======
 
@@ -137,12 +137,15 @@ void draw() {
   stroke(200);
   circle(lat,lon, 20);  //For first: Need the -1 bc the lon was negative 
   //What does it mean when the longitude is negative/positive? How to translate this into geomaps coordinates. 
+//  circle(lon,lat, 20);  
+  
 //>>>>>>> Stashed changes
   
 //mapping circles for all earthquakes in 1905 (hard-coded)
   int minRadius = 15;
   int maxRadius = 40;
 
+  fill(255,0,0);
   //for (int i = 0; i < dataTable.getRowCount(); i++) { //for all years
   for (int i = 11; i < 31; i++) { 
     TableRow second = dataTable.getRow(i);
