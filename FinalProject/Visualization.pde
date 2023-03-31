@@ -5,6 +5,10 @@
 import org.gicentre.geomap.*;
 import controlP5.*;
 import java.awt.Color;
+import java.io.FileWriter;
+import com.opencsv.CSVWriter;
+import java.util.Dictionary;
+import java.util.Hashtable;
 
 // Raw data tables and objects
 Table dataTable;
@@ -12,9 +16,9 @@ GeoMap geoMap;
 
 ControlP5 cp5;
 int controlColor = color(0, 0, 0);
-
 String highlightedQuake = "";
 processing.data.Table countryIDs; 
+
 
 // === DATA PROCESSING ROUTINES ===
 
@@ -89,6 +93,11 @@ void setup() {
   //Generate country IDs
   countryIDs = geoMap.getAttributeTable();
   saveTable(countryIDs, "data/countryIDs.csv");
+  String[] countries = countryIDs.getStringColumn("NAME");
+  
+ // cumulDeathsbyCountry(countries);
+  
+  
 }
 
 void draw() {
@@ -218,16 +227,10 @@ String getUnderMouse() {
     float screenX = screenXY.x;
     float screenY = screenXY.y;
     float distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
-//    System.out.println("mouseX: " + mouseX + " Mousey: " + mouseY);
-//    System.out.println("screenX: " + screenX + " screeny: " + screenY);
-    
-//    System.out.println("Dist: " + distSquared);
+
     float radius = getRadius(mag);
-//    System.out.println("rad: " + radius);
     float radiusSquared = constrain(radius*radius, 1, height);
-//    System.out.println("rad2: " + radiusSquared +"\n");
     if ((distSquared <= radiusSquared) && (radiusSquared < smallestRadiusSquared)) {
-      //System.out.println("Yes\n");
       underMouse = place;
       smallestRadiusSquared = radiusSquared;
     }
@@ -236,6 +239,37 @@ String getUnderMouse() {
 }
 
 //Helper Function: calculate cumulative deaths for a country
-void cumulDeathsbyCountry(String country){
+//void cumulDeathsbyCountry(String[] countries){
+//  try{CSVWriter writer = new CSVWriter(new FileWriter("data/deathsByCountryYear.csv"));
+//  Dictionary<String, Integer> count = new Hashtable<>();
+//  int cumCount = 0;
+//  //String country;
+//  //String[] line= new String[] {"Year", "Country", "Deaths"};
+//  //writer.writeNext(line);
+//  //for(int i = 1950; i<2021; i++){
+//  //  for(TableRow row : dataTable.findRows("Year", i)){
+      
+//  //    if(row.getString("Earthquake : Deaths")!=""){
+//  //      country = row.getString("Country");
+//  //      if(count.get(country)!=-1){cumCount = count.get(country);}
+//  //      else{cumCount= 0;}
+//  //      count.put(country, cumCount + (int) row.getString("Earthquake : Deaths"));
+//  //    }
   
-}
+//  //    for(int j = 0; j<countries.length; j++){
+//  //      line = {Integer.toString(i), Integer.toString(countries[j]), "0"};
+//  //      if(count.get(countries[j])!=-1){
+//  //        line = {Integer.toString(i), Integer.toString(countries[j]), Integer.toString(count.get(countries[j]))};
+//  //      }
+//  //      writer.writeNext(line);
+//  //    }
+//  //    writer.flush();
+ 
+//  //  }
+    
+//  //}
+//  }
+//  catch(IOException e){
+//    e.printStackTrace();
+//  }
+//}
