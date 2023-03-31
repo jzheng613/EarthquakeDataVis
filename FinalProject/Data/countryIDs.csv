@@ -1,0 +1,243 @@
+id,ISO_A2,ISO_A3,NAME,ABBREV
+1,AW,ABW,Aruba,Aruba
+2,AF,AFG,Afghanistan,Afg.
+3,AO,AGO,Angola,Ang.
+4,AI,AIA,Anguilla,Ang.
+5,AL,ALB,Albania,Alb.
+6,-99,ALA,Aland,Aland
+7,AD,AND,Andorra,And.
+8,AE,ARE,United Arab Emirates,U.A.E.
+9,AR,ARG,Argentina,Arg.
+10,AM,ARM,Armenia,Arm.
+11,AS,ASM,American Samoa,Am. Samoa
+12,AQ,ATA,Antarctica,Ant.
+13,AU,AUS,Ashmore and Cartier Is.,A.C.Is.
+14,TF,ATF,Fr. S. and Antarctic Lands,Fr. S.A.L.
+15,AG,ATG,Antigua and Barb.,Ant.B.
+16,AU,AUS,Australia,Auz.
+17,AT,AUT,Austria,Aust.
+18,AZ,AZE,Azerbaijan,Aze.
+19,BI,BDI,Burundi,Bur.
+20,BE,BEL,Belgium,Belg.
+21,BJ,BEN,Benin,Benin
+22,BF,BFA,Burkina Faso,B.F.
+23,BD,BGD,Bangladesh,Bang.
+24,BG,BGR,Bulgaria,Bulg.
+25,BH,BHR,Bahrain,Bahr.
+26,BS,BHS,Bahamas,Bhs.
+27,BA,BIH,Bosnia and Herz.,B.H.
+28,BL,BLM,St. Barthelemy,St. B.
+29,BY,BLR,Belarus,Bela.
+30,BZ,BLZ,Belize,Belize
+31,BM,BMU,Bermuda,Berm.
+32,BO,BOL,Bolivia,Bolivia
+33,BR,BRA,Brazil,Brazil
+34,BB,BRB,Barbados,Barb.
+35,BN,BRN,Brunei,Brunei
+36,BT,BTN,Bhutan,Bhutan
+37,BW,BWA,Botswana,Bwa.
+38,CF,CAF,Central African Rep.,C.A.R.
+39,CA,CAN,Canada,Can.
+40,CH,CHE,Switzerland,Switz.
+41,CL,CHL,Chile,Chile
+42,CN,CHN,China,China
+43,CI,CIV,Ivory Coast,I.C.
+44,CM,CMR,Cameroon,Cam.
+45,CD,COD,Congo (Kinshasa),D.R.C.
+46,CG,COG,Congo (Brazzaville),Rep. Congo
+47,CK,COK,Cook Is.,Cook Is.
+48,CO,COL,Colombia,Col.
+49,KM,COM,Comoros,Com.
+50,CV,CPV,Cape Verde,C.Vd.
+51,CR,CRI,Costa Rica,C.R.
+52,CU,CUB,Cuba,Cuba
+53,CW,CUW,Cura?ao,Cur.
+54,KY,CYM,Cayman Is.,Cym. Is.
+55,-99,-99,N. Cyprus,N. Cy.
+56,CY,CYP,Cyprus,Cyp.
+57,CZ,CZE,Czech Rep.,Cz. Rep.
+58,DE,DEU,Germany,Ger.
+59,DJ,DJI,Djibouti,Dji.
+60,DM,DMA,Dominica,D'inca
+61,DK,DNK,Denmark,Den.
+62,DO,DOM,Dominican Rep.,Dom. Rep.
+63,DZ,DZA,Algeria,Alg.
+64,EC,ECU,Ecuador,Ecu.
+65,EG,EGY,Egypt,Egypt
+66,ER,ERI,Eritrea,Erit.
+67,ES,ESP,Spain,Sp.
+68,EE,EST,Estonia,Est.
+69,ET,ETH,Ethiopia,Eth.
+70,FI,FIN,Finland,Fin.
+71,FJ,FJI,Fiji,Fiji
+72,FK,FLK,Falkland Is.,Flk. Is.
+73,FR,FRA,France,Fr.
+74,FO,FRO,Faroe Is.,Faroe Is.
+75,FM,FSM,Micronesia,F.S.M.
+76,GA,GAB,Gabon,Gabon
+77,PS,PSE,Gaza,Gaza
+78,GB,GBR,United Kingdom,U.K.
+79,GE,GEO,Georgia,Geo.
+80,GG,GGY,Guernsey,Guern.
+81,GH,GHA,Ghana,Ghana
+82,GN,GIN,Guinea,Gin.
+83,GM,GMB,Gambia,Gambia
+84,GW,GNB,Guinea Bissau,GnB.
+85,GQ,GNQ,Eq. Guinea,Eq. G.
+86,GR,GRC,Greece,Greece
+87,GD,GRD,Grenada,Gren.
+88,GL,GRL,Greenland,Grlnd.
+89,GT,GTM,Guatemala,Guat.
+90,GU,GUM,Guam,Guam
+91,GY,GUY,Guyana,Guy.
+92,HK,HKG,Hong Kong,H.K.
+93,HM,HMD,Heard I. and McDonald Is.,H.M.Is.
+94,HN,HND,Honduras,Hond.
+95,HR,HRV,Croatia,Cro.
+96,HT,HTI,Haiti,Haiti
+97,HU,HUN,Hungary,Hun.
+98,ID,IDN,Indonesia,Indo.
+99,IM,IMN,Isle of Man,IoMan
+100,IN,IND,India,India
+101,-99,-99,Indian Ocean Ter.,Ind. Oc. Ter.
+102,IO,IOT,Br. Indian Ocean Ter.,I.O.T.
+103,IE,IRL,Ireland,Ire.
+104,IR,IRN,Iran,Iran
+105,IQ,IRQ,Iraq,Iraq
+106,IS,ISL,Iceland,Iceland
+107,IL,ISR,Israel,Isr.
+108,IT,ITA,Italy,Italy
+109,JM,JAM,Jamaica,Jam.
+110,JE,JEY,Jersey,Jey.
+111,JO,JOR,Jordan,Jord.
+112,JP,JPN,Japan,Japan
+113,-99,-99,Kashmir,Kashmir
+114,KZ,KAZ,Kazakhstan,Kaz.
+115,KE,KEN,Kenya,Ken.
+116,KG,KGZ,Kyrgyzstan,Kgz.
+117,KH,KHM,Cambodia,Camb.
+118,KI,KIR,Kiribati,Kir.
+119,KN,KNA,St. Kitts and Nevis,St.K.N.
+120,KR,KOR,S. Korea,S.Kor.
+121,-99,-99,Kosovo,Kos.
+122,KW,KWT,Kuwait,Kwt.
+123,LA,LAO,Laos,Laos
+124,LB,LBN,Lebanon,Leb.
+125,LR,LBR,Liberia,Liberia
+126,LY,LBY,Libya,Libya
+127,LC,LCA,Saint Lucia,S.L.
+128,LI,LIE,Liechtenstein,Liech.
+129,LK,LKA,Sri Lanka,Sri L.
+130,LS,LSO,Lesotho,Les.
+131,LT,LTU,Lithuania,Lith.
+132,LU,LUX,Luxembourg,Lux.
+133,LV,LVA,Latvia,Lat.
+134,MO,MAC,Macau,Mac.
+135,MF,MAF,St. Martin,St. M.
+136,MA,MAR,Morocco,Mor.
+137,MC,MCO,Monaco,Mco.
+138,MD,MDA,Moldova,Mda.
+139,MG,MDG,Madagascar,Mad.
+140,MV,MDV,Maldives,Mald.
+141,MX,MEX,Mexico,Mex.
+142,MH,MHL,Marshall Is.,M. Is.
+143,MK,MKD,Macedonia,Mkd.
+144,ML,MLI,Mali,Mali
+145,MT,MLT,Malta,Malta
+146,MM,MMR,Myanmar,Myan.
+147,ME,MNE,Montenegro,Mont.
+148,MN,MNG,Mongolia,Mong.
+149,MP,MNP,N. Mariana Is.,N.M.I.
+150,MZ,MOZ,Mozambique,Moz.
+151,MR,MRT,Mauritania,Mrt.
+152,MS,MSR,Montserrat,Monts.
+153,MU,MUS,Mauritius,Mus.
+154,MW,MWI,Malawi,Mal.
+155,MY,MYS,Malaysia,Malay.
+156,NA,NAM,Namibia,Nam.
+157,NC,NCL,New Caledonia,New C.
+158,NE,NER,Niger,Niger
+159,NF,NFK,Norfolk Island,Nfk. I.
+160,NG,NGA,Nigeria,Nigeria
+161,NI,NIC,Nicaragua,Nic.
+162,NU,NIU,Niue,Niue
+163,NL,NLD,Netherlands,Neth.
+164,NO,NOR,Norway,Nor.
+165,NP,NPL,Nepal,Nepal
+166,NR,NRU,Nauru,Nauru
+167,NZ,NZL,New Zealand,N.Z.
+168,OM,OMN,Oman,Oman
+169,PK,PAK,Pakistan,Pak.
+170,PA,PAN,Panama,Pan.
+171,PN,PCN,Pitcairn Is.,Pit. Is.
+172,PE,PER,Peru,Peru
+173,PH,PHL,Philippines,Phil.
+174,PW,PLW,Palau,Palau
+175,PG,PNG,Papua New Guinea,P.N.G.
+176,PL,POL,Poland,Pol.
+177,PR,PRI,Puerto Rico,P.R.
+178,KP,PRK,N. Korea,N. Kor.
+179,PT,PRT,Portugal,Port.
+180,PY,PRY,Paraguay,Para.
+181,PF,PYF,Fr. Polynesia,Fr. Poly.
+182,QA,QAT,Qatar,Qatar
+183,RO,ROU,Romania,Rom.
+184,RU,RUS,Russia,Rus.
+185,RW,RWA,Rwanda,Rwa.
+186,-99,-99,W. Sahara,W. Sah.
+187,SA,SAU,Saudi Arabia,Saud.
+188,SD,SDN,Sudan,Sudan
+189,SS,SDS,S. Sudan,S. Sud.
+190,SN,SEN,Senegal,Sen.
+191,SG,SGP,Singapore,Sing.
+192,GS,SGS,S. Geo. and S. Sandw. Is.,S.G. S.S. Is.
+193,SH,SHN,Saint Helena,St.H.
+194,SB,SLB,Solomon Is.,S. Is.
+195,SL,SLE,Sierra Leone,S.L.
+196,SV,SLV,El Salvador,El. S.
+197,SM,SMR,San Marino,S.M.
+198,-99,-99,Somaliland,Solnd.
+199,SO,SOM,Somalia,Som.
+200,PM,SPM,St. Pierre and Miquelon,St. P.M.
+201,RS,SRB,Serbia,Serb.
+202,ST,STP,Sao Tome and Principe,S.T.P.
+203,SR,SUR,Suriname,Sur.
+204,SK,SVK,Slovakia,Svk.
+205,SI,SVN,Slovenia,Slo.
+206,SE,SWE,Sweden,Swe.
+207,SZ,SWZ,Swaziland,Swz.
+208,SX,SXM,Sint Maarten,St. M.
+209,SC,SYC,Seychelles,Syc.
+210,SY,SYR,Syria,Syria
+211,TC,TCA,Turks and Caicos Is.,T.C. Is.
+212,TD,TCD,Chad,Chad
+213,TG,TGO,Togo,Togo
+214,TH,THA,Thailand,Thai.
+215,TJ,TJK,Tajikistan,Tjk.
+216,TM,TKM,Turkmenistan,Turkm.
+217,TL,TLS,East Timor,E.T.
+218,TO,TON,Tonga,Tongo
+219,TT,TTO,Trinidad and Tobago,Tr.T.
+220,TN,TUN,Tunisia,Tun.
+221,TR,TUR,Turkey,Tur.
+222,TW,TWN,Taiwan,Taiwan
+223,TZ,TZA,Tanzania,Tanz.
+224,UG,UGA,Uganda,Uga.
+225,UA,UKR,Ukraine,Ukr.
+226,UY,URY,Uruguay,Ury.
+227,US,USA,United States,U.S.A.
+228,UZ,UZB,Uzbekistan,Uzb.
+229,VA,VAT,Vatican,Vat.
+230,VC,VCT,St. Vin. and Gren.,St.V.G.
+231,VE,VEN,Venezuela,Ven.
+232,VG,VGB,British Virgin Is.,V.I. (Br.)
+233,VI,VIR,U.S. Virgin Is.,V.I. (U.S.)
+234,VN,VNM,Vietnam,Viet.
+235,VU,VUT,Vanuatu,Van.
+236,PS,PSE,West Bank,W.B.
+237,WF,WLF,Wallis and Futuna,Wlf.
+238,WS,WSM,Samoa,Samoa
+239,YE,YEM,Yemen,Yem.
+240,ZA,ZAF,South Africa,S.Af.
+241,ZM,ZMB,Zambia,Zambia
+242,ZW,ZWE,Zimbabwe,Zimb.

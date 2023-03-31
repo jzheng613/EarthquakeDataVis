@@ -1,16 +1,7 @@
-/* CSci-5609 Final Project: Global Major/ Great Earthquakes from 1900-2023
+/* CSci-5609 Final Project: Global Major/ Great Earthquakes from 1950-2020
 */
 
 // === GLOBAL DATA VARIABLES ===
-
-/*Imports 
-If it doesn't work automatically: see 
-https://discourse.processing.org/t/why-wont-processing-find-my-library/1483
-https://www.gicentre.net/geomap/using
-
-You may need to: drag .jar file (in geoMap libraries folder) and world.dhp/shp files onto the sketch; add jar file or geomap file to your libraries folder in processing
-I'm not sure what combination of these allowed this to run
-*/
 import org.gicentre.geomap.*;
 import controlP5.*;
 import java.awt.Color;
@@ -23,6 +14,7 @@ ControlP5 cp5;
 int controlColor = color(0, 0, 0);
 
 String highlightedQuake = "";
+processing.data.Table countryIDs; 
 
 // === DATA PROCESSING ROUTINES ===
 
@@ -93,6 +85,10 @@ void setup() {
     .align(ControlP5.LEFT, ControlP5.BOTTOM_OUTSIDE)
     .setPaddingX(10)
     ;
+    
+  //Generate country IDs
+  countryIDs = geoMap.getAttributeTable();
+  saveTable(countryIDs, "data/countryIDs.csv");
 }
 
 void draw() {
@@ -134,19 +130,6 @@ void draw() {
     }
   }
   text("Total Earthquakes in " + yearValue + ": " + quakesInYear, 1340, 145);
-
-  
-// leaving for now, can we erase this?
-  //getting data from CSV
-  //TableRow first = dataTable.getRow(6); //7.86 mag at 57.09 lat, -153.48 long, in Alaska
-  //float lat = first.getFloat("latitude"); 
-  //System.out.println(lat);
-  //float lon = first.getFloat("longitude"); 
-  //System.out.println(lon);
-   
-//  PVector coord = geoMap.geoToScreen(lon, lat);
-  //circle(coord.x, coord.y, 20);
-  
   
   // mapping circles for earthquakes for specified Year and Magnitude
   int minRadius = 15;
@@ -170,7 +153,8 @@ void draw() {
 
       //Details on Demand
       if(highlightedQuake.equals(place)){
-        System.out.println(place);
+       // System.out.println(geoMap.getID(mouseX, mouseY));
+        
         textSize(14);
         fill(255,255,255);
         rect(mouseX+5,mouseY-20, 300, 45);
@@ -249,4 +233,9 @@ String getUnderMouse() {
     }
   }
   return underMouse;  
+}
+
+//Helper Function: calculate cumulative deaths for a country
+void cumulDeathsbyCountry(String country){
+  
 }
