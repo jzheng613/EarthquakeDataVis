@@ -92,10 +92,9 @@ void setup() {
     
   //Generate country IDs
   countryIDs = geoMap.getAttributeTable();
-  saveTable(countryIDs, "data/countryIDs.csv");
+  //saveTable(countryIDs, "data/countryIDs.csv");
   String[] countries = countryIDs.getStringColumn("NAME");
   
- // cumulDeathsbyCountry(countries);
   
   
 }
@@ -237,39 +236,3 @@ String getUnderMouse() {
   }
   return underMouse;  
 }
-
-//Helper Function: calculate cumulative deaths for a country
-//void cumulDeathsbyCountry(String[] countries){
-//  try{CSVWriter writer = new CSVWriter(new FileWriter("data/deathsByCountryYear.csv"));
-//  Dictionary<String, Integer> count = new Hashtable<>();
-//  int cumCount = 0;
-//  //String country;
-//  //String[] line= new String[] {"Year", "Country", "Deaths"};
-//  //writer.writeNext(line);
-//  //for(int i = 1950; i<2021; i++){
-//  //  for(TableRow row : dataTable.findRows("Year", i)){
-      
-//  //    if(row.getString("Earthquake : Deaths")!=""){
-//  //      country = row.getString("Country");
-//  //      if(count.get(country)!=-1){cumCount = count.get(country);}
-//  //      else{cumCount= 0;}
-//  //      count.put(country, cumCount + (int) row.getString("Earthquake : Deaths"));
-//  //    }
-  
-//  //    for(int j = 0; j<countries.length; j++){
-//  //      line = {Integer.toString(i), Integer.toString(countries[j]), "0"};
-//  //      if(count.get(countries[j])!=-1){
-//  //        line = {Integer.toString(i), Integer.toString(countries[j]), Integer.toString(count.get(countries[j]))};
-//  //      }
-//  //      writer.writeNext(line);
-//  //    }
-//  //    writer.flush();
- 
-//  //  }
-    
-//  //}
-//  }
-//  catch(IOException e){
-//    e.printStackTrace();
-//  }
-//}
