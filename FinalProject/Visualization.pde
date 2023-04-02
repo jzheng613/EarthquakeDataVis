@@ -162,7 +162,6 @@ void draw() {
     //TableRow currentRow2 = dataTable2.getRow(i);
     int currentYear = currentRow.getInt("year");
     float currentMagnitude = currentRow.getFloat("magnitude");
-    println("currentMag: ", currentMagnitude);
     //float currentDeaths = currentRow2.getFloat("Earthquake : Deaths");
     
     
