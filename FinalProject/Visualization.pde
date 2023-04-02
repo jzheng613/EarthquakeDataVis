@@ -12,7 +12,11 @@ import java.util.Hashtable;
 
 // Raw data tables and objects
 Table dataTable;
+//Table dataTable2;
 GeoMap geoMap;
+
+float minMag;
+float maxMag;
 
 ControlP5 cp5;
 int controlColor = color(0, 0, 0);
@@ -24,7 +28,10 @@ processing.data.Table countryIDs;
 
 void loadRawDataTables() {
   dataTable = loadTable("EarthquakeData.csv", "header");
-  println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount()); 
+  println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount());
+  
+  //dataTable2 = loadTable("Significant Earthquake Database.csv");
+  //println("Location table2:", dataTable2.getRowCount(), "x", dataTable2.getColumnCount());
 }
 
 void setup() {
@@ -141,54 +148,60 @@ void draw() {
   
   // mapping circles for earthquakes for specified Year and Magnitude
   int minRadius = 15;
-  int maxRadius = 40;  
+  int maxRadius = 40;
+  minMag = TableUtils.findMinFloatInColumn(dataTable, "magnitude");
+  maxMag = TableUtils.findMaxFloatInColumn(dataTable, "magnitude");
+  /*float minDeaths = TableUtils.findMinFloatInColumn(dataTable2, "Earthquake : Deaths");
+  float maxDeaths = TableUtils.findMaxFloatInColumn(dataTable2, "Earthquake : Deaths");*/
+  color lowestMagnitudeColor = color(255, 224, 121);
+  color highestMagnitudeColor = color(232, 81, 21);
+  
   
   for (int i = 0; i < dataTable.getRowCount(); i++) {
     TableRow currentRow = dataTable.getRow(i);
+    //TableRow currentRow2 = dataTable2.getRow(i);
     int currentYear = currentRow.getInt("year");
     float currentMagnitude = currentRow.getFloat("magnitude");
+    println("currentMag: ", currentMagnitude);
+    //float currentDeaths = currentRow2.getFloat("Earthquake : Deaths");
+    
     
     if(currentYear == yearValue && currentMagnitude == magnitudeValue) {      
       String place = currentRow.getString("place");
-      float mag_01 = (currentMagnitude - 7) / (8.33 - 7);
+      //float death_01 = (currentDeaths - minDeaths) / (maxDeaths - minDeaths);
+      float mag_01 = (currentMagnitude - minMag) / (maxMag - minMag);
       float radius = lerp(minRadius, maxRadius, mag_01);
+      color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
+      fill(c);
       float lat2 = currentRow.getFloat("latitude");
       float lon2 = currentRow.getFloat("longitude");
       PVector coord2 = geoMap.geoToScreen(lon2, lat2);
       
-      fill(255,0,0);
+      //fill(255,0,0);
       stroke(200);
 
       //Details on Demand
       if(highlightedQuake.equals(place)){
        // System.out.println(geoMap.getID(mouseX, mouseY));
         
-        textSize(14);
+        //box by circle, can delete
+        /*textSize(14);
         fill(255,255,255);
         rect(mouseX+5,mouseY-20, 300, 45);
         fill(0);
         text("Place: " + place + "\nMagnitude: " + currentMagnitude,  mouseX+10, mouseY-5);
-        fill(5,250,38);
+        fill(5,250,38);*/
+        
+        text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 180, 250, 320);
+        textSize(20);
       }
       circle(coord2.x, coord2.y, radius);
-      fill(255,0,0);
+      //fill(255,0,0);
     }
   }
   
   
-// leaving for now, can we erase this?
-//  for (int i = 11; i < 31; i++) { 
-//    TableRow second = dataTable.getRow(i);
-//    float magnitude = second.getFloat("magnitude");
-//    String place = second.getString("place");
-//   // float mag = second.getFloat("magnitude");
-//    float mag_01 = (magnitude - 7) / (8.33 - 7);
-////    System.out.println(mag_01);
-//    float radius = lerp(minRadius, maxRadius, mag_01);
-//    float lat2 = second.getFloat("latitude");
-//    float lon2 = second.getFloat("longitude");
-//    PVector coord2 = geoMap.geoToScreen(lon2, lat2);
-    
+// leaving for now, can we erase this? 
 //    //Details on Demand
 //    if(highlightedQuake.equals(place)){
 //      System.out.println(place);
@@ -209,7 +222,7 @@ void draw() {
 float getRadius (float mag){
   int minRadius = 15;
   int maxRadius = 40;
-  mag = (mag-7)/(7.95-7);
+  mag = (mag-minMag)/(maxMag-minMag);
   return lerp(minRadius, maxRadius, mag);
 }
 
