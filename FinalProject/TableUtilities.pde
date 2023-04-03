@@ -34,6 +34,37 @@ static class TableUtils {
   static float findMaxFloatInColumn(Table t, String columnName) {
     return findMaxFloatInColumn(t, t.getColumnIndex(columnName));
   }
+  //-------------------------------
+  static int findMinIntInColumn(Table t, int column) {
+    int[] values = t.getIntColumn(column);
+    int min = values[0];
+    for (int i=0; i<values.length; i++) {
+      if (values[i] < min) {
+        min = values[i]; 
+      }
+    }
+    return min;
+  }
+
+  static int findMinIntInColumn(Table t, String columnName) {
+    return findMinIntInColumn(t, t.getColumnIndex(columnName));
+  }
+  
+  static int findMaxIntInColumn(Table t, int column) {
+    int[] values = t.getIntColumn(column);
+    int max = values[0];
+    for (int i=0; i<values.length; i++) {
+      if (values[i] > max) {
+        max = values[i]; 
+      }
+    }
+    return max;
+  }
+
+  static int findMaxIntInColumn(Table t, String columnName) {
+    return findMaxIntInColumn(t, t.getColumnIndex(columnName));
+  }
+  //-------------------------------
 
   static public boolean contains(int[] arr, int value) {
     for (int i : arr) {

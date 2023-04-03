@@ -17,6 +17,8 @@ GeoMap geoMap;
 
 float minMag;
 float maxMag;
+//int minDeaths;
+//int maxDeaths;
 
 ControlP5 cp5;
 CheckBox checkbox1;
@@ -24,12 +26,7 @@ CheckBox checkbox2;
 int controlColor = color(0, 0, 0);
 int myColorBackground;
 String highlightedQuake = "";
-Table countryIDs; 
-Table cumDeaths;
-String[] countries;
-int maxDeaths;
-int minDeaths;
-ColorMap countriesScale;
+processing.data.Table countryIDs; 
 
 
 // === DATA PROCESSING ROUTINES ===
@@ -37,12 +34,6 @@ ColorMap countriesScale;
 void loadRawDataTables() {
   dataTable = loadTable("Significant Earthquake Database.csv", "header");
   println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount());
-  
-  cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
-  
-  maxDeaths = int(TableUtils.findMaxFloatInColumn(cumDeaths, "CumulDeaths"));
-  minDeaths = int(TableUtils.findMinFloatInColumn(cumDeaths, "CumulDeaths"));
-
 }
 
 void setup() {
@@ -124,9 +115,7 @@ void setup() {
   //Generate country IDs
   countryIDs = geoMap.getAttributeTable();
   //saveTable(countryIDs, "data/countryIDs.csv");
-  countries = countryIDs.getStringColumn("NAME");
-  countriesScale = new ColorMap("8-m_purp_pink-circle1.xml"); 
-
+  String[] countries = countryIDs.getStringColumn("NAME");
   
   
   
@@ -152,8 +141,8 @@ void draw() {
   int maxRadius = 40;
   minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
   maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
-  /*float minDeaths = TableUtils.findMinFloatInColumn(dataTable2, "Earthquake : Deaths");
-  float maxDeaths = TableUtils.findMaxFloatInColumn(dataTable2, "Earthquake : Deaths");*/
+  //minDeaths = TableUtils.findMinIntInColumn(dataTable, "Earthquake : Deaths");
+  //maxDeaths = TableUtils.findMaxIntInColumn(dataTable, "Earthquake : Deaths");
   color lowestMagnitudeColor = color(255, 224, 121);
   color highestMagnitudeColor = color(232, 81, 21);
   
@@ -219,9 +208,7 @@ void draw() {
     //TableRow currentRow2 = dataTable2.getRow(i);
     int currentYear = currentRow.getInt("Year");
     float currentMagnitude = currentRow.getFloat("EQ Primary");
-    //println("currentMag: ", currentMagnitude);
-    //float currentDeaths = currentRow2.getFloat("Earthquake : Deaths");
-    
+    //int currentDeaths = currentRow.getInt("Earthquake : Deaths");
     boolean showNone = false;
     if (!showFirst && !showSecond && !showThird && !showAllMags) {
       showNone = true;
@@ -234,7 +221,8 @@ void draw() {
           String place = currentRow.getString("Location name");
           //float death_01 = (currentDeaths - minDeaths) / (maxDeaths - minDeaths);
           float mag_01 = (currentMagnitude - minMag) / (maxMag - minMag);
-          float radius = lerp(minRadius, maxRadius, mag_01);
+          float radius = lerp(minRadius, maxRadius, mag_01);//CHANGE TO DEATH_01
+          //println("radius: " + radius);
           color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
           fill(c);
           float lat2 = currentRow.getFloat("Latitude");
@@ -256,8 +244,9 @@ void draw() {
             fill(0);
             text("Place: " + place + "\nMagnitude: " + currentMagnitude,  mouseX+10, mouseY-5);
             fill(5,250,38);*/
-            
-            text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 220, 250, 320);
+         
+            //text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 220, 250, 350);
+            text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 220, 250, 350);
             textSize(20);
           }
           circle(coord2.x, coord2.y, radius);
@@ -267,6 +256,20 @@ void draw() {
     }
   }
   
+// leaving for now, can we erase this? 
+//    //Details on Demand
+//    if(highlightedQuake.equals(place)){
+//      System.out.println(place);
+//      textSize(14);
+//      fill(255,255,255);
+//      rect(mouseX+5,mouseY-20, 300, 45);
+//      fill(0);
+//      text("Place: " + place + "\nMagnitude: " + magnitude,  mouseX+10, mouseY-5);
+//      fill(5,250,38);
+//    }
+//    circle(coord2.x, coord2.y, radius);
+//    fill(255,0,0);
+//  }
 
 
   /*// legend box (right)
@@ -324,30 +327,7 @@ void draw() {
     text("Magnitude 9.0-10.0: " + total9, 1340, 215);
   }
   
-   // colormap legend
- // fill(111, 87, 0);
-  //textAlign(CENTER, CENTER);
-  text("Cumulative Death Count", 1340, 500);
-
-  strokeWeight(1);
-  //textAlign(RIGHT, CENTER);
-  int gradientHeight = 200;
-  int gradientWidth = 40;
-  int labelStep = gradientHeight / 5;
-  for (int y=0; y<gradientHeight; y++) {
-    float amt = 1.0 - (float)y/(gradientHeight-1);
-    color c = lerpColorLab(countriesScale.lookupColor(minDeaths), countriesScale.lookupColor(maxDeaths), amt);
-    stroke(c);
-    line(1400, 550 + y, 1400+gradientWidth, 550 + y);
-    if ((y % labelStep == 0) || (y == gradientHeight-1)) {
-      int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
-      text(labelValue, 1490, 550 + y);
-    }
-  }
   
-  //Coloring Countries
-  cumDeathbyYear(yearValue);
-
 }
 
 float getRadius (float mag){
@@ -379,25 +359,4 @@ String getUnderMouse() {
     }
   }
   return underMouse;  
-}
-
-void cumDeathbyYear(int year){
-  //To do: get min and max deaths of all time in a country for lerp
-  TableRow row;
-  int deaths;
-  int ID;
-  float lerpedDeaths;
-  int firstRow = 242*(year-1950); //EQ for finding first table row this exists
-  for(int i = 0; i<countries.length; i++){
-    row = cumDeaths.getRow(firstRow+i);//Get deathcount for that country in that year
-    deaths = row.getInt("CumulDeaths");
-    //Lerp it
-    lerpedDeaths = (float(deaths)-float(minDeaths))/(float(maxDeaths)-float(minDeaths));
-    ID = countryIDs.getRow(i).getInt("id");//Find Country ID
-   // System.out.println(countryIDs.getRow(i).getString("NAME"));
-    
-    fill(countriesScale.lookupColor(lerpedDeaths));//Get colorshade
-    
-    geoMap.draw(ID);
-  }
 }
