@@ -16,8 +16,6 @@ GeoMap geoMap;
 
 float minMag;
 float maxMag;
-//int minDeaths;
-//int maxDeaths;
 
 ControlP5 cp5;
 CheckBox checkbox1;
@@ -25,7 +23,14 @@ CheckBox checkbox2;
 int controlColor = color(0, 0, 0);
 int myColorBackground;
 String highlightedQuake = "";
-processing.data.Table countryIDs; 
+
+
+Table countryIDs; 
+Table cumDeaths;
+String[] countries;
+int minDeaths;
+int maxDeaths;
+ColorMap countriesScale;
 
 
 // === DATA PROCESSING ROUTINES ===
@@ -33,6 +38,10 @@ processing.data.Table countryIDs;
 void loadRawDataTables() {
   dataTable = loadTable("Significant Earthquake Database.csv", "header");
   println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount());
+  
+  cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
+  maxDeaths = int(TableUtils.findMaxFloatInColumn(cumDeaths, "CumulDeaths"));
+  minDeaths = int(TableUtils.findMinFloatInColumn(cumDeaths, "CumulDeaths"));
 }
 
 void setup() {
@@ -45,6 +54,8 @@ void setup() {
   // create world map, scaled size
   geoMap = new GeoMap(0, 0, 1312, 738, this);
   geoMap.readFile("world");
+  
+  
   
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
@@ -97,8 +108,8 @@ void setup() {
   //Generate country IDs
   countryIDs = geoMap.getAttributeTable();
   //saveTable(countryIDs, "data/countryIDs.csv");
-  String[] countries = countryIDs.getStringColumn("NAME");
-  
+  countries = countryIDs.getStringColumn("NAME");
+  countriesScale =  new ColorMap("8-m_purp_pink-circle1.xml"); 
   
   
 }
@@ -109,7 +120,8 @@ void draw() {
   stroke(0,0,0);
   fill(114,114,114);
   
-  geoMap.draw();
+  //geoMap.draw();
+  
   fill(235,55,52);
   
   highlightedQuake = getUnderMouse();  
@@ -117,6 +129,8 @@ void draw() {
   // === LEGEND BOX THINGS ===
   float filterYear = cp5.getController("Earthquake Range: 1950-").getValue();
   int yearValue = (int) filterYear; // cast type float to int for Year
+  
+  cumDeathbyYear(yearValue); //Includes draw command
   
   // mapping circles for earthquakes for specified Year and Magnitude
   int minRadius = 15;
@@ -200,7 +214,26 @@ void draw() {
   stroke(0);
   fill(200);
   rect(1312, 0, 288, 900);
-
+  
+  fill(0);
+  stroke(1);
+  text("Cumulative Death Count", 1340, 500);
+  strokeWeight(1);
+  int gradientHeight = 200;
+  int gradientWidth = 40;
+  int labelStep = gradientHeight / 5;
+  for(int y = 0; y < gradientHeight; y++){
+    float amt = 1.0-(float)y/(gradientHeight-1);
+    color c = lerpColorLab(countriesScale.lookupColor(minDeaths), countriesScale.lookupColor(maxDeaths), amt);
+    stroke(c);
+    line(1400, 550 + y, 1400+gradientWidth, 550 + y);
+    if ((y % labelStep == 0) || (y == gradientHeight-1)) {
+      int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
+      text(labelValue, 1490, 550 + y);
+    }
+  }
+  stroke(0);
+  fill(200);
   for (int i = 0; i < dataTable.getRowCount(); i++) {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
@@ -228,6 +261,11 @@ void draw() {
       }
     }
   }
+  
+
+  
+  
+  
   
   // control box (bottom)
   fill(230);
@@ -311,4 +349,25 @@ String getUnderMouse() {
     }
   }
   return underMouse;  
+}
+
+void cumDeathbyYear(int year){
+  TableRow row;
+  int deaths;
+  int ID;
+  float lerpedDeaths;
+  int firstRow = 242*(year-1950);
+  
+  for(int i = 0; i<countries.length;i++){
+   row = cumDeaths.getRow(firstRow+i);
+   
+   deaths = row.getInt("CumulDeaths");
+   lerpedDeaths = (float(deaths)-float(minDeaths))/(float(maxDeaths)-float(minDeaths));
+   ID = countryIDs.getRow(i).getInt("id");
+   
+   fill(countriesScale.lookupColor(lerpedDeaths));
+   stroke(1);
+   geoMap.draw(ID);
+  }
+
 }

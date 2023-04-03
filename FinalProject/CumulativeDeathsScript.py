@@ -33,6 +33,10 @@ with open('Significant Earthquake Database.csv') as csvfile:
                else:
                    sum = 0
                count[country] = int(sum) + int(row["Earthquake : Deaths"])
+
+
+
+
         else: #Moved to new year
             for i in range(len(countries)):
                 name = countries[i].upper()
@@ -40,8 +44,9 @@ with open('Significant Earthquake Database.csv') as csvfile:
                     newFile.append([yearprocessed, countries[i], count[name]])
                 else:
                     newFile.append([yearprocessed, countries[i], 0])
-
+            #
             yearprocessed = row['Year']
+            print(yearprocessed)
         ##Process this entry so we don't miss it
             if (row['Earthquake : Deaths'] != ""):  # If there are deaths in that year
                 country = row['Country']
@@ -51,6 +56,16 @@ with open('Significant Earthquake Database.csv') as csvfile:
                     sum = 0
                 count[country] = int(sum) + int(row["Earthquake : Deaths"])
 
+    #To push 2020 data to file
+    for i in range(len(countries)):
+        name = countries[i].upper()
+        if name in count.keys():
+            newFile.append([yearprocessed, countries[i], count[name]])
+        else:
+            newFile.append([yearprocessed, countries[i], 0])
+
+   # yearprocessed = row['Year']
+    print(yearprocessed)
 csvfile.close()
 
 fields = ["Year", "Country", "CumulDeaths"]
