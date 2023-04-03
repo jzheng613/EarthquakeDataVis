@@ -199,6 +199,11 @@ void draw() {
 
   }
 
+  // legend box (right)
+  stroke(0);
+  fill(200);
+  rect(1312, 0, 288, 900);
+
   for (int i = 0; i < dataTable.getRowCount(); i++) {
     TableRow currentRow = dataTable.getRow(i);
     //TableRow currentRow2 = dataTable2.getRow(i);
@@ -231,6 +236,7 @@ void draw() {
     
           //Details on Demand
           if(highlightedQuake.equals(place)){
+            println("place: " + place);
            // System.out.println(geoMap.getID(mouseX, mouseY));
             
             //box by circle, can delete
@@ -241,7 +247,7 @@ void draw() {
             text("Place: " + place + "\nMagnitude: " + currentMagnitude,  mouseX+10, mouseY-5);
             fill(5,250,38);*/
             
-            text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 180, 250, 320);
+            text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 220, 250, 320);
             textSize(20);
           }
           circle(coord2.x, coord2.y, radius);
@@ -267,10 +273,10 @@ void draw() {
 //  }
 
 
-  // legend box (right)
+  /*// legend box (right)
   stroke(0);
   fill(200);
-  rect(1312, 0, 288, 900);
+  rect(1312, 0, 288, 900);*///MOVED ABOVE SELECTED EARTHQUAKE PRINTED DETAILS
   
   // control box (bottom)
   fill(230);
