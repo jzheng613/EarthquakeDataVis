@@ -137,8 +137,6 @@ void draw() {
   int maxRadius = 40;
   minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
   maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
-  //minDeaths = TableUtils.findMinIntInColumn(dataTable, "Earthquake : Deaths");
-  //maxDeaths = TableUtils.findMaxIntInColumn(dataTable, "Earthquake : Deaths");
   color lowestMagnitudeColor = color(255, 224, 121);
   color highestMagnitudeColor = color(232, 81, 21);
   
@@ -199,8 +197,20 @@ void draw() {
           float lon2 = currentRow.getFloat("Longitude");
           PVector coord2 = geoMap.geoToScreen(lon2, lat2);
           
-          stroke(200);
-          fill(c);
+          
+          //Highlight current year range circles
+          //println("currentYear: " + currentYear);
+          if ((currentYear == yearValue) | (currentYear > yearValue-10)) {
+            stroke(0);
+            strokeWeight(2);
+            fill(c);
+          }
+          else {
+            stroke(200);
+            //noStroke();
+            fill(c, 200);
+          }
+          //fill(c);
           circle(coord2.x, coord2.y, radius);
         }
       }
