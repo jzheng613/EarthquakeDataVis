@@ -133,8 +133,13 @@ void draw() {
   cumDeathbyYear(yearValue); //Includes draw command
   
   // mapping circles for earthquakes for specified Year and Magnitude
+  //-------------------------
   int minRadius = 15;
-  int maxRadius = 40;
+  int maxRadius = 30;
+  
+  int minRadius2 = 31;
+  int maxRadius2 = 40;
+  //-------------------------
   minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
   maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
   color lowestMagnitudeColor = color(255, 224, 121);
@@ -177,29 +182,43 @@ void draw() {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
     float currentMagnitude = currentRow.getFloat("EQ Primary");
-    //int currentDeaths = currentRow.getInt("Earthquake : Deaths");
+    //-------------------------
+    int currentDeaths = currentRow.getInt("Earthquake : Deaths");
+    //-------------------------
     boolean showNone = false;
     if (!showFirst && !showSecond && !showThird && !showAllMags) {
       showNone = true;
     }
-    // confirming earthquake year is <= current slider max and that a magnitude box is checked
+    // confirming earthquake year is <= current slider max and that a magnitude box is checked    
     if ((currentYear <= yearValue) && (!showNone)) {  
       for (String range : selectedRanges.keySet()) {
+        float radius;
         float[] selectedRange = selectedRanges.get(range);
         if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
           String place = currentRow.getString("Location name");
-          //float death_01 = (currentDeaths - minDeaths) / (maxDeaths - minDeaths);
+          //-------------------------
+          //min=0 and max=5,000
+          //float death_01 = (float(currentDeaths) - float(minDeaths)) / (float(maxDeaths) - float(minDeaths));
+          float death_01 = (float(currentDeaths) - float(0)) / (float(5000) - float(0));
+          //min=5,001 and max=316,000
+          float death_02 = (float(currentDeaths) - float(5001)) / (float(320000) - float(5001));
+          //-------------------------
           float mag_01 = (currentMagnitude - minMag) / (maxMag - minMag);
-          float radius = lerp(minRadius, maxRadius, mag_01);//CHANGE TO DEATH_01
-          //println("radius: " + radius);
+          //-------------------------
+          if (currentDeaths < 5001) {
+            radius = lerp(minRadius, maxRadius, death_01);
+          }
+          else {
+            radius = lerp(minRadius2, maxRadius2, death_02);
+          }
+          //-------------------------
           color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
           float lat2 = currentRow.getFloat("Latitude");
           float lon2 = currentRow.getFloat("Longitude");
           PVector coord2 = geoMap.geoToScreen(lon2, lat2);
           
           
-          //Highlight current year range circles
-          //println("currentYear: " + currentYear);
+          // current year range's earthquakes are highlighted
           if ((currentYear == yearValue) | (currentYear > yearValue-10)) {
             stroke(0);
             strokeWeight(2);
@@ -208,9 +227,9 @@ void draw() {
           else {
             stroke(200);
             //noStroke();
-            fill(c, 200);
+            //fill(c, 200);
+            fill(c);
           }
-          //fill(c);
           circle(coord2.x, coord2.y, radius);
         }
       }
@@ -248,7 +267,7 @@ void draw() {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
     float currentMagnitude = currentRow.getFloat("EQ Primary");
-    //int currentDeaths = currentRow.getInt("Earthquake : Deaths");
+    int currentDeaths = currentRow.getInt("Earthquake : Deaths");
     boolean showNone = false;
     if (!showFirst && !showSecond && !showThird && !showAllMags) {
       showNone = true;
@@ -261,10 +280,15 @@ void draw() {
           String place = currentRow.getString("Location name");          
           //Details on Demand
           if(highlightedQuake.equals(place)){
-            println("place: " + place);
-            //text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 220, 250, 350);
             fill(0);
-            text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 235, 250, 350);
+            // CHANGE BELOW SO IF DEATHS=0, WRITE "UNKNOWN" INSTEAD OF "0"
+            if (currentDeaths == 0) {
+              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: Unknown", 1340, 220, 250, 350);
+            }
+            else {
+              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 220, 250, 350);
+            }
+            //text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 235, 250, 350);
             textSize(20);
           }
         }
