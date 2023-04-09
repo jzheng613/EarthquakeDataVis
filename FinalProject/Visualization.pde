@@ -244,7 +244,7 @@ void draw() {
   //CUMULATIVE DEATH COUNT LEGEND
   fill(0);
   stroke(1);
-  text("Cumulative Death Count", 1340, 500, 150, 350);
+  text("Cumulative Death Count", 1340, 500, 145, 350);
   strokeWeight(1);
   int gradientHeight = 200;
   int gradientWidth = 80;
@@ -289,13 +289,13 @@ void draw() {
           if(highlightedQuake.equals(place)){
             fill(0);
             // CHANGE BELOW SO IF DEATHS=0, WRITE "UNKNOWN" INSTEAD OF "0"
+            text("---------------------", 1340, 230);
             if (currentDeaths == 0) {
-              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: Unknown", 1340, 220, 250, 350);
+              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: Unknown", 1340, 230, 250, 350);
             }
             else {
-              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 220, 250, 350);
+              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 230, 250, 350);
             }
-            //text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude, 1340, 235, 250, 350);
             textSize(20);
           }
         }
@@ -303,14 +303,12 @@ void draw() {
     }
   }
   
-  //----------------------------
+  
   // colormap legend
-  /*fill(111, 87, 0);
-  textAlign(CENTER, CENTER);
-  text("Magnitude", 1500, 500);
+  fill(0);
+  text("Magnitude", 1495, 600);
 
   strokeWeight(1);
-  textAlign(RIGHT, CENTER);
   int cGradientHeight = 200;
   int cGradientWidth = 40;
   int labelStep = cGradientHeight / 5;
@@ -318,36 +316,29 @@ void draw() {
     float amt = 1.0 - (float)y/(cGradientHeight-1);
     color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, amt);
     stroke(c);
-    line(1500, 570 + y, 1500+cGradientWidth, 570 + y);
+    line(1495, 650 + y, 1495+cGradientWidth, 650 + y);
     if ((y % labelStep == 0) || (y == cGradientHeight-1)) {
       float labelValue = (float)(minMag + amt*(maxMag - minMag));
-      text(labelValue, 1490, 570 + y);
+      text(labelValue, 1540, 650 + y);
     }
-  }*/
+  }
             
   // circle size legend
-  /*fill(111, 87, 0);
-  textAlign(CENTER, CENTER);
-  text("Municipality Area", 1500, 300);
+  fill(0);
+  text("Death Count", 1480, 390, 145, 350);
 
   noStroke();
-  textAlign(RIGHT, CENTER);
   int nExamples = 6;
   float y = 340;
   for (int i=0; i<nExamples; i++) {
     float amt = 1.0 - (float)i/(nExamples - 1);
     float radius = lerp(minRadius, maxRadius, amt);
     
-    ellipseMode(RADIUS);
-    circle(1500 + radius, y, radius);
+    circle(1470 + radius, y+100, radius);
     int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
-    text(labelValue, 1490, y);
-    y += 2 * radius;//maxIslandRadius;
-  }*/
-  //------------------------------
-  
-
-  
+    text(labelValue, 1520, y+106);
+    y += radius;//maxIslandRadius;
+  }  
   
   
   
