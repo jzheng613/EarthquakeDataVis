@@ -139,13 +139,11 @@ void draw() {
  // System.out.println(geoMap.getID(mouseX, mouseY));
   
   // mapping circles for earthquakes for specified Year and Magnitude
-  //-------------------------
   int minRadius = 15;
   int maxRadius = 30;
-  
   int minRadius2 = 31;
   int maxRadius2 = 40;
-  //-------------------------
+  
   minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
   maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
   color lowestMagnitudeColor = color(255, 224, 121);
@@ -188,9 +186,7 @@ void draw() {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
     float currentMagnitude = currentRow.getFloat("EQ Primary");
-    //-------------------------
     int currentDeaths = currentRow.getInt("Earthquake : Deaths");
-    //-------------------------
     boolean showNone = false;
     if (!showFirst && !showSecond && !showThird && !showAllMags) {
       showNone = true;
@@ -202,22 +198,19 @@ void draw() {
         float[] selectedRange = selectedRanges.get(range);
         if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
           String place = currentRow.getString("Location name");
-          //-------------------------
           //min=0 and max=5,000
-          //float death_01 = (float(currentDeaths) - float(minDeaths)) / (float(maxDeaths) - float(minDeaths));
           float death_01 = (float(currentDeaths) - float(0)) / (float(5000) - float(0));
           //min=5,001 and max=316,000
           float death_02 = (float(currentDeaths) - float(5001)) / (float(320000) - float(5001));
-          //-------------------------
           float mag_01 = (currentMagnitude - minMag) / (maxMag - minMag);
-          //-------------------------
+          
           if (currentDeaths < 5001) {
             radius = lerp(minRadius, maxRadius, death_01);
           }
           else {
             radius = lerp(minRadius2, maxRadius2, death_02);
           }
-          //-------------------------
+          
           color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
           float lat2 = currentRow.getFloat("Latitude");
           float lon2 = currentRow.getFloat("Longitude");
@@ -232,8 +225,6 @@ void draw() {
           }
           else {
             stroke(200);
-            //noStroke();
-            //fill(c, 200);
             fill(c);
           }
           circle(coord2.x, coord2.y, radius);
@@ -253,7 +244,7 @@ void draw() {
   //CUMULATIVE DEATH COUNT LEGEND
   fill(0);
   stroke(1);
-  text("Cumulative Death Count", 1340, 500);
+  text("Cumulative Death Count", 1340, 500, 150, 350);
   strokeWeight(1);
   int gradientHeight = 200;
   int gradientWidth = 80;
@@ -265,13 +256,13 @@ void draw() {
     stroke(c);
     fill(c);
     //line(1400, 525 + count, 1400+gradientWidth, 525 + count);
-    rect(1400, 525 + 15*y, gradientWidth, 15);
+    rect(1340, 575 + 15*y, gradientWidth, 15);
     count +=15;
    // if ((y % labelStep == 0) || (y == gradientHeight-1)) {
       long labelValue = Math.round(colorMapControlPts[y]*361569);
       textSize(12);
       fill(0);
-      text(NumberFormat.getInstance().format((int)labelValue), 1490, 520 + count);
+      text(NumberFormat.getInstance().format((int)labelValue), 1430, 570 + count);
    // }
   }
   
@@ -311,6 +302,49 @@ void draw() {
       }
     }
   }
+  
+  //----------------------------
+  // colormap legend
+  /*fill(111, 87, 0);
+  textAlign(CENTER, CENTER);
+  text("Magnitude", 1500, 500);
+
+  strokeWeight(1);
+  textAlign(RIGHT, CENTER);
+  int cGradientHeight = 200;
+  int cGradientWidth = 40;
+  int labelStep = cGradientHeight / 5;
+  for (int y=0; y<cGradientHeight; y++) {
+    float amt = 1.0 - (float)y/(cGradientHeight-1);
+    color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, amt);
+    stroke(c);
+    line(1500, 570 + y, 1500+cGradientWidth, 570 + y);
+    if ((y % labelStep == 0) || (y == cGradientHeight-1)) {
+      float labelValue = (float)(minMag + amt*(maxMag - minMag));
+      text(labelValue, 1490, 570 + y);
+    }
+  }*/
+            
+  // circle size legend
+  /*fill(111, 87, 0);
+  textAlign(CENTER, CENTER);
+  text("Municipality Area", 1500, 300);
+
+  noStroke();
+  textAlign(RIGHT, CENTER);
+  int nExamples = 6;
+  float y = 340;
+  for (int i=0; i<nExamples; i++) {
+    float amt = 1.0 - (float)i/(nExamples - 1);
+    float radius = lerp(minRadius, maxRadius, amt);
+    
+    ellipseMode(RADIUS);
+    circle(1500 + radius, y, radius);
+    int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
+    text(labelValue, 1490, y);
+    y += 2 * radius;//maxIslandRadius;
+  }*/
+  //------------------------------
   
 
   
