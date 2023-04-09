@@ -9,6 +9,8 @@ import java.io.FileWriter;
 import com.opencsv.CSVWriter;
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.lang.Math;
+import java.text.NumberFormat;
 
 // Raw data tables and objects
 Table dataTable;
@@ -31,6 +33,7 @@ String[] countries;
 int minDeaths;
 int maxDeaths;
 ColorMap countriesScale;
+double[] colorMapControlPts = new double[21];
 
 
 // === DATA PROCESSING ROUTINES ===
@@ -109,9 +112,10 @@ void setup() {
   countryIDs = geoMap.getAttributeTable();
   //saveTable(countryIDs, "data/countryIDs.csv");
   countries = countryIDs.getStringColumn("NAME");
-  countriesScale =  new ColorMap("8-m_purp_pink-circle1.xml"); 
+ // countriesScale =  new ColorMap("div3-green-brown-div.xml"); 
   
-  
+  countriesScale =  new ColorMap("div3-green-brown-div (1).xml"); //original colormap
+  colorMapControlPts = new double[] {0.0,0.000002,0.00008,0.0002,0.0007,0.0019,0.0023,0.0045,0.008,0.011,0.0138,0.022,0.027,0.041,0.071,0.185,0.212,0.246,0.56,0.8739,1.0};
 }
 
 void draw() {
@@ -131,6 +135,8 @@ void draw() {
   int yearValue = (int) filterYear; // cast type float to int for Year
   
   cumDeathbyYear(yearValue); //Includes draw command
+  
+ // System.out.println(geoMap.getID(mouseX, mouseY));
   
   // mapping circles for earthquakes for specified Year and Magnitude
   //-------------------------
@@ -244,25 +250,35 @@ void draw() {
   fill(200);
   rect(1312, 0, 288, 900);
   
+  //CUMULATIVE DEATH COUNT LEGEND
   fill(0);
   stroke(1);
   text("Cumulative Death Count", 1340, 500);
   strokeWeight(1);
   int gradientHeight = 200;
-  int gradientWidth = 40;
-  int labelStep = gradientHeight / 5;
-  for(int y = 0; y < gradientHeight; y++){
-    float amt = 1.0-(float)y/(gradientHeight-1);
-    color c = lerpColorLab(countriesScale.lookupColor(minDeaths), countriesScale.lookupColor(maxDeaths), amt);
+  int gradientWidth = 80;
+//  int labelStep = gradientHeight / 2;
+  int count = 0;
+  for(int y = 0; y < colorMapControlPts.length; y++){
+    double amt = colorMapControlPts[y];
+    color c = countriesScale.lookupColor((float)amt);
     stroke(c);
-    line(1400, 550 + y, 1400+gradientWidth, 550 + y);
-    if ((y % labelStep == 0) || (y == gradientHeight-1)) {
-      int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
-      text(labelValue, 1490, 550 + y);
-    }
+    fill(c);
+    //line(1400, 525 + count, 1400+gradientWidth, 525 + count);
+    rect(1400, 525 + 15*y, gradientWidth, 15);
+    count +=15;
+   // if ((y % labelStep == 0) || (y == gradientHeight-1)) {
+      long labelValue = Math.round(colorMapControlPts[y]*361569);
+      textSize(12);
+      fill(0);
+      text(NumberFormat.getInstance().format((int)labelValue), 1490, 520 + count);
+   // }
   }
+  
+  
   stroke(0);
   fill(200);
+  textSize(20);
   for (int i = 0; i < dataTable.getRowCount(); i++) {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
