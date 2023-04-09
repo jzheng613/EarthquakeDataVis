@@ -305,7 +305,7 @@ void draw() {
   
   //----------------------------
   // colormap legend
-  fill(111, 87, 0);
+  /*fill(111, 87, 0);
   textAlign(CENTER, CENTER);
   text("Magnitude", 1500, 500);
 
@@ -323,12 +323,12 @@ void draw() {
       float labelValue = (float)(minMag + amt*(maxMag - minMag));
       text(labelValue, 1490, 570 + y);
     }
-  }
+  }*/
             
   // circle size legend
   /*fill(111, 87, 0);
   textAlign(CENTER, CENTER);
-  text("Death Count", 1500, 300);
+  text("Municipality Area", 1500, 300);
 
   noStroke();
   textAlign(RIGHT, CENTER);
@@ -339,10 +339,10 @@ void draw() {
     float radius = lerp(minRadius, maxRadius, amt);
     
     ellipseMode(RADIUS);
-    //circle(1500 + radius, y, radius);
+    circle(1500 + radius, y, radius);
     int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
     text(labelValue, 1490, y);
-    y += 2 * radius;//maxRadius;
+    y += 2 * radius;//maxIslandRadius;
   }*/
   //------------------------------
   
