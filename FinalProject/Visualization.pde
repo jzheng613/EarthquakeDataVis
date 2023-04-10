@@ -22,8 +22,6 @@ float maxMag;
 ControlP5 cp5;
 CheckBox checkbox1;
 CheckBox checkbox2;
-int controlColor = color(0, 0, 0);
-int myColorBackground;
 String highlightedQuake = "";
 
 
@@ -32,6 +30,8 @@ Table cumDeaths;
 String[] countries;
 int minDeaths;
 int maxDeaths;
+int tempMin;
+int tempMax;
 ColorMap countriesScale;
 double[] colorMapControlPts = new double[21];
 
@@ -41,6 +41,8 @@ double[] colorMapControlPts = new double[21];
 void loadRawDataTables() {
   dataTable = loadTable("Significant Earthquake Database.csv", "header");
   println("Location table:", dataTable.getRowCount(), "x", dataTable.getColumnCount());
+  tempMax = TableUtils.findMaxIntInColumn(dataTable, "Earthquake : Deaths");
+  tempMin = TableUtils.findMinIntInColumn(dataTable, "Earthquake : Deaths");
   
   cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
   maxDeaths = int(TableUtils.findMaxFloatInColumn(cumDeaths, "CumulDeaths"));
@@ -64,12 +66,12 @@ void setup() {
   cp5 = new ControlP5(this);
   
   cp5.addSlider("Earthquake Range: 1950-")
-    .setPosition(100, 790)
-    .setSize(500, 55)
+    .setPosition(50, 790)
+    .setSize(400, 55)
     .setRange(1950, 2020)
     .setValue(1950)
-    .setColorLabel(controlColor)
-    .setColorValue(controlColor)
+    .setColorLabel(color(0, 0, 0))
+    .setColorValue(color(0, 0, 0))
     .setNumberOfTickMarks(8)
     .setSliderMode(Slider.FIX)
     .showTickMarks(false)
@@ -89,11 +91,10 @@ void setup() {
     ;
     
   checkbox1 = cp5.addCheckBox("magnitudes")
-                .setPosition(700, 790)
+                .setPosition(525, 790)
                 .setSize(55, 55)
                 .setItemsPerRow(4)
                 .setSpacingColumn(55)
-                .setSpacingRow(20)
                 .addItem("7.0-7.9", 0)
                 .addItem("8.0-8.9", 1)
                 .addItem("9.0-10.0", 2)
@@ -115,7 +116,8 @@ void setup() {
  // countriesScale =  new ColorMap("div3-green-brown-div.xml"); 
   
   countriesScale =  new ColorMap("div3-green-brown-div (1).xml"); //original colormap
-  colorMapControlPts = new double[] {0.0,0.000002,0.00008,0.0002,0.0007,0.0019,0.0023,0.0045,0.008,0.011,0.0138,0.022,0.027,0.041,0.071,0.185,0.212,0.246,0.56,0.8739,1.0};
+  colorMapControlPts = new double[] {0.0,0.000002,0.00008,0.0002,0.0007,0.0019,0.0023,0.0045,0.008,0.011,
+                                     0.0138,0.022,0.027,0.041,0.071,0.185,0.212,0.246,0.56,0.8739,1.0};
 }
 
 void draw() {
@@ -124,7 +126,6 @@ void draw() {
   stroke(0,0,0);
   fill(114,114,114);
   
-  //geoMap.draw();
   
   fill(235,55,52);
   
@@ -135,9 +136,7 @@ void draw() {
   int yearValue = (int) filterYear; // cast type float to int for Year
   
   cumDeathbyYear(yearValue); //Includes draw command
-  
- // System.out.println(geoMap.getID(mouseX, mouseY));
-  
+    
   // mapping circles for earthquakes for specified Year and Magnitude
   int minRadius = 15;
   int maxRadius = 30;
@@ -197,7 +196,6 @@ void draw() {
         float radius;
         float[] selectedRange = selectedRanges.get(range);
         if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
-          String place = currentRow.getString("Location name");
           //min=0 and max=5,000
           float death_01 = (float(currentDeaths) - float(0)) / (float(5000) - float(0));
           //min=5,001 and max=316,000
@@ -215,7 +213,6 @@ void draw() {
           float lat2 = currentRow.getFloat("Latitude");
           float lon2 = currentRow.getFloat("Longitude");
           PVector coord2 = geoMap.geoToScreen(lon2, lat2);
-          
           
           // current year range's earthquakes are highlighted
           if ((currentYear == yearValue) | (currentYear > yearValue-10)) {
@@ -244,37 +241,41 @@ void draw() {
   //CUMULATIVE DEATH COUNT LEGEND
   fill(0);
   stroke(1);
-  text("Cumulative Death Count", 1340, 500, 145, 350);
+  textSize(22);
+  text("Cumulative Deaths", 1340, 500);
+  text("For Countries", 1340, 525);
   strokeWeight(1);
-  int gradientHeight = 200;
   int gradientWidth = 80;
-//  int labelStep = gradientHeight / 2;
   int count = 0;
   for(int y = 0; y < colorMapControlPts.length; y++){
     double amt = colorMapControlPts[y];
     color c = countriesScale.lookupColor((float)amt);
     stroke(c);
     fill(c);
-    //line(1400, 525 + count, 1400+gradientWidth, 525 + count);
-    rect(1340, 575 + 15*y, gradientWidth, 15);
+    rect(1340, 550 + 15*y, gradientWidth, 15);
     count +=15;
-   // if ((y % labelStep == 0) || (y == gradientHeight-1)) {
-      long labelValue = Math.round(colorMapControlPts[y]*361569);
-      textSize(12);
-      fill(0);
-      text(NumberFormat.getInstance().format((int)labelValue), 1430, 570 + count);
-   // }
+    long labelValue = Math.round(colorMapControlPts[y]*361569);
+    textSize(12);
+    fill(0);
+    text(NumberFormat.getInstance().format((int)labelValue), 1440, 545 + count);
   }
   
   
   stroke(0);
-  fill(200);
-  textSize(20);
+  fill(0);
+  textSize(16);
+  text("Place:", 1340, 50);
+  text("Magnitude:", 1340, 80);
+  text("Deaths:", 1340, 110);
+  text("Date:", 1340, 140);
   for (int i = 0; i < dataTable.getRowCount(); i++) {
     TableRow currentRow = dataTable.getRow(i);
     int currentYear = currentRow.getInt("Year");
     float currentMagnitude = currentRow.getFloat("EQ Primary");
-    int currentDeaths = currentRow.getInt("Earthquake : Deaths");
+    String currentDeaths = currentRow.getString("Earthquake : Deaths");
+    int dateMonth = currentRow.getInt("Month");
+    int dateDay = currentRow.getInt("Day");
+    int dateYear = currentRow.getInt("Year");
     boolean showNone = false;
     if (!showFirst && !showSecond && !showThird && !showAllMags) {
       showNone = true;
@@ -284,30 +285,30 @@ void draw() {
       for (String range : selectedRanges.keySet()) {
         float[] selectedRange = selectedRanges.get(range);
         if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
-          String place = currentRow.getString("Location name");          
-          //Details on Demand
+        // Details on Demand
+          String place = currentRow.getString("Country");
           if(highlightedQuake.equals(place)){
-            fill(0);
-            // CHANGE BELOW SO IF DEATHS=0, WRITE "UNKNOWN" INSTEAD OF "0"
-            text("---------------------", 1340, 230);
-            if (currentDeaths == 0) {
-              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: Unknown", 1340, 230, 250, 350);
+            textSize(19);
+            text(place, 1385, 50);
+            text(currentMagnitude, 1415, 80);
+            text(dateMonth + "/" + dateDay + "/" + dateYear, 1378, 140);
+            if (currentDeaths.isEmpty()) {
+              text("Unknown", 1395, 110);
             }
             else {
-              text("Current Place: " + place + "\nCurrent Magnitude: " + currentMagnitude + "\nDeaths: " + currentDeaths, 1340, 230, 250, 350);
+              int deaths = Integer.parseInt(currentDeaths);
+              text(deaths, 1395, 110);
             }
-            textSize(20);
           }
         }
       }
     }
   }
   
-  
+  textSize(20);
   // colormap legend
   fill(0);
-  text("Magnitude", 1495, 600);
-
+  text("Magnitude", 1485, 210);
   strokeWeight(1);
   int cGradientHeight = 200;
   int cGradientWidth = 40;
@@ -316,28 +317,31 @@ void draw() {
     float amt = 1.0 - (float)y/(cGradientHeight-1);
     color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, amt);
     stroke(c);
-    line(1495, 650 + y, 1495+cGradientWidth, 650 + y);
+    line(1485, 235 + y, 1485+cGradientWidth, 235 + y);
     if ((y % labelStep == 0) || (y == cGradientHeight-1)) {
       float labelValue = (float)(minMag + amt*(maxMag - minMag));
-      text(labelValue, 1540, 650 + y);
+      textSize(18);
+      text(labelValue, 1540, 240 + y);
     }
   }
             
   // circle size legend
-  fill(0);
-  text("Death Count", 1480, 390, 145, 350);
-
+  textSize(20);
+  text("Earthquake", 1340, 190);
+  text("Death Count", 1340, 210);
   noStroke();
   int nExamples = 6;
-  float y = 340;
+  float y = 210;
   for (int i=0; i<nExamples; i++) {
     float amt = 1.0 - (float)i/(nExamples - 1);
-    float radius = lerp(minRadius, maxRadius, amt);
-    
-    circle(1470 + radius, y+100, radius);
+    float radius = lerp(minRadius, maxRadius2, amt);
+    fill(50);
+    circle(1355, y+30, radius);
     int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
-    text(labelValue, 1520, y+106);
-    y += radius;//maxIslandRadius;
+    //int labelValue = (int)(tempMin + amt*(tempMax - tempMin));
+    fill(0);
+    text(labelValue, 1390, y+35);
+    y += (1.4 * radius);//maxIslandRadius;
   }  
   
   
@@ -347,9 +351,9 @@ void draw() {
   rect(0, 739, 1312, 162);
   
   fill(0);
-  textSize(20);
-  text("Choose Year Range:", 100, 775);
-  text("Choose Earthquake Magnitude:", 700, 775);  
+  textSize(25);
+  text("Year Range: 1950-" + yearValue, 50, 775);
+  text("Filter By Magnitude:", 525, 775);  
   
   int totalQuakes = 0;
   int total7 = 0;
@@ -372,33 +376,38 @@ void draw() {
       }
     }
   }
-  textSize(28);
-  if (yearValue == 1950) {
-    text("Year: 1950", 1340, 75);
-    textSize(20);
-    text("Total Earthquakes in " + yearValue + ": " + totalQuakes, 1340, 115);
-    text("Magnitude 7.0-7.9: " + total7, 1340, 155);
-    text("Magnitude 8.0-8.9: " + total8, 1340, 175);
-    text("Magnitude 9.0-10.0: " + total9, 1340, 195);
+  textSize(25);
+  text("Total Earthquakes: " + totalQuakes, 1015, 775);
+  textSize(20);
+  text("Magnitude 7.0-7.9: " + total7, 1015, 805);
+  text("Magnitude 8.0-8.9: " + total8, 1015, 825);
+  text("Magnitude 9.0-10.0: " + total9, 1015, 845);
 
+  if (showFirst) {    
+    checkbox1.setColorActive(color(255, 219, 83));
   }
-  else {
-    text("Year: 1950-" + yearValue, 1340, 75);
-    textSize(20);
-    text("Total Earthquakes", 1340, 115);
-    text("From 1950-" + yearValue + ": " + totalQuakes, 1340, 135);
-    text("Magnitude 7.0-7.9: " + total7, 1340, 175);
-    text("Magnitude 8.0-8.9: " + total8, 1340, 195);
-    text("Magnitude 9.0-10.0: " + total9, 1340, 215);
+  if (showSecond) {    
+    checkbox1.setColorActive(color(255, 142, 39));
   }
-  
-  
+  if (showThird) {    
+    checkbox1.setColorActive(color(253, 74, 0));
+  }
+  if (showAllMags) {
+    checkbox1.setColorActive(color(0, 152, 255));
+  }
 }
 
-float getRadius (float mag){
+float getMag(String placeName) {
+  TableRow rowData = dataTable.findRow(placeName, "Country");
+  float mag = rowData.getFloat("EQ Primary");
+  float mag_01 = (mag-minMag)/(maxMag-minMag);
+  return mag_01;
+}
+
+float getRadius (String placeName){
   int minRadius = 15;
   int maxRadius = 40;
-  mag = (mag-minMag)/(maxMag-minMag);
+  float mag = getMag(placeName);
   return lerp(minRadius, maxRadius, mag);
 }
 
@@ -407,16 +416,14 @@ String getUnderMouse() {
   String underMouse = "";
   for (int i=0; i<dataTable.getRowCount(); i++) {
     TableRow rowData = dataTable.getRow(i);
-    String place = rowData.getString("Location name");
-    float mag = rowData.getFloat("EQ Primary");
+    String place = rowData.getString("Country");
     float latitude = rowData.getFloat("Latitude");
     float longitude = rowData.getFloat("Longitude");
     PVector screenXY = geoMap.geoToScreen(longitude,latitude);
     float screenX = screenXY.x;
     float screenY = screenXY.y;
     float distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
-
-    float radius = getRadius(mag);
+    float radius = getRadius(place);
     float radiusSquared = constrain(radius*radius, 1, height);
     if ((distSquared <= radiusSquared) && (radiusSquared < smallestRadiusSquared)) {
       underMouse = place;
@@ -444,5 +451,4 @@ void cumDeathbyYear(int year){
    stroke(1);
    geoMap.draw(ID);
   }
-
 }
