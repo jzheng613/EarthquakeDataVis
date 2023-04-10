@@ -45,8 +45,8 @@ void loadRawDataTables() {
   tempMin = TableUtils.findMinIntInColumn(dataTable, "Earthquake : Deaths");
   
   cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
-  maxDeaths = int(TableUtils.findMaxFloatInColumn(cumDeaths, "CumulDeaths"));
-  minDeaths = int(TableUtils.findMinFloatInColumn(cumDeaths, "CumulDeaths"));
+  maxDeaths = TableUtils.findMaxIntInColumn(cumDeaths, "CumulDeaths");
+  minDeaths = TableUtils.findMinIntInColumn(cumDeaths, "CumulDeaths");
 }
 
 void setup() {
@@ -59,8 +59,6 @@ void setup() {
   // create world map, scaled size
   geoMap = new GeoMap(0, 0, 1312, 738, this);
   geoMap.readFile("world");
-  
-  
   
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
@@ -124,9 +122,6 @@ void draw() {
   background(230);
   
   stroke(0,0,0);
-  fill(114,114,114);
-  
-  
   fill(235,55,52);
   
   highlightedQuake = getUnderMouse();  
@@ -178,7 +173,6 @@ void draw() {
     selectedRanges.put("A", new float[]{7.0, 7.9});
     selectedRanges.put("B", new float[]{8.0, 8.9});
     selectedRanges.put("C", new float[]{9.0, 10.0});
-
   }
 
   for (int i = 0; i < dataTable.getRowCount(); i++) {
@@ -343,8 +337,6 @@ void draw() {
     text(labelValue, 1390, y+35);
     y += (1.4 * radius);//maxIslandRadius;
   }  
-  
-  
   
   // control box (bottom)
   fill(230);
