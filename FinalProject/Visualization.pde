@@ -22,7 +22,7 @@ float maxMag;
 ControlP5 cp5;
 CheckBox checkbox1;
 Toggle toggle1;
-String highlightedQuake = "";
+String[] highlightedQuake = new String[6];
 
 
 Table countryIDs; 
@@ -35,6 +35,7 @@ int tempMax;
 ColorMap countriesScale;
 double[] colorMapControlPts = new double[21];
 
+int yearValue = 1950;
 
 // === DATA PROCESSING ROUTINES ===
 
@@ -50,9 +51,11 @@ void loadRawDataTables() {
 }
 
 void setup() {
+
+  
   // screen size setup
   size(1600,900);
-  
+
   // load up data info
   loadRawDataTables();
   
@@ -136,7 +139,7 @@ void draw() {
   
   // === LEGEND BOX THINGS ===
   float filterYear = cp5.getController("Earthquake Range: 1950-").getValue();
-  int yearValue = (int) filterYear; // cast type float to int for Year
+  yearValue = (int) filterYear; // cast type float to int for Year
         
   // filtering by magnitude
   boolean showFirst = checkbox1.getState(0);
@@ -203,19 +206,25 @@ void draw() {
     maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
     color lowestMagnitudeColor = color(255, 224, 121);
     color highestMagnitudeColor = color(232, 81, 21);
-  
+    
+    
     for (int i = 0; i < dataTable.getRowCount(); i++) {
       TableRow currentRow = dataTable.getRow(i);
       int currentYear = currentRow.getInt("Year");
       float currentMagnitude = currentRow.getFloat("EQ Primary");
       int currentDeaths = currentRow.getInt("Earthquake : Deaths");
       boolean showNone = false;
+      String coord = currentRow.getString("Coordinates");
+      String place = currentRow.getString("Location name");
+      String month = currentRow.getString("Month");
+      String day = currentRow.getString("Day");
+      
       if (!showFirst && !showSecond && !showThird && !showAllMags) {
         showNone = true;
       }
       //confirming earthquake year is <= current slider max and that a magnitude box is checked    
       if ((currentYear <= yearValue) && (!showNone)) {  
-        for (String range : selectedRanges.keySet()) {
+        for (String range : selectedRanges.keySet()) { 
           float radius;
           float[] selectedRange = selectedRanges.get(range);
           if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
@@ -233,6 +242,11 @@ void draw() {
             }
             
             color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
+            
+            //If highlighted, make color white 
+            if(highlightedQuake[0].equals(coord) || (highlightedQuake[1].equals(place) && ((highlightedQuake[2].equals(""+currentYear) && highlightedQuake[3].equals(month) && highlightedQuake[4].equals(day) && highlightedQuake[5].equals(""+currentMagnitude))))){
+              c = color(255,255,255);
+            }
             float lat2 = currentRow.getFloat("Latitude");
             float lon2 = currentRow.getFloat("Longitude");
             PVector coord2 = geoMap.geoToScreen(lon2, lat2);
@@ -284,13 +298,25 @@ void draw() {
       }
       // confirming earthquake year is <= current slider max and that a magnitude box is checked
       if ((currentYear <= yearValue) && (!showNone)) {  
+        String coord = "";
+        String place = "";
+        String year = "";
+        String month = "";
+        String day = "";
+        String mag = "";
+        
         for (String range : selectedRanges.keySet()) {
           float[] selectedRange = selectedRanges.get(range);
           if (currentMagnitude >= selectedRange[0] && currentMagnitude <= selectedRange[1]) {
           // Details on Demand
-            String place = currentRow.getString("Country");
-            if(highlightedQuake.equals(place)){
+            coord = currentRow.getString("Coordinates");
+            place = currentRow.getString("Location name");
+            year = currentRow.getString("Year");
+            month =  currentRow.getString("Month");
+            day = currentRow.getString("Day");
+            if(highlightedQuake[0].equals(coord) || (highlightedQuake[1].equals(place) && (highlightedQuake[2].equals(year) && highlightedQuake[3].equals(month) && highlightedQuake[4].equals(day) && highlightedQuake[5].equals(mag)))){
               textSize(19);
+             
               text(place, 1385, 200);
               text(currentMagnitude, 1415, 230);
               text(dateMonth + "/" + dateDay + "/" + dateYear, 1378, 290);
@@ -320,9 +346,9 @@ void draw() {
       float radius = lerp(minRadius, maxRadius2, amt);
       fill(50);
       circle(1360, y+30, radius);
-      int labelValue = (int)(minDeaths + amt*(maxDeaths - minDeaths));
+      int labelValue = (int)(0 + amt*(316000 - 0));
       fill(0);
-      text(labelValue, 1395, y+35);
+      text(NumberFormat.getInstance().format(labelValue), 1395, y+35);
       y += (1.4 * radius);//maxIslandRadius;
     }  
     
@@ -426,39 +452,56 @@ void draw() {
   
 }
 
-float getMag(String placeName) {
-  TableRow rowData = dataTable.findRow(placeName, "Country");
+float getMag(String coord) {
+  TableRow rowData = dataTable.findRow(coord, "Coordinates");
   float mag = rowData.getFloat("EQ Primary");
   float mag_01 = (mag-minMag)/(maxMag-minMag);
   return mag_01;
 }
 
-float getRadius (String placeName){
+float getRadius (String coord){
   int minRadius = 15;
   int maxRadius = 40;
-  float mag = getMag(placeName);
+  float mag = getMag(coord);
   return lerp(minRadius, maxRadius, mag);
 }
 
-String getUnderMouse() {
+String[] getUnderMouse() {
   float smallestRadiusSquared = Float.MAX_VALUE;
-  String underMouse = "";
+  //String underMouseCoord = "";
+  //String underMouseLoc = "";
+  String[] underMouse = {"", "" , "", "", "", ""}; //{coordinates, location name}
+  TableRow rowData;
+  String place, coordinates, year, month, day, mag;
+  float latitude, longitude, screenX, screenY, distSquared, radius, radiusSquared;
+  
   for (int i=0; i<dataTable.getRowCount(); i++) {
-    TableRow rowData = dataTable.getRow(i);
-    String place = rowData.getString("Country");
-    float latitude = rowData.getFloat("Latitude");
-    float longitude = rowData.getFloat("Longitude");
+    rowData = dataTable.getRow(i);
+    place = rowData.getString("Location name");
+    coordinates = rowData.getString("Coordinates");
+    year = rowData.getString("Year");
+    month = rowData.getString("Month");
+    day = rowData.getString("Day");
+    mag = rowData.getString("EQ Primary");
+    latitude = rowData.getFloat("Latitude");
+    longitude = rowData.getFloat("Longitude");
     PVector screenXY = geoMap.geoToScreen(longitude,latitude);
-    float screenX = screenXY.x;
-    float screenY = screenXY.y;
-    float distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
-    float radius = getRadius(place);
-    float radiusSquared = constrain(radius*radius, 1, height);
+    screenX = screenXY.x;
+    screenY = screenXY.y;
+    distSquared = (mouseX-screenX)*(mouseX-screenX) + (mouseY-screenY)*(mouseY-screenY);
+    radius = getRadius(coordinates);
+    radiusSquared = constrain(radius*radius, 1, height);
     if ((distSquared <= radiusSquared) && (radiusSquared < smallestRadiusSquared)) {
-      underMouse = place;
+      underMouse[0] = coordinates;
+      underMouse[1] = place;
+      underMouse[2] = year;
+      underMouse[3] = month;
+      underMouse[4] = day;
+      underMouse[5] = mag;
       smallestRadiusSquared = radiusSquared;
     }
   }
+ // System.out.println(underMouse[0] + " " + underMouse[1]);
   return underMouse;  
 }
 
@@ -468,6 +511,7 @@ void cumDeathbyYear(int year){
   int ID;
   float lerpedDeaths;
   int firstRow = 242*(year-1950);
+
   
   for(int i = 0; i<countries.length;i++){
    row = cumDeaths.getRow(firstRow+i);
@@ -477,7 +521,8 @@ void cumDeathbyYear(int year){
    ID = countryIDs.getRow(i).getInt("id");
    
    fill(countriesScale.lookupColor(lerpedDeaths));
-   stroke(1);
+
+
    geoMap.draw(ID);
   }
 }
