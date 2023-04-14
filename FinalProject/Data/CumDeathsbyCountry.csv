@@ -144,7 +144,7 @@ Year,Country,CumulDeaths
 1950,Macedonia,0
 1950,Mali,0
 1950,Malta,0
-1950,Myanmar,0
+1950,Myanmar (BURMA),0
 1950,Montenegro,0
 1950,Mongolia,0
 1950,N. Mariana Is.,0
@@ -192,7 +192,7 @@ Year,Country,CumulDeaths
 1950,Singapore,0
 1950,S. Geo. and S. Sandw. Is.,0
 1950,Saint Helena,0
-1950,Solomon Is.,0
+1950,Solomon Islands,0
 1950,Sierra Leone,0
 1950,El Salvador,0
 1950,San Marino,0
@@ -386,7 +386,7 @@ Year,Country,CumulDeaths
 1951,Macedonia,0
 1951,Mali,0
 1951,Malta,0
-1951,Myanmar,0
+1951,Myanmar (BURMA),0
 1951,Montenegro,0
 1951,Mongolia,0
 1951,N. Mariana Is.,0
@@ -434,7 +434,7 @@ Year,Country,CumulDeaths
 1951,Singapore,0
 1951,S. Geo. and S. Sandw. Is.,0
 1951,Saint Helena,0
-1951,Solomon Is.,0
+1951,Solomon Islands,0
 1951,Sierra Leone,0
 1951,El Salvador,0
 1951,San Marino,0
@@ -628,7 +628,7 @@ Year,Country,CumulDeaths
 1952,Macedonia,0
 1952,Mali,0
 1952,Malta,0
-1952,Myanmar,0
+1952,Myanmar (BURMA),0
 1952,Montenegro,0
 1952,Mongolia,0
 1952,N. Mariana Is.,0
@@ -676,7 +676,7 @@ Year,Country,CumulDeaths
 1952,Singapore,0
 1952,S. Geo. and S. Sandw. Is.,0
 1952,Saint Helena,0
-1952,Solomon Is.,0
+1952,Solomon Islands,0
 1952,Sierra Leone,0
 1952,El Salvador,0
 1952,San Marino,0
@@ -709,7 +709,7 @@ Year,Country,CumulDeaths
 1952,Uganda,0
 1952,Ukraine,0
 1952,Uruguay,0
-1952,USA,0
+1952,USA,12
 1952,Uzbekistan,0
 1952,Vatican,0
 1952,St. Vin. and Gren.,0
@@ -870,7 +870,7 @@ Year,Country,CumulDeaths
 1953,Macedonia,0
 1953,Mali,0
 1953,Malta,0
-1953,Myanmar,0
+1953,Myanmar (BURMA),0
 1953,Montenegro,0
 1953,Mongolia,0
 1953,N. Mariana Is.,0
@@ -918,7 +918,7 @@ Year,Country,CumulDeaths
 1953,Singapore,0
 1953,S. Geo. and S. Sandw. Is.,0
 1953,Saint Helena,0
-1953,Solomon Is.,0
+1953,Solomon Islands,0
 1953,Sierra Leone,0
 1953,El Salvador,0
 1953,San Marino,0
@@ -951,7 +951,7 @@ Year,Country,CumulDeaths
 1953,Uganda,0
 1953,Ukraine,0
 1953,Uruguay,0
-1953,USA,0
+1953,USA,12
 1953,Uzbekistan,0
 1953,Vatican,0
 1953,St. Vin. and Gren.,0
@@ -1112,7 +1112,7 @@ Year,Country,CumulDeaths
 1954,Macedonia,0
 1954,Mali,0
 1954,Malta,0
-1954,Myanmar,0
+1954,Myanmar (BURMA),0
 1954,Montenegro,0
 1954,Mongolia,0
 1954,N. Mariana Is.,0
@@ -1160,7 +1160,7 @@ Year,Country,CumulDeaths
 1954,Singapore,0
 1954,S. Geo. and S. Sandw. Is.,0
 1954,Saint Helena,0
-1954,Solomon Is.,0
+1954,Solomon Islands,0
 1954,Sierra Leone,0
 1954,El Salvador,0
 1954,San Marino,0
@@ -1193,7 +1193,7 @@ Year,Country,CumulDeaths
 1954,Uganda,0
 1954,Ukraine,0
 1954,Uruguay,0
-1954,USA,0
+1954,USA,12
 1954,Uzbekistan,0
 1954,Vatican,0
 1954,St. Vin. and Gren.,0
@@ -1354,7 +1354,7 @@ Year,Country,CumulDeaths
 1955,Macedonia,0
 1955,Mali,0
 1955,Malta,0
-1955,Myanmar,0
+1955,Myanmar (BURMA),0
 1955,Montenegro,0
 1955,Mongolia,0
 1955,N. Mariana Is.,0
@@ -1402,7 +1402,7 @@ Year,Country,CumulDeaths
 1955,Singapore,0
 1955,S. Geo. and S. Sandw. Is.,0
 1955,Saint Helena,0
-1955,Solomon Is.,0
+1955,Solomon Islands,0
 1955,Sierra Leone,0
 1955,El Salvador,0
 1955,San Marino,0
@@ -1435,7 +1435,7 @@ Year,Country,CumulDeaths
 1955,Uganda,0
 1955,Ukraine,0
 1955,Uruguay,0
-1955,USA,0
+1955,USA,12
 1955,Uzbekistan,0
 1955,Vatican,0
 1955,St. Vin. and Gren.,0
@@ -1596,7 +1596,7 @@ Year,Country,CumulDeaths
 1956,Macedonia,0
 1956,Mali,0
 1956,Malta,0
-1956,Myanmar,0
+1956,Myanmar (BURMA),38
 1956,Montenegro,0
 1956,Mongolia,0
 1956,N. Mariana Is.,0
@@ -1644,7 +1644,7 @@ Year,Country,CumulDeaths
 1956,Singapore,0
 1956,S. Geo. and S. Sandw. Is.,0
 1956,Saint Helena,0
-1956,Solomon Is.,0
+1956,Solomon Islands,0
 1956,Sierra Leone,0
 1956,El Salvador,0
 1956,San Marino,0
@@ -1677,7 +1677,7 @@ Year,Country,CumulDeaths
 1956,Uganda,0
 1956,Ukraine,0
 1956,Uruguay,0
-1956,USA,0
+1956,USA,12
 1956,Uzbekistan,0
 1956,Vatican,0
 1956,St. Vin. and Gren.,0
@@ -1838,7 +1838,7 @@ Year,Country,CumulDeaths
 1957,Macedonia,0
 1957,Mali,0
 1957,Malta,0
-1957,Myanmar,0
+1957,Myanmar (BURMA),38
 1957,Montenegro,0
 1957,Mongolia,30
 1957,N. Mariana Is.,0
@@ -1886,7 +1886,7 @@ Year,Country,CumulDeaths
 1957,Singapore,0
 1957,S. Geo. and S. Sandw. Is.,0
 1957,Saint Helena,0
-1957,Solomon Is.,0
+1957,Solomon Islands,0
 1957,Sierra Leone,0
 1957,El Salvador,0
 1957,San Marino,0
@@ -1919,7 +1919,7 @@ Year,Country,CumulDeaths
 1957,Uganda,0
 1957,Ukraine,0
 1957,Uruguay,0
-1957,USA,0
+1957,USA,12
 1957,Uzbekistan,0
 1957,Vatican,0
 1957,St. Vin. and Gren.,0
@@ -2080,7 +2080,7 @@ Year,Country,CumulDeaths
 1958,Macedonia,0
 1958,Mali,0
 1958,Malta,0
-1958,Myanmar,0
+1958,Myanmar (BURMA),38
 1958,Montenegro,0
 1958,Mongolia,30
 1958,N. Mariana Is.,0
@@ -2128,7 +2128,7 @@ Year,Country,CumulDeaths
 1958,Singapore,0
 1958,S. Geo. and S. Sandw. Is.,0
 1958,Saint Helena,0
-1958,Solomon Is.,0
+1958,Solomon Islands,0
 1958,Sierra Leone,0
 1958,El Salvador,0
 1958,San Marino,0
@@ -2161,7 +2161,7 @@ Year,Country,CumulDeaths
 1958,Uganda,0
 1958,Ukraine,0
 1958,Uruguay,0
-1958,USA,0
+1958,USA,12
 1958,Uzbekistan,0
 1958,Vatican,0
 1958,St. Vin. and Gren.,0
@@ -2322,7 +2322,7 @@ Year,Country,CumulDeaths
 1959,Macedonia,0
 1959,Mali,0
 1959,Malta,0
-1959,Myanmar,0
+1959,Myanmar (BURMA),38
 1959,Montenegro,0
 1959,Mongolia,30
 1959,N. Mariana Is.,0
@@ -2370,7 +2370,7 @@ Year,Country,CumulDeaths
 1959,Singapore,0
 1959,S. Geo. and S. Sandw. Is.,0
 1959,Saint Helena,0
-1959,Solomon Is.,0
+1959,Solomon Islands,0
 1959,Sierra Leone,0
 1959,El Salvador,0
 1959,San Marino,0
@@ -2403,7 +2403,7 @@ Year,Country,CumulDeaths
 1959,Uganda,0
 1959,Ukraine,0
 1959,Uruguay,0
-1959,USA,0
+1959,USA,40
 1959,Uzbekistan,0
 1959,Vatican,0
 1959,St. Vin. and Gren.,0
@@ -2564,7 +2564,7 @@ Year,Country,CumulDeaths
 1960,Macedonia,0
 1960,Mali,0
 1960,Malta,0
-1960,Myanmar,0
+1960,Myanmar (BURMA),38
 1960,Montenegro,0
 1960,Mongolia,30
 1960,N. Mariana Is.,0
@@ -2612,7 +2612,7 @@ Year,Country,CumulDeaths
 1960,Singapore,0
 1960,S. Geo. and S. Sandw. Is.,0
 1960,Saint Helena,0
-1960,Solomon Is.,0
+1960,Solomon Islands,0
 1960,Sierra Leone,0
 1960,El Salvador,0
 1960,San Marino,0
@@ -2645,7 +2645,7 @@ Year,Country,CumulDeaths
 1960,Uganda,0
 1960,Ukraine,0
 1960,Uruguay,0
-1960,USA,0
+1960,USA,40
 1960,Uzbekistan,0
 1960,Vatican,0
 1960,St. Vin. and Gren.,0
@@ -2806,7 +2806,7 @@ Year,Country,CumulDeaths
 1961,Macedonia,0
 1961,Mali,0
 1961,Malta,0
-1961,Myanmar,0
+1961,Myanmar (BURMA),38
 1961,Montenegro,0
 1961,Mongolia,30
 1961,N. Mariana Is.,0
@@ -2854,7 +2854,7 @@ Year,Country,CumulDeaths
 1961,Singapore,0
 1961,S. Geo. and S. Sandw. Is.,0
 1961,Saint Helena,0
-1961,Solomon Is.,0
+1961,Solomon Islands,0
 1961,Sierra Leone,0
 1961,El Salvador,0
 1961,San Marino,0
@@ -2887,7 +2887,7 @@ Year,Country,CumulDeaths
 1961,Uganda,0
 1961,Ukraine,0
 1961,Uruguay,0
-1961,USA,0
+1961,USA,40
 1961,Uzbekistan,0
 1961,Vatican,0
 1961,St. Vin. and Gren.,0
@@ -3048,7 +3048,7 @@ Year,Country,CumulDeaths
 1962,Macedonia,0
 1962,Mali,0
 1962,Malta,0
-1962,Myanmar,0
+1962,Myanmar (BURMA),38
 1962,Montenegro,0
 1962,Mongolia,30
 1962,N. Mariana Is.,0
@@ -3096,7 +3096,7 @@ Year,Country,CumulDeaths
 1962,Singapore,0
 1962,S. Geo. and S. Sandw. Is.,0
 1962,Saint Helena,0
-1962,Solomon Is.,0
+1962,Solomon Islands,0
 1962,Sierra Leone,0
 1962,El Salvador,0
 1962,San Marino,0
@@ -3129,7 +3129,7 @@ Year,Country,CumulDeaths
 1962,Uganda,0
 1962,Ukraine,0
 1962,Uruguay,0
-1962,USA,0
+1962,USA,40
 1962,Uzbekistan,0
 1962,Vatican,0
 1962,St. Vin. and Gren.,0
@@ -3290,7 +3290,7 @@ Year,Country,CumulDeaths
 1963,Macedonia,0
 1963,Mali,0
 1963,Malta,0
-1963,Myanmar,0
+1963,Myanmar (BURMA),38
 1963,Montenegro,0
 1963,Mongolia,30
 1963,N. Mariana Is.,0
@@ -3338,7 +3338,7 @@ Year,Country,CumulDeaths
 1963,Singapore,0
 1963,S. Geo. and S. Sandw. Is.,0
 1963,Saint Helena,0
-1963,Solomon Is.,0
+1963,Solomon Islands,0
 1963,Sierra Leone,0
 1963,El Salvador,0
 1963,San Marino,0
@@ -3371,7 +3371,7 @@ Year,Country,CumulDeaths
 1963,Uganda,0
 1963,Ukraine,0
 1963,Uruguay,0
-1963,USA,0
+1963,USA,40
 1963,Uzbekistan,0
 1963,Vatican,0
 1963,St. Vin. and Gren.,0
@@ -3532,7 +3532,7 @@ Year,Country,CumulDeaths
 1964,Macedonia,0
 1964,Mali,0
 1964,Malta,0
-1964,Myanmar,0
+1964,Myanmar (BURMA),38
 1964,Montenegro,0
 1964,Mongolia,30
 1964,N. Mariana Is.,0
@@ -3580,7 +3580,7 @@ Year,Country,CumulDeaths
 1964,Singapore,0
 1964,S. Geo. and S. Sandw. Is.,0
 1964,Saint Helena,0
-1964,Solomon Is.,0
+1964,Solomon Islands,0
 1964,Sierra Leone,0
 1964,El Salvador,0
 1964,San Marino,0
@@ -3613,7 +3613,7 @@ Year,Country,CumulDeaths
 1964,Uganda,0
 1964,Ukraine,0
 1964,Uruguay,0
-1964,USA,0
+1964,USA,55
 1964,Uzbekistan,0
 1964,Vatican,0
 1964,St. Vin. and Gren.,0
@@ -3774,7 +3774,7 @@ Year,Country,CumulDeaths
 1965,Macedonia,0
 1965,Mali,0
 1965,Malta,0
-1965,Myanmar,0
+1965,Myanmar (BURMA),38
 1965,Montenegro,0
 1965,Mongolia,30
 1965,N. Mariana Is.,0
@@ -3822,7 +3822,7 @@ Year,Country,CumulDeaths
 1965,Singapore,0
 1965,S. Geo. and S. Sandw. Is.,0
 1965,Saint Helena,0
-1965,Solomon Is.,0
+1965,Solomon Islands,0
 1965,Sierra Leone,0
 1965,El Salvador,0
 1965,San Marino,0
@@ -3855,7 +3855,7 @@ Year,Country,CumulDeaths
 1965,Uganda,0
 1965,Ukraine,0
 1965,Uruguay,0
-1965,USA,0
+1965,USA,55
 1965,Uzbekistan,0
 1965,Vatican,0
 1965,St. Vin. and Gren.,0
@@ -4016,7 +4016,7 @@ Year,Country,CumulDeaths
 1966,Macedonia,0
 1966,Mali,0
 1966,Malta,0
-1966,Myanmar,0
+1966,Myanmar (BURMA),38
 1966,Montenegro,0
 1966,Mongolia,30
 1966,N. Mariana Is.,0
@@ -4064,7 +4064,7 @@ Year,Country,CumulDeaths
 1966,Singapore,0
 1966,S. Geo. and S. Sandw. Is.,0
 1966,Saint Helena,0
-1966,Solomon Is.,0
+1966,Solomon Islands,0
 1966,Sierra Leone,0
 1966,El Salvador,0
 1966,San Marino,0
@@ -4097,7 +4097,7 @@ Year,Country,CumulDeaths
 1966,Uganda,140
 1966,Ukraine,0
 1966,Uruguay,0
-1966,USA,0
+1966,USA,55
 1966,Uzbekistan,0
 1966,Vatican,0
 1966,St. Vin. and Gren.,0
@@ -4258,7 +4258,7 @@ Year,Country,CumulDeaths
 1967,Macedonia,0
 1967,Mali,0
 1967,Malta,0
-1967,Myanmar,0
+1967,Myanmar (BURMA),38
 1967,Montenegro,0
 1967,Mongolia,30
 1967,N. Mariana Is.,0
@@ -4306,7 +4306,7 @@ Year,Country,CumulDeaths
 1967,Singapore,0
 1967,S. Geo. and S. Sandw. Is.,0
 1967,Saint Helena,0
-1967,Solomon Is.,0
+1967,Solomon Islands,0
 1967,Sierra Leone,0
 1967,El Salvador,0
 1967,San Marino,0
@@ -4339,7 +4339,7 @@ Year,Country,CumulDeaths
 1967,Uganda,140
 1967,Ukraine,0
 1967,Uruguay,0
-1967,USA,0
+1967,USA,55
 1967,Uzbekistan,0
 1967,Vatican,0
 1967,St. Vin. and Gren.,0
@@ -4500,7 +4500,7 @@ Year,Country,CumulDeaths
 1968,Macedonia,0
 1968,Mali,0
 1968,Malta,0
-1968,Myanmar,0
+1968,Myanmar (BURMA),38
 1968,Montenegro,0
 1968,Mongolia,30
 1968,N. Mariana Is.,0
@@ -4548,7 +4548,7 @@ Year,Country,CumulDeaths
 1968,Singapore,0
 1968,S. Geo. and S. Sandw. Is.,0
 1968,Saint Helena,0
-1968,Solomon Is.,0
+1968,Solomon Islands,0
 1968,Sierra Leone,0
 1968,El Salvador,0
 1968,San Marino,0
@@ -4581,7 +4581,7 @@ Year,Country,CumulDeaths
 1968,Uganda,140
 1968,Ukraine,0
 1968,Uruguay,0
-1968,USA,0
+1968,USA,55
 1968,Uzbekistan,0
 1968,Vatican,0
 1968,St. Vin. and Gren.,0
@@ -4742,7 +4742,7 @@ Year,Country,CumulDeaths
 1969,Macedonia,0
 1969,Mali,0
 1969,Malta,0
-1969,Myanmar,0
+1969,Myanmar (BURMA),38
 1969,Montenegro,0
 1969,Mongolia,30
 1969,N. Mariana Is.,0
@@ -4790,7 +4790,7 @@ Year,Country,CumulDeaths
 1969,Singapore,0
 1969,S. Geo. and S. Sandw. Is.,0
 1969,Saint Helena,0
-1969,Solomon Is.,0
+1969,Solomon Islands,0
 1969,Sierra Leone,0
 1969,El Salvador,0
 1969,San Marino,0
@@ -4823,7 +4823,7 @@ Year,Country,CumulDeaths
 1969,Uganda,140
 1969,Ukraine,0
 1969,Uruguay,0
-1969,USA,0
+1969,USA,55
 1969,Uzbekistan,0
 1969,Vatican,0
 1969,St. Vin. and Gren.,0
@@ -4984,7 +4984,7 @@ Year,Country,CumulDeaths
 1970,Macedonia,0
 1970,Mali,0
 1970,Malta,0
-1970,Myanmar,0
+1970,Myanmar (BURMA),38
 1970,Montenegro,0
 1970,Mongolia,30
 1970,N. Mariana Is.,0
@@ -5032,7 +5032,7 @@ Year,Country,CumulDeaths
 1970,Singapore,0
 1970,S. Geo. and S. Sandw. Is.,0
 1970,Saint Helena,0
-1970,Solomon Is.,0
+1970,Solomon Islands,0
 1970,Sierra Leone,0
 1970,El Salvador,0
 1970,San Marino,0
@@ -5065,7 +5065,7 @@ Year,Country,CumulDeaths
 1970,Uganda,140
 1970,Ukraine,0
 1970,Uruguay,0
-1970,USA,0
+1970,USA,55
 1970,Uzbekistan,0
 1970,Vatican,0
 1970,St. Vin. and Gren.,0
@@ -5226,7 +5226,7 @@ Year,Country,CumulDeaths
 1971,Macedonia,0
 1971,Mali,0
 1971,Malta,0
-1971,Myanmar,0
+1971,Myanmar (BURMA),38
 1971,Montenegro,0
 1971,Mongolia,30
 1971,N. Mariana Is.,0
@@ -5274,7 +5274,7 @@ Year,Country,CumulDeaths
 1971,Singapore,0
 1971,S. Geo. and S. Sandw. Is.,0
 1971,Saint Helena,0
-1971,Solomon Is.,0
+1971,Solomon Islands,0
 1971,Sierra Leone,0
 1971,El Salvador,0
 1971,San Marino,0
@@ -5307,7 +5307,7 @@ Year,Country,CumulDeaths
 1971,Uganda,140
 1971,Ukraine,0
 1971,Uruguay,0
-1971,USA,0
+1971,USA,55
 1971,Uzbekistan,0
 1971,Vatican,0
 1971,St. Vin. and Gren.,0
@@ -5468,7 +5468,7 @@ Year,Country,CumulDeaths
 1972,Macedonia,0
 1972,Mali,0
 1972,Malta,0
-1972,Myanmar,0
+1972,Myanmar (BURMA),38
 1972,Montenegro,0
 1972,Mongolia,30
 1972,N. Mariana Is.,0
@@ -5516,7 +5516,7 @@ Year,Country,CumulDeaths
 1972,Singapore,0
 1972,S. Geo. and S. Sandw. Is.,0
 1972,Saint Helena,0
-1972,Solomon Is.,0
+1972,Solomon Islands,0
 1972,Sierra Leone,0
 1972,El Salvador,0
 1972,San Marino,0
@@ -5549,7 +5549,7 @@ Year,Country,CumulDeaths
 1972,Uganda,140
 1972,Ukraine,0
 1972,Uruguay,0
-1972,USA,0
+1972,USA,55
 1972,Uzbekistan,0
 1972,Vatican,0
 1972,St. Vin. and Gren.,0
@@ -5710,7 +5710,7 @@ Year,Country,CumulDeaths
 1973,Macedonia,0
 1973,Mali,0
 1973,Malta,0
-1973,Myanmar,0
+1973,Myanmar (BURMA),38
 1973,Montenegro,0
 1973,Mongolia,30
 1973,N. Mariana Is.,0
@@ -5758,7 +5758,7 @@ Year,Country,CumulDeaths
 1973,Singapore,0
 1973,S. Geo. and S. Sandw. Is.,0
 1973,Saint Helena,0
-1973,Solomon Is.,0
+1973,Solomon Islands,0
 1973,Sierra Leone,0
 1973,El Salvador,0
 1973,San Marino,0
@@ -5791,7 +5791,7 @@ Year,Country,CumulDeaths
 1973,Uganda,140
 1973,Ukraine,0
 1973,Uruguay,0
-1973,USA,0
+1973,USA,55
 1973,Uzbekistan,0
 1973,Vatican,0
 1973,St. Vin. and Gren.,0
@@ -5952,7 +5952,7 @@ Year,Country,CumulDeaths
 1974,Macedonia,0
 1974,Mali,0
 1974,Malta,0
-1974,Myanmar,0
+1974,Myanmar (BURMA),38
 1974,Montenegro,0
 1974,Mongolia,30
 1974,N. Mariana Is.,0
@@ -6000,7 +6000,7 @@ Year,Country,CumulDeaths
 1974,Singapore,0
 1974,S. Geo. and S. Sandw. Is.,0
 1974,Saint Helena,0
-1974,Solomon Is.,0
+1974,Solomon Islands,0
 1974,Sierra Leone,0
 1974,El Salvador,0
 1974,San Marino,0
@@ -6033,7 +6033,7 @@ Year,Country,CumulDeaths
 1974,Uganda,140
 1974,Ukraine,0
 1974,Uruguay,0
-1974,USA,0
+1974,USA,55
 1974,Uzbekistan,0
 1974,Vatican,0
 1974,St. Vin. and Gren.,0
@@ -6194,7 +6194,7 @@ Year,Country,CumulDeaths
 1975,Macedonia,0
 1975,Mali,0
 1975,Malta,0
-1975,Myanmar,0
+1975,Myanmar (BURMA),38
 1975,Montenegro,0
 1975,Mongolia,30
 1975,N. Mariana Is.,0
@@ -6242,7 +6242,7 @@ Year,Country,CumulDeaths
 1975,Singapore,0
 1975,S. Geo. and S. Sandw. Is.,0
 1975,Saint Helena,0
-1975,Solomon Is.,0
+1975,Solomon Islands,0
 1975,Sierra Leone,0
 1975,El Salvador,0
 1975,San Marino,0
@@ -6275,7 +6275,7 @@ Year,Country,CumulDeaths
 1975,Uganda,140
 1975,Ukraine,0
 1975,Uruguay,0
-1975,USA,0
+1975,USA,55
 1975,Uzbekistan,0
 1975,Vatican,0
 1975,St. Vin. and Gren.,0
@@ -6436,7 +6436,7 @@ Year,Country,CumulDeaths
 1976,Macedonia,0
 1976,Mali,0
 1976,Malta,0
-1976,Myanmar,0
+1976,Myanmar (BURMA),38
 1976,Montenegro,0
 1976,Mongolia,30
 1976,N. Mariana Is.,0
@@ -6484,7 +6484,7 @@ Year,Country,CumulDeaths
 1976,Singapore,0
 1976,S. Geo. and S. Sandw. Is.,0
 1976,Saint Helena,0
-1976,Solomon Is.,0
+1976,Solomon Islands,0
 1976,Sierra Leone,0
 1976,El Salvador,0
 1976,San Marino,0
@@ -6517,7 +6517,7 @@ Year,Country,CumulDeaths
 1976,Uganda,140
 1976,Ukraine,0
 1976,Uruguay,0
-1976,USA,0
+1976,USA,55
 1976,Uzbekistan,0
 1976,Vatican,0
 1976,St. Vin. and Gren.,0
@@ -6678,7 +6678,7 @@ Year,Country,CumulDeaths
 1977,Macedonia,0
 1977,Mali,0
 1977,Malta,0
-1977,Myanmar,0
+1977,Myanmar (BURMA),38
 1977,Montenegro,0
 1977,Mongolia,30
 1977,N. Mariana Is.,0
@@ -6726,7 +6726,7 @@ Year,Country,CumulDeaths
 1977,Singapore,0
 1977,S. Geo. and S. Sandw. Is.,0
 1977,Saint Helena,0
-1977,Solomon Is.,0
+1977,Solomon Islands,18
 1977,Sierra Leone,0
 1977,El Salvador,0
 1977,San Marino,0
@@ -6759,7 +6759,7 @@ Year,Country,CumulDeaths
 1977,Uganda,140
 1977,Ukraine,0
 1977,Uruguay,0
-1977,USA,0
+1977,USA,55
 1977,Uzbekistan,0
 1977,Vatican,0
 1977,St. Vin. and Gren.,0
@@ -6920,7 +6920,7 @@ Year,Country,CumulDeaths
 1978,Macedonia,0
 1978,Mali,0
 1978,Malta,0
-1978,Myanmar,0
+1978,Myanmar (BURMA),38
 1978,Montenegro,0
 1978,Mongolia,30
 1978,N. Mariana Is.,0
@@ -6968,7 +6968,7 @@ Year,Country,CumulDeaths
 1978,Singapore,0
 1978,S. Geo. and S. Sandw. Is.,0
 1978,Saint Helena,0
-1978,Solomon Is.,0
+1978,Solomon Islands,18
 1978,Sierra Leone,0
 1978,El Salvador,0
 1978,San Marino,0
@@ -7001,7 +7001,7 @@ Year,Country,CumulDeaths
 1978,Uganda,140
 1978,Ukraine,0
 1978,Uruguay,0
-1978,USA,0
+1978,USA,55
 1978,Uzbekistan,0
 1978,Vatican,0
 1978,St. Vin. and Gren.,0
@@ -7162,7 +7162,7 @@ Year,Country,CumulDeaths
 1979,Macedonia,0
 1979,Mali,0
 1979,Malta,0
-1979,Myanmar,0
+1979,Myanmar (BURMA),38
 1979,Montenegro,0
 1979,Mongolia,30
 1979,N. Mariana Is.,0
@@ -7210,7 +7210,7 @@ Year,Country,CumulDeaths
 1979,Singapore,0
 1979,S. Geo. and S. Sandw. Is.,0
 1979,Saint Helena,0
-1979,Solomon Is.,0
+1979,Solomon Islands,18
 1979,Sierra Leone,0
 1979,El Salvador,0
 1979,San Marino,0
@@ -7243,7 +7243,7 @@ Year,Country,CumulDeaths
 1979,Uganda,140
 1979,Ukraine,0
 1979,Uruguay,0
-1979,USA,0
+1979,USA,55
 1979,Uzbekistan,0
 1979,Vatican,0
 1979,St. Vin. and Gren.,0
@@ -7404,7 +7404,7 @@ Year,Country,CumulDeaths
 1980,Macedonia,0
 1980,Mali,0
 1980,Malta,0
-1980,Myanmar,0
+1980,Myanmar (BURMA),38
 1980,Montenegro,0
 1980,Mongolia,30
 1980,N. Mariana Is.,0
@@ -7452,7 +7452,7 @@ Year,Country,CumulDeaths
 1980,Singapore,0
 1980,S. Geo. and S. Sandw. Is.,0
 1980,Saint Helena,0
-1980,Solomon Is.,0
+1980,Solomon Islands,18
 1980,Sierra Leone,0
 1980,El Salvador,0
 1980,San Marino,0
@@ -7485,7 +7485,7 @@ Year,Country,CumulDeaths
 1980,Uganda,140
 1980,Ukraine,0
 1980,Uruguay,0
-1980,USA,0
+1980,USA,60
 1980,Uzbekistan,0
 1980,Vatican,0
 1980,St. Vin. and Gren.,0
@@ -7646,7 +7646,7 @@ Year,Country,CumulDeaths
 1981,Macedonia,0
 1981,Mali,0
 1981,Malta,0
-1981,Myanmar,0
+1981,Myanmar (BURMA),38
 1981,Montenegro,0
 1981,Mongolia,30
 1981,N. Mariana Is.,0
@@ -7694,7 +7694,7 @@ Year,Country,CumulDeaths
 1981,Singapore,0
 1981,S. Geo. and S. Sandw. Is.,0
 1981,Saint Helena,0
-1981,Solomon Is.,0
+1981,Solomon Islands,18
 1981,Sierra Leone,0
 1981,El Salvador,0
 1981,San Marino,0
@@ -7727,7 +7727,7 @@ Year,Country,CumulDeaths
 1981,Uganda,140
 1981,Ukraine,0
 1981,Uruguay,0
-1981,USA,0
+1981,USA,60
 1981,Uzbekistan,0
 1981,Vatican,0
 1981,St. Vin. and Gren.,0
@@ -7888,7 +7888,7 @@ Year,Country,CumulDeaths
 1982,Macedonia,0
 1982,Mali,0
 1982,Malta,0
-1982,Myanmar,0
+1982,Myanmar (BURMA),38
 1982,Montenegro,0
 1982,Mongolia,30
 1982,N. Mariana Is.,0
@@ -7936,7 +7936,7 @@ Year,Country,CumulDeaths
 1982,Singapore,0
 1982,S. Geo. and S. Sandw. Is.,0
 1982,Saint Helena,0
-1982,Solomon Is.,0
+1982,Solomon Islands,18
 1982,Sierra Leone,0
 1982,El Salvador,0
 1982,San Marino,0
@@ -7969,7 +7969,7 @@ Year,Country,CumulDeaths
 1982,Uganda,140
 1982,Ukraine,0
 1982,Uruguay,0
-1982,USA,0
+1982,USA,60
 1982,Uzbekistan,0
 1982,Vatican,0
 1982,St. Vin. and Gren.,0
@@ -8130,7 +8130,7 @@ Year,Country,CumulDeaths
 1983,Macedonia,0
 1983,Mali,0
 1983,Malta,0
-1983,Myanmar,0
+1983,Myanmar (BURMA),38
 1983,Montenegro,0
 1983,Mongolia,30
 1983,N. Mariana Is.,0
@@ -8178,7 +8178,7 @@ Year,Country,CumulDeaths
 1983,Singapore,0
 1983,S. Geo. and S. Sandw. Is.,0
 1983,Saint Helena,0
-1983,Solomon Is.,0
+1983,Solomon Islands,18
 1983,Sierra Leone,0
 1983,El Salvador,0
 1983,San Marino,0
@@ -8211,7 +8211,7 @@ Year,Country,CumulDeaths
 1983,Uganda,140
 1983,Ukraine,0
 1983,Uruguay,0
-1983,USA,0
+1983,USA,62
 1983,Uzbekistan,0
 1983,Vatican,0
 1983,St. Vin. and Gren.,0
@@ -8372,7 +8372,7 @@ Year,Country,CumulDeaths
 1984,Macedonia,0
 1984,Mali,0
 1984,Malta,0
-1984,Myanmar,0
+1984,Myanmar (BURMA),38
 1984,Montenegro,0
 1984,Mongolia,30
 1984,N. Mariana Is.,0
@@ -8420,7 +8420,7 @@ Year,Country,CumulDeaths
 1984,Singapore,0
 1984,S. Geo. and S. Sandw. Is.,0
 1984,Saint Helena,0
-1984,Solomon Is.,0
+1984,Solomon Islands,18
 1984,Sierra Leone,0
 1984,El Salvador,0
 1984,San Marino,0
@@ -8453,7 +8453,7 @@ Year,Country,CumulDeaths
 1984,Uganda,140
 1984,Ukraine,0
 1984,Uruguay,0
-1984,USA,0
+1984,USA,62
 1984,Uzbekistan,0
 1984,Vatican,0
 1984,St. Vin. and Gren.,0
@@ -8614,7 +8614,7 @@ Year,Country,CumulDeaths
 1985,Macedonia,0
 1985,Mali,0
 1985,Malta,0
-1985,Myanmar,0
+1985,Myanmar (BURMA),38
 1985,Montenegro,0
 1985,Mongolia,30
 1985,N. Mariana Is.,0
@@ -8662,7 +8662,7 @@ Year,Country,CumulDeaths
 1985,Singapore,0
 1985,S. Geo. and S. Sandw. Is.,0
 1985,Saint Helena,0
-1985,Solomon Is.,0
+1985,Solomon Islands,18
 1985,Sierra Leone,0
 1985,El Salvador,0
 1985,San Marino,0
@@ -8695,7 +8695,7 @@ Year,Country,CumulDeaths
 1985,Uganda,140
 1985,Ukraine,0
 1985,Uruguay,0
-1985,USA,0
+1985,USA,62
 1985,Uzbekistan,0
 1985,Vatican,0
 1985,St. Vin. and Gren.,0
@@ -8856,7 +8856,7 @@ Year,Country,CumulDeaths
 1986,Macedonia,0
 1986,Mali,0
 1986,Malta,0
-1986,Myanmar,0
+1986,Myanmar (BURMA),38
 1986,Montenegro,0
 1986,Mongolia,30
 1986,N. Mariana Is.,0
@@ -8904,7 +8904,7 @@ Year,Country,CumulDeaths
 1986,Singapore,0
 1986,S. Geo. and S. Sandw. Is.,0
 1986,Saint Helena,0
-1986,Solomon Is.,0
+1986,Solomon Islands,18
 1986,Sierra Leone,0
 1986,El Salvador,0
 1986,San Marino,0
@@ -8937,7 +8937,7 @@ Year,Country,CumulDeaths
 1986,Uganda,140
 1986,Ukraine,0
 1986,Uruguay,0
-1986,USA,0
+1986,USA,62
 1986,Uzbekistan,0
 1986,Vatican,0
 1986,St. Vin. and Gren.,0
@@ -9098,7 +9098,7 @@ Year,Country,CumulDeaths
 1987,Macedonia,0
 1987,Mali,0
 1987,Malta,0
-1987,Myanmar,0
+1987,Myanmar (BURMA),38
 1987,Montenegro,0
 1987,Mongolia,30
 1987,N. Mariana Is.,0
@@ -9146,7 +9146,7 @@ Year,Country,CumulDeaths
 1987,Singapore,0
 1987,S. Geo. and S. Sandw. Is.,0
 1987,Saint Helena,0
-1987,Solomon Is.,0
+1987,Solomon Islands,18
 1987,Sierra Leone,0
 1987,El Salvador,0
 1987,San Marino,0
@@ -9179,7 +9179,7 @@ Year,Country,CumulDeaths
 1987,Uganda,140
 1987,Ukraine,0
 1987,Uruguay,0
-1987,USA,0
+1987,USA,62
 1987,Uzbekistan,0
 1987,Vatican,0
 1987,St. Vin. and Gren.,0
@@ -9340,7 +9340,7 @@ Year,Country,CumulDeaths
 1988,Macedonia,0
 1988,Mali,0
 1988,Malta,0
-1988,Myanmar,0
+1988,Myanmar (BURMA),76
 1988,Montenegro,0
 1988,Mongolia,30
 1988,N. Mariana Is.,0
@@ -9388,7 +9388,7 @@ Year,Country,CumulDeaths
 1988,Singapore,0
 1988,S. Geo. and S. Sandw. Is.,0
 1988,Saint Helena,0
-1988,Solomon Is.,0
+1988,Solomon Islands,18
 1988,Sierra Leone,0
 1988,El Salvador,0
 1988,San Marino,0
@@ -9421,7 +9421,7 @@ Year,Country,CumulDeaths
 1988,Uganda,140
 1988,Ukraine,0
 1988,Uruguay,0
-1988,USA,0
+1988,USA,62
 1988,Uzbekistan,0
 1988,Vatican,0
 1988,St. Vin. and Gren.,0
@@ -9582,7 +9582,7 @@ Year,Country,CumulDeaths
 1989,Macedonia,0
 1989,Mali,0
 1989,Malta,0
-1989,Myanmar,0
+1989,Myanmar (BURMA),76
 1989,Montenegro,0
 1989,Mongolia,30
 1989,N. Mariana Is.,0
@@ -9630,7 +9630,7 @@ Year,Country,CumulDeaths
 1989,Singapore,0
 1989,S. Geo. and S. Sandw. Is.,0
 1989,Saint Helena,0
-1989,Solomon Is.,0
+1989,Solomon Islands,18
 1989,Sierra Leone,0
 1989,El Salvador,0
 1989,San Marino,0
@@ -9663,7 +9663,7 @@ Year,Country,CumulDeaths
 1989,Uganda,140
 1989,Ukraine,0
 1989,Uruguay,0
-1989,USA,0
+1989,USA,62
 1989,Uzbekistan,0
 1989,Vatican,0
 1989,St. Vin. and Gren.,0
@@ -9824,7 +9824,7 @@ Year,Country,CumulDeaths
 1990,Macedonia,0
 1990,Mali,0
 1990,Malta,0
-1990,Myanmar,0
+1990,Myanmar (BURMA),76
 1990,Montenegro,0
 1990,Mongolia,30
 1990,N. Mariana Is.,0
@@ -9872,7 +9872,7 @@ Year,Country,CumulDeaths
 1990,Singapore,0
 1990,S. Geo. and S. Sandw. Is.,0
 1990,Saint Helena,0
-1990,Solomon Is.,0
+1990,Solomon Islands,18
 1990,Sierra Leone,0
 1990,El Salvador,0
 1990,San Marino,0
@@ -9905,7 +9905,7 @@ Year,Country,CumulDeaths
 1990,Uganda,140
 1990,Ukraine,0
 1990,Uruguay,0
-1990,USA,0
+1990,USA,62
 1990,Uzbekistan,0
 1990,Vatican,0
 1990,St. Vin. and Gren.,0
@@ -10066,7 +10066,7 @@ Year,Country,CumulDeaths
 1991,Macedonia,0
 1991,Mali,0
 1991,Malta,0
-1991,Myanmar,0
+1991,Myanmar (BURMA),76
 1991,Montenegro,0
 1991,Mongolia,30
 1991,N. Mariana Is.,0
@@ -10114,7 +10114,7 @@ Year,Country,CumulDeaths
 1991,Singapore,0
 1991,S. Geo. and S. Sandw. Is.,0
 1991,Saint Helena,0
-1991,Solomon Is.,0
+1991,Solomon Islands,18
 1991,Sierra Leone,0
 1991,El Salvador,0
 1991,San Marino,0
@@ -10147,7 +10147,7 @@ Year,Country,CumulDeaths
 1991,Uganda,140
 1991,Ukraine,0
 1991,Uruguay,0
-1991,USA,0
+1991,USA,62
 1991,Uzbekistan,0
 1991,Vatican,0
 1991,St. Vin. and Gren.,0
@@ -10308,7 +10308,7 @@ Year,Country,CumulDeaths
 1992,Macedonia,0
 1992,Mali,0
 1992,Malta,0
-1992,Myanmar,0
+1992,Myanmar (BURMA),76
 1992,Montenegro,0
 1992,Mongolia,30
 1992,N. Mariana Is.,0
@@ -10356,7 +10356,7 @@ Year,Country,CumulDeaths
 1992,Singapore,0
 1992,S. Geo. and S. Sandw. Is.,0
 1992,Saint Helena,0
-1992,Solomon Is.,0
+1992,Solomon Islands,18
 1992,Sierra Leone,0
 1992,El Salvador,0
 1992,San Marino,0
@@ -10389,7 +10389,7 @@ Year,Country,CumulDeaths
 1992,Uganda,140
 1992,Ukraine,0
 1992,Uruguay,0
-1992,USA,0
+1992,USA,65
 1992,Uzbekistan,0
 1992,Vatican,0
 1992,St. Vin. and Gren.,0
@@ -10550,7 +10550,7 @@ Year,Country,CumulDeaths
 1993,Macedonia,0
 1993,Mali,0
 1993,Malta,0
-1993,Myanmar,0
+1993,Myanmar (BURMA),76
 1993,Montenegro,0
 1993,Mongolia,30
 1993,N. Mariana Is.,0
@@ -10598,7 +10598,7 @@ Year,Country,CumulDeaths
 1993,Singapore,0
 1993,S. Geo. and S. Sandw. Is.,0
 1993,Saint Helena,0
-1993,Solomon Is.,0
+1993,Solomon Islands,18
 1993,Sierra Leone,0
 1993,El Salvador,0
 1993,San Marino,0
@@ -10631,7 +10631,7 @@ Year,Country,CumulDeaths
 1993,Uganda,140
 1993,Ukraine,0
 1993,Uruguay,0
-1993,USA,0
+1993,USA,65
 1993,Uzbekistan,0
 1993,Vatican,0
 1993,St. Vin. and Gren.,0
@@ -10792,7 +10792,7 @@ Year,Country,CumulDeaths
 1994,Macedonia,0
 1994,Mali,0
 1994,Malta,0
-1994,Myanmar,0
+1994,Myanmar (BURMA),76
 1994,Montenegro,0
 1994,Mongolia,30
 1994,N. Mariana Is.,0
@@ -10840,7 +10840,7 @@ Year,Country,CumulDeaths
 1994,Singapore,0
 1994,S. Geo. and S. Sandw. Is.,0
 1994,Saint Helena,0
-1994,Solomon Is.,0
+1994,Solomon Islands,18
 1994,Sierra Leone,0
 1994,El Salvador,0
 1994,San Marino,0
@@ -10873,7 +10873,7 @@ Year,Country,CumulDeaths
 1994,Uganda,140
 1994,Ukraine,0
 1994,Uruguay,0
-1994,USA,0
+1994,USA,65
 1994,Uzbekistan,0
 1994,Vatican,0
 1994,St. Vin. and Gren.,0
@@ -11034,7 +11034,7 @@ Year,Country,CumulDeaths
 1995,Macedonia,0
 1995,Mali,0
 1995,Malta,0
-1995,Myanmar,0
+1995,Myanmar (BURMA),76
 1995,Montenegro,0
 1995,Mongolia,30
 1995,N. Mariana Is.,0
@@ -11082,7 +11082,7 @@ Year,Country,CumulDeaths
 1995,Singapore,0
 1995,S. Geo. and S. Sandw. Is.,0
 1995,Saint Helena,0
-1995,Solomon Is.,0
+1995,Solomon Islands,18
 1995,Sierra Leone,0
 1995,El Salvador,0
 1995,San Marino,0
@@ -11115,7 +11115,7 @@ Year,Country,CumulDeaths
 1995,Uganda,140
 1995,Ukraine,0
 1995,Uruguay,0
-1995,USA,0
+1995,USA,65
 1995,Uzbekistan,0
 1995,Vatican,0
 1995,St. Vin. and Gren.,0
@@ -11276,7 +11276,7 @@ Year,Country,CumulDeaths
 1996,Macedonia,0
 1996,Mali,0
 1996,Malta,0
-1996,Myanmar,0
+1996,Myanmar (BURMA),76
 1996,Montenegro,0
 1996,Mongolia,30
 1996,N. Mariana Is.,0
@@ -11324,7 +11324,7 @@ Year,Country,CumulDeaths
 1996,Singapore,0
 1996,S. Geo. and S. Sandw. Is.,0
 1996,Saint Helena,0
-1996,Solomon Is.,0
+1996,Solomon Islands,19
 1996,Sierra Leone,0
 1996,El Salvador,0
 1996,San Marino,0
@@ -11357,7 +11357,7 @@ Year,Country,CumulDeaths
 1996,Uganda,140
 1996,Ukraine,0
 1996,Uruguay,0
-1996,USA,0
+1996,USA,65
 1996,Uzbekistan,0
 1996,Vatican,0
 1996,St. Vin. and Gren.,0
@@ -11518,7 +11518,7 @@ Year,Country,CumulDeaths
 1997,Macedonia,0
 1997,Mali,0
 1997,Malta,0
-1997,Myanmar,0
+1997,Myanmar (BURMA),76
 1997,Montenegro,0
 1997,Mongolia,30
 1997,N. Mariana Is.,0
@@ -11566,7 +11566,7 @@ Year,Country,CumulDeaths
 1997,Singapore,0
 1997,S. Geo. and S. Sandw. Is.,0
 1997,Saint Helena,0
-1997,Solomon Is.,0
+1997,Solomon Islands,19
 1997,Sierra Leone,0
 1997,El Salvador,0
 1997,San Marino,0
@@ -11599,7 +11599,7 @@ Year,Country,CumulDeaths
 1997,Uganda,140
 1997,Ukraine,0
 1997,Uruguay,0
-1997,USA,0
+1997,USA,65
 1997,Uzbekistan,0
 1997,Vatican,0
 1997,St. Vin. and Gren.,0
@@ -11760,7 +11760,7 @@ Year,Country,CumulDeaths
 1998,Macedonia,0
 1998,Mali,0
 1998,Malta,0
-1998,Myanmar,0
+1998,Myanmar (BURMA),76
 1998,Montenegro,0
 1998,Mongolia,30
 1998,N. Mariana Is.,0
@@ -11808,7 +11808,7 @@ Year,Country,CumulDeaths
 1998,Singapore,0
 1998,S. Geo. and S. Sandw. Is.,0
 1998,Saint Helena,0
-1998,Solomon Is.,0
+1998,Solomon Islands,19
 1998,Sierra Leone,0
 1998,El Salvador,0
 1998,San Marino,0
@@ -11841,7 +11841,7 @@ Year,Country,CumulDeaths
 1998,Uganda,140
 1998,Ukraine,0
 1998,Uruguay,0
-1998,USA,0
+1998,USA,65
 1998,Uzbekistan,0
 1998,Vatican,0
 1998,St. Vin. and Gren.,0
@@ -12002,7 +12002,7 @@ Year,Country,CumulDeaths
 1999,Macedonia,0
 1999,Mali,0
 1999,Malta,0
-1999,Myanmar,0
+1999,Myanmar (BURMA),76
 1999,Montenegro,0
 1999,Mongolia,30
 1999,N. Mariana Is.,0
@@ -12050,7 +12050,7 @@ Year,Country,CumulDeaths
 1999,Singapore,0
 1999,S. Geo. and S. Sandw. Is.,0
 1999,Saint Helena,0
-1999,Solomon Is.,0
+1999,Solomon Islands,19
 1999,Sierra Leone,0
 1999,El Salvador,0
 1999,San Marino,0
@@ -12083,7 +12083,7 @@ Year,Country,CumulDeaths
 1999,Uganda,140
 1999,Ukraine,0
 1999,Uruguay,0
-1999,USA,0
+1999,USA,65
 1999,Uzbekistan,0
 1999,Vatican,0
 1999,St. Vin. and Gren.,0
@@ -12244,7 +12244,7 @@ Year,Country,CumulDeaths
 2000,Macedonia,0
 2000,Mali,0
 2000,Malta,0
-2000,Myanmar,0
+2000,Myanmar (BURMA),76
 2000,Montenegro,0
 2000,Mongolia,30
 2000,N. Mariana Is.,0
@@ -12292,7 +12292,7 @@ Year,Country,CumulDeaths
 2000,Singapore,0
 2000,S. Geo. and S. Sandw. Is.,0
 2000,Saint Helena,0
-2000,Solomon Is.,0
+2000,Solomon Islands,19
 2000,Sierra Leone,0
 2000,El Salvador,0
 2000,San Marino,0
@@ -12325,7 +12325,7 @@ Year,Country,CumulDeaths
 2000,Uganda,140
 2000,Ukraine,0
 2000,Uruguay,0
-2000,USA,0
+2000,USA,65
 2000,Uzbekistan,0
 2000,Vatican,0
 2000,St. Vin. and Gren.,0
@@ -12486,7 +12486,7 @@ Year,Country,CumulDeaths
 2001,Macedonia,0
 2001,Mali,0
 2001,Malta,0
-2001,Myanmar,0
+2001,Myanmar (BURMA),76
 2001,Montenegro,0
 2001,Mongolia,30
 2001,N. Mariana Is.,0
@@ -12534,7 +12534,7 @@ Year,Country,CumulDeaths
 2001,Singapore,0
 2001,S. Geo. and S. Sandw. Is.,0
 2001,Saint Helena,0
-2001,Solomon Is.,0
+2001,Solomon Islands,19
 2001,Sierra Leone,0
 2001,El Salvador,844
 2001,San Marino,0
@@ -12567,7 +12567,7 @@ Year,Country,CumulDeaths
 2001,Uganda,140
 2001,Ukraine,0
 2001,Uruguay,0
-2001,USA,0
+2001,USA,65
 2001,Uzbekistan,0
 2001,Vatican,0
 2001,St. Vin. and Gren.,0
@@ -12728,7 +12728,7 @@ Year,Country,CumulDeaths
 2002,Macedonia,0
 2002,Mali,0
 2002,Malta,0
-2002,Myanmar,0
+2002,Myanmar (BURMA),76
 2002,Montenegro,0
 2002,Mongolia,30
 2002,N. Mariana Is.,0
@@ -12776,7 +12776,7 @@ Year,Country,CumulDeaths
 2002,Singapore,0
 2002,S. Geo. and S. Sandw. Is.,0
 2002,Saint Helena,0
-2002,Solomon Is.,0
+2002,Solomon Islands,19
 2002,Sierra Leone,0
 2002,El Salvador,844
 2002,San Marino,0
@@ -12809,7 +12809,7 @@ Year,Country,CumulDeaths
 2002,Uganda,140
 2002,Ukraine,0
 2002,Uruguay,0
-2002,USA,0
+2002,USA,65
 2002,Uzbekistan,0
 2002,Vatican,0
 2002,St. Vin. and Gren.,0
@@ -12970,7 +12970,7 @@ Year,Country,CumulDeaths
 2003,Macedonia,0
 2003,Mali,0
 2003,Malta,0
-2003,Myanmar,0
+2003,Myanmar (BURMA),76
 2003,Montenegro,0
 2003,Mongolia,30
 2003,N. Mariana Is.,0
@@ -13018,7 +13018,7 @@ Year,Country,CumulDeaths
 2003,Singapore,0
 2003,S. Geo. and S. Sandw. Is.,0
 2003,Saint Helena,0
-2003,Solomon Is.,0
+2003,Solomon Islands,19
 2003,Sierra Leone,0
 2003,El Salvador,844
 2003,San Marino,0
@@ -13051,7 +13051,7 @@ Year,Country,CumulDeaths
 2003,Uganda,140
 2003,Ukraine,0
 2003,Uruguay,0
-2003,USA,0
+2003,USA,65
 2003,Uzbekistan,0
 2003,Vatican,0
 2003,St. Vin. and Gren.,0
@@ -13212,7 +13212,7 @@ Year,Country,CumulDeaths
 2004,Macedonia,0
 2004,Mali,0
 2004,Malta,0
-2004,Myanmar,0
+2004,Myanmar (BURMA),76
 2004,Montenegro,0
 2004,Mongolia,30
 2004,N. Mariana Is.,0
@@ -13260,7 +13260,7 @@ Year,Country,CumulDeaths
 2004,Singapore,0
 2004,S. Geo. and S. Sandw. Is.,0
 2004,Saint Helena,0
-2004,Solomon Is.,0
+2004,Solomon Islands,19
 2004,Sierra Leone,0
 2004,El Salvador,844
 2004,San Marino,0
@@ -13293,7 +13293,7 @@ Year,Country,CumulDeaths
 2004,Uganda,140
 2004,Ukraine,0
 2004,Uruguay,0
-2004,USA,0
+2004,USA,65
 2004,Uzbekistan,0
 2004,Vatican,0
 2004,St. Vin. and Gren.,0
@@ -13454,7 +13454,7 @@ Year,Country,CumulDeaths
 2005,Macedonia,0
 2005,Mali,0
 2005,Malta,0
-2005,Myanmar,0
+2005,Myanmar (BURMA),76
 2005,Montenegro,0
 2005,Mongolia,30
 2005,N. Mariana Is.,0
@@ -13502,7 +13502,7 @@ Year,Country,CumulDeaths
 2005,Singapore,0
 2005,S. Geo. and S. Sandw. Is.,0
 2005,Saint Helena,0
-2005,Solomon Is.,0
+2005,Solomon Islands,19
 2005,Sierra Leone,0
 2005,El Salvador,844
 2005,San Marino,0
@@ -13535,7 +13535,7 @@ Year,Country,CumulDeaths
 2005,Uganda,140
 2005,Ukraine,0
 2005,Uruguay,0
-2005,USA,0
+2005,USA,65
 2005,Uzbekistan,0
 2005,Vatican,0
 2005,St. Vin. and Gren.,0
@@ -13696,7 +13696,7 @@ Year,Country,CumulDeaths
 2006,Macedonia,0
 2006,Mali,0
 2006,Malta,0
-2006,Myanmar,0
+2006,Myanmar (BURMA),76
 2006,Montenegro,0
 2006,Mongolia,30
 2006,N. Mariana Is.,0
@@ -13744,7 +13744,7 @@ Year,Country,CumulDeaths
 2006,Singapore,0
 2006,S. Geo. and S. Sandw. Is.,0
 2006,Saint Helena,0
-2006,Solomon Is.,0
+2006,Solomon Islands,19
 2006,Sierra Leone,0
 2006,El Salvador,844
 2006,San Marino,0
@@ -13777,7 +13777,7 @@ Year,Country,CumulDeaths
 2006,Uganda,140
 2006,Ukraine,0
 2006,Uruguay,0
-2006,USA,0
+2006,USA,65
 2006,Uzbekistan,0
 2006,Vatican,0
 2006,St. Vin. and Gren.,0
@@ -13938,7 +13938,7 @@ Year,Country,CumulDeaths
 2007,Macedonia,0
 2007,Mali,0
 2007,Malta,0
-2007,Myanmar,0
+2007,Myanmar (BURMA),76
 2007,Montenegro,0
 2007,Mongolia,30
 2007,N. Mariana Is.,0
@@ -13986,7 +13986,7 @@ Year,Country,CumulDeaths
 2007,Singapore,0
 2007,S. Geo. and S. Sandw. Is.,0
 2007,Saint Helena,0
-2007,Solomon Is.,0
+2007,Solomon Islands,21
 2007,Sierra Leone,0
 2007,El Salvador,844
 2007,San Marino,0
@@ -14019,7 +14019,7 @@ Year,Country,CumulDeaths
 2007,Uganda,140
 2007,Ukraine,0
 2007,Uruguay,0
-2007,USA,0
+2007,USA,65
 2007,Uzbekistan,0
 2007,Vatican,0
 2007,St. Vin. and Gren.,0
@@ -14180,7 +14180,7 @@ Year,Country,CumulDeaths
 2008,Macedonia,0
 2008,Mali,0
 2008,Malta,0
-2008,Myanmar,0
+2008,Myanmar (BURMA),76
 2008,Montenegro,0
 2008,Mongolia,30
 2008,N. Mariana Is.,0
@@ -14228,7 +14228,7 @@ Year,Country,CumulDeaths
 2008,Singapore,0
 2008,S. Geo. and S. Sandw. Is.,0
 2008,Saint Helena,0
-2008,Solomon Is.,0
+2008,Solomon Islands,21
 2008,Sierra Leone,0
 2008,El Salvador,844
 2008,San Marino,0
@@ -14261,7 +14261,7 @@ Year,Country,CumulDeaths
 2008,Uganda,140
 2008,Ukraine,0
 2008,Uruguay,0
-2008,USA,0
+2008,USA,65
 2008,Uzbekistan,0
 2008,Vatican,0
 2008,St. Vin. and Gren.,0
@@ -14422,7 +14422,7 @@ Year,Country,CumulDeaths
 2009,Macedonia,0
 2009,Mali,0
 2009,Malta,0
-2009,Myanmar,0
+2009,Myanmar (BURMA),76
 2009,Montenegro,0
 2009,Mongolia,30
 2009,N. Mariana Is.,0
@@ -14470,7 +14470,7 @@ Year,Country,CumulDeaths
 2009,Singapore,0
 2009,S. Geo. and S. Sandw. Is.,0
 2009,Saint Helena,0
-2009,Solomon Is.,0
+2009,Solomon Islands,21
 2009,Sierra Leone,0
 2009,El Salvador,844
 2009,San Marino,0
@@ -14503,7 +14503,7 @@ Year,Country,CumulDeaths
 2009,Uganda,140
 2009,Ukraine,0
 2009,Uruguay,0
-2009,USA,0
+2009,USA,65
 2009,Uzbekistan,0
 2009,Vatican,0
 2009,St. Vin. and Gren.,0
@@ -14664,7 +14664,7 @@ Year,Country,CumulDeaths
 2010,Macedonia,0
 2010,Mali,0
 2010,Malta,0
-2010,Myanmar,0
+2010,Myanmar (BURMA),76
 2010,Montenegro,0
 2010,Mongolia,30
 2010,N. Mariana Is.,0
@@ -14712,7 +14712,7 @@ Year,Country,CumulDeaths
 2010,Singapore,0
 2010,S. Geo. and S. Sandw. Is.,0
 2010,Saint Helena,0
-2010,Solomon Is.,0
+2010,Solomon Islands,21
 2010,Sierra Leone,0
 2010,El Salvador,844
 2010,San Marino,0
@@ -14745,7 +14745,7 @@ Year,Country,CumulDeaths
 2010,Uganda,140
 2010,Ukraine,0
 2010,Uruguay,0
-2010,USA,0
+2010,USA,65
 2010,Uzbekistan,0
 2010,Vatican,0
 2010,St. Vin. and Gren.,0
@@ -14906,7 +14906,7 @@ Year,Country,CumulDeaths
 2011,Macedonia,0
 2011,Mali,0
 2011,Malta,0
-2011,Myanmar,0
+2011,Myanmar (BURMA),76
 2011,Montenegro,0
 2011,Mongolia,30
 2011,N. Mariana Is.,0
@@ -14954,7 +14954,7 @@ Year,Country,CumulDeaths
 2011,Singapore,0
 2011,S. Geo. and S. Sandw. Is.,0
 2011,Saint Helena,0
-2011,Solomon Is.,0
+2011,Solomon Islands,21
 2011,Sierra Leone,0
 2011,El Salvador,844
 2011,San Marino,0
@@ -14987,7 +14987,7 @@ Year,Country,CumulDeaths
 2011,Uganda,140
 2011,Ukraine,0
 2011,Uruguay,0
-2011,USA,0
+2011,USA,65
 2011,Uzbekistan,0
 2011,Vatican,0
 2011,St. Vin. and Gren.,0
@@ -15148,7 +15148,7 @@ Year,Country,CumulDeaths
 2012,Macedonia,0
 2012,Mali,0
 2012,Malta,0
-2012,Myanmar,0
+2012,Myanmar (BURMA),76
 2012,Montenegro,0
 2012,Mongolia,30
 2012,N. Mariana Is.,0
@@ -15196,7 +15196,7 @@ Year,Country,CumulDeaths
 2012,Singapore,0
 2012,S. Geo. and S. Sandw. Is.,0
 2012,Saint Helena,0
-2012,Solomon Is.,0
+2012,Solomon Islands,21
 2012,Sierra Leone,0
 2012,El Salvador,844
 2012,San Marino,0
@@ -15229,7 +15229,7 @@ Year,Country,CumulDeaths
 2012,Uganda,140
 2012,Ukraine,0
 2012,Uruguay,0
-2012,USA,0
+2012,USA,65
 2012,Uzbekistan,0
 2012,Vatican,0
 2012,St. Vin. and Gren.,0
@@ -15390,7 +15390,7 @@ Year,Country,CumulDeaths
 2013,Macedonia,0
 2013,Mali,0
 2013,Malta,0
-2013,Myanmar,0
+2013,Myanmar (BURMA),76
 2013,Montenegro,0
 2013,Mongolia,30
 2013,N. Mariana Is.,0
@@ -15438,7 +15438,7 @@ Year,Country,CumulDeaths
 2013,Singapore,0
 2013,S. Geo. and S. Sandw. Is.,0
 2013,Saint Helena,0
-2013,Solomon Is.,0
+2013,Solomon Islands,21
 2013,Sierra Leone,0
 2013,El Salvador,844
 2013,San Marino,0
@@ -15471,7 +15471,7 @@ Year,Country,CumulDeaths
 2013,Uganda,140
 2013,Ukraine,0
 2013,Uruguay,0
-2013,USA,0
+2013,USA,65
 2013,Uzbekistan,0
 2013,Vatican,0
 2013,St. Vin. and Gren.,0
@@ -15632,7 +15632,7 @@ Year,Country,CumulDeaths
 2014,Macedonia,0
 2014,Mali,0
 2014,Malta,0
-2014,Myanmar,0
+2014,Myanmar (BURMA),76
 2014,Montenegro,0
 2014,Mongolia,30
 2014,N. Mariana Is.,0
@@ -15680,7 +15680,7 @@ Year,Country,CumulDeaths
 2014,Singapore,0
 2014,S. Geo. and S. Sandw. Is.,0
 2014,Saint Helena,0
-2014,Solomon Is.,0
+2014,Solomon Islands,21
 2014,Sierra Leone,0
 2014,El Salvador,845
 2014,San Marino,0
@@ -15713,7 +15713,7 @@ Year,Country,CumulDeaths
 2014,Uganda,140
 2014,Ukraine,0
 2014,Uruguay,0
-2014,USA,0
+2014,USA,65
 2014,Uzbekistan,0
 2014,Vatican,0
 2014,St. Vin. and Gren.,0
@@ -15874,7 +15874,7 @@ Year,Country,CumulDeaths
 2015,Macedonia,0
 2015,Mali,0
 2015,Malta,0
-2015,Myanmar,0
+2015,Myanmar (BURMA),76
 2015,Montenegro,0
 2015,Mongolia,30
 2015,N. Mariana Is.,0
@@ -15922,7 +15922,7 @@ Year,Country,CumulDeaths
 2015,Singapore,0
 2015,S. Geo. and S. Sandw. Is.,0
 2015,Saint Helena,0
-2015,Solomon Is.,0
+2015,Solomon Islands,21
 2015,Sierra Leone,0
 2015,El Salvador,845
 2015,San Marino,0
@@ -15955,7 +15955,7 @@ Year,Country,CumulDeaths
 2015,Uganda,140
 2015,Ukraine,0
 2015,Uruguay,0
-2015,USA,0
+2015,USA,65
 2015,Uzbekistan,0
 2015,Vatican,0
 2015,St. Vin. and Gren.,0
@@ -16116,7 +16116,7 @@ Year,Country,CumulDeaths
 2016,Macedonia,0
 2016,Mali,0
 2016,Malta,0
-2016,Myanmar,0
+2016,Myanmar (BURMA),76
 2016,Montenegro,0
 2016,Mongolia,30
 2016,N. Mariana Is.,0
@@ -16164,7 +16164,7 @@ Year,Country,CumulDeaths
 2016,Singapore,0
 2016,S. Geo. and S. Sandw. Is.,0
 2016,Saint Helena,0
-2016,Solomon Is.,0
+2016,Solomon Islands,22
 2016,Sierra Leone,0
 2016,El Salvador,845
 2016,San Marino,0
@@ -16197,7 +16197,7 @@ Year,Country,CumulDeaths
 2016,Uganda,140
 2016,Ukraine,0
 2016,Uruguay,0
-2016,USA,0
+2016,USA,65
 2016,Uzbekistan,0
 2016,Vatican,0
 2016,St. Vin. and Gren.,0
@@ -16358,7 +16358,7 @@ Year,Country,CumulDeaths
 2017,Macedonia,0
 2017,Mali,0
 2017,Malta,0
-2017,Myanmar,0
+2017,Myanmar (BURMA),76
 2017,Montenegro,0
 2017,Mongolia,30
 2017,N. Mariana Is.,0
@@ -16406,7 +16406,7 @@ Year,Country,CumulDeaths
 2017,Singapore,0
 2017,S. Geo. and S. Sandw. Is.,0
 2017,Saint Helena,0
-2017,Solomon Is.,0
+2017,Solomon Islands,22
 2017,Sierra Leone,0
 2017,El Salvador,845
 2017,San Marino,0
@@ -16439,7 +16439,7 @@ Year,Country,CumulDeaths
 2017,Uganda,140
 2017,Ukraine,0
 2017,Uruguay,0
-2017,USA,0
+2017,USA,65
 2017,Uzbekistan,0
 2017,Vatican,0
 2017,St. Vin. and Gren.,0
@@ -16600,7 +16600,7 @@ Year,Country,CumulDeaths
 2018,Macedonia,0
 2018,Mali,0
 2018,Malta,0
-2018,Myanmar,0
+2018,Myanmar (BURMA),76
 2018,Montenegro,0
 2018,Mongolia,30
 2018,N. Mariana Is.,0
@@ -16648,7 +16648,7 @@ Year,Country,CumulDeaths
 2018,Singapore,0
 2018,S. Geo. and S. Sandw. Is.,0
 2018,Saint Helena,0
-2018,Solomon Is.,0
+2018,Solomon Islands,22
 2018,Sierra Leone,0
 2018,El Salvador,845
 2018,San Marino,0
@@ -16681,7 +16681,7 @@ Year,Country,CumulDeaths
 2018,Uganda,140
 2018,Ukraine,0
 2018,Uruguay,0
-2018,USA,0
+2018,USA,65
 2018,Uzbekistan,0
 2018,Vatican,0
 2018,St. Vin. and Gren.,0
@@ -16842,7 +16842,7 @@ Year,Country,CumulDeaths
 2019,Macedonia,0
 2019,Mali,0
 2019,Malta,0
-2019,Myanmar,0
+2019,Myanmar (BURMA),76
 2019,Montenegro,0
 2019,Mongolia,30
 2019,N. Mariana Is.,0
@@ -16890,7 +16890,7 @@ Year,Country,CumulDeaths
 2019,Singapore,0
 2019,S. Geo. and S. Sandw. Is.,0
 2019,Saint Helena,0
-2019,Solomon Is.,0
+2019,Solomon Islands,22
 2019,Sierra Leone,0
 2019,El Salvador,845
 2019,San Marino,0
@@ -16923,7 +16923,7 @@ Year,Country,CumulDeaths
 2019,Uganda,140
 2019,Ukraine,0
 2019,Uruguay,0
-2019,USA,0
+2019,USA,65
 2019,Uzbekistan,0
 2019,Vatican,0
 2019,St. Vin. and Gren.,0
@@ -17084,7 +17084,7 @@ Year,Country,CumulDeaths
 2020,Macedonia,0
 2020,Mali,0
 2020,Malta,0
-2020,Myanmar,0
+2020,Myanmar (BURMA),76
 2020,Montenegro,0
 2020,Mongolia,30
 2020,N. Mariana Is.,0
@@ -17132,7 +17132,7 @@ Year,Country,CumulDeaths
 2020,Singapore,0
 2020,S. Geo. and S. Sandw. Is.,0
 2020,Saint Helena,0
-2020,Solomon Is.,0
+2020,Solomon Islands,22
 2020,Sierra Leone,0
 2020,El Salvador,845
 2020,San Marino,0
@@ -17165,7 +17165,7 @@ Year,Country,CumulDeaths
 2020,Uganda,140
 2020,Ukraine,0
 2020,Uruguay,0
-2020,USA,0
+2020,USA,65
 2020,Uzbekistan,0
 2020,Vatican,0
 2020,St. Vin. and Gren.,0
