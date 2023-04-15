@@ -25,7 +25,6 @@ CheckBox checkbox1;
 Toggle toggle1;
 String[] highlightedQuake = new String[6];
 
-
 Table countryIDs; 
 Table cumDeaths;
 String[] countries;
@@ -45,7 +44,7 @@ int maxRadius2 = 40;
 
 HandyRenderer h;
 java.util.Map<java.lang.Integer, Feature> features;
-
+int[] firstRowOfEachYear = new int[71];
 
 // === DATA PROCESSING ROUTINES ===
 
@@ -55,9 +54,24 @@ void loadRawDataTables() {
   tempMax = TableUtils.findMaxIntInColumn(dataTable, "Earthquake : Deaths");
   tempMin = TableUtils.findMinIntInColumn(dataTable, "Earthquake : Deaths");
   
+  int year = 0;
+  int count = 0;
+  for(int i = 0; i < dataTable.getRowCount(); i++) {
+   int y = dataTable.getRow(i).getInt("Year");
+   if(y != year){
+     firstRowOfEachYear[count]=i;
+     System.out.println(y + " " + i);
+     year = y;
+     count++;
+   }
+  }
+  
+  
   cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
   maxDeaths = TableUtils.findMaxIntInColumn(cumDeaths, "CumulDeaths");
   minDeaths = TableUtils.findMinIntInColumn(cumDeaths, "CumulDeaths");
+  
+
 }
 
 void setup() {  
@@ -75,10 +89,14 @@ void setup() {
   geoMap.readFile("world");
   
   features = geoMap.getFeatures();
-  System.out.println(features);
+ // System.out.println(features);
   
   h = new HandyRenderer(this);
+  h.setHachureAngle(15);
  // setHandyRenderer(); //Uncomment if using handyRenderer on countries
+ // h.setSeed(1234); //Uncomment if using handyRenderer on countries; should make sketchiness stand still
+  h.setOverrideFillColour(true); //Uncomment if using handRenderer on Circles
+  h.setOverrideStrokeColour(true); //Uncomment if using handRenderer on Circles
   
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
@@ -269,15 +287,24 @@ void draw() {
             
             // current year range's earthquakes are highlighted
             if ((currentYear == yearValue) | (currentYear > yearValue-10)) {
-              stroke(0);
-              strokeWeight(2);
-              fill(c);
+           //   stroke(0);
+           //   strokeWeight(2);
+           //   fill(c);
+               
+              // h.setIsHandy(true);
+               h.setOverrideFillColour(true);
+               h.setOverrideStrokeColour(true);
+               h.setBackgroundColour(c);
+               h.setFillColour(c);
+               h.setStrokeColour(color(0));
+               h.ellipse(coord2.x, coord2.y, radius, radius);
             }
             else {
               stroke(200);
               fill(c);
             }
             circle(coord2.x, coord2.y, radius);
+            
           }
         }
       }
@@ -503,7 +530,11 @@ String[] getUnderMouse() {
   String place, coordinates, year, month, day, mag;
   float latitude, longitude, screenX, screenY, distSquared, radius, radiusSquared;
   
-  for (int i=dataTable.getRowCount()-1; i>=0; i--) {
+  
+ // System.out.println(firstRowOfEachYear[1]);
+  
+  for (int i=firstRowOfEachYear[yearValue-1950+1]-1; i>=0; i--) {
+ //   System.out.println(firstRowOfEachYear[yearValue-1950+1]-1);
     rowData = dataTable.getRow(i);
     place = rowData.getString("Location name");
     coordinates = rowData.getString("Coordinates");
