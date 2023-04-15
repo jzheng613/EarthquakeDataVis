@@ -11,6 +11,7 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.lang.Math;
 import java.text.NumberFormat;
+import org.gicentre.handy.*;
 
 // Raw data tables and objects
 Table dataTable;
@@ -37,6 +38,15 @@ double[] colorMapControlPts = new double[21];
 
 int yearValue = 1950;
 
+int minRadius = 15;
+int maxRadius = 30;
+int minRadius2 = 31;
+int maxRadius2 = 40;
+
+HandyRenderer h;
+java.util.Map<java.lang.Integer, Feature> features;
+
+
 // === DATA PROCESSING ROUTINES ===
 
 void loadRawDataTables() {
@@ -50,11 +60,12 @@ void loadRawDataTables() {
   minDeaths = TableUtils.findMinIntInColumn(cumDeaths, "CumulDeaths");
 }
 
-void setup() {
-
-  
+void setup() {  
   // screen size setup
   size(1600,900);
+
+  //Set window title
+  surface.setTitle("Global Major and Great Earthquakes, 1950-2020");
 
   // load up data info
   loadRawDataTables();
@@ -62,6 +73,12 @@ void setup() {
   // create world map, scaled size
   geoMap = new GeoMap(0, 0, 1312, 738, this);
   geoMap.readFile("world");
+  
+  features = geoMap.getFeatures();
+  System.out.println(features);
+  
+  h = new HandyRenderer(this);
+ // setHandyRenderer(); //Uncomment if using handyRenderer on countries
   
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
@@ -128,6 +145,8 @@ void setup() {
      .setValue(true)
      .setMode(ControlP5.SWITCH)
      ;
+     
+  
 }
 
 void draw() {
@@ -197,10 +216,7 @@ void draw() {
     geoMap.draw();
     
     // === DRAWING OUT EACH EARTHQUAKE CIRCLE ===
-    int minRadius = 15;
-    int maxRadius = 30;
-    int minRadius2 = 31;
-    int maxRadius2 = 40;
+    
     
     minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
     maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
@@ -452,20 +468,32 @@ void draw() {
   
 }
 
-float getMag(String coord) {
+float getRadius(String coord) {
+  float radius;
   TableRow rowData = dataTable.findRow(coord, "Coordinates");
-  float mag = rowData.getFloat("EQ Primary");
-  float mag_01 = (mag-minMag)/(maxMag-minMag);
-  return mag_01;
+  int currentDeaths = rowData.getInt("Earthquake : Deaths");
+  float death_01 = (float(currentDeaths) - float(0)) / (float(5000) - float(0));
+  //min=5,001 and max=316,000
+  float death_02 = (float(currentDeaths) - float(5001)) / (float(320000) - float(5001));
+ 
+            
+  if (currentDeaths < 5001) {
+    radius = lerp(minRadius, maxRadius, death_01);
+  }
+  else {
+    radius = lerp(minRadius2, maxRadius2, death_02);
+  }
+  
+  return radius;
 }
 
-float getRadius (String coord){
-  int minRadius = 15;
-  int maxRadius = 40;
-  float mag = getMag(coord);
-  return lerp(minRadius, maxRadius, mag);
-}
 
+
+////////////
+//HELPER FUNCTIONS
+
+
+//Returns array of information about country under mouse or null if no country is available
 String[] getUnderMouse() {
   float smallestRadiusSquared = Float.MAX_VALUE;
   //String underMouseCoord = "";
@@ -475,7 +503,7 @@ String[] getUnderMouse() {
   String place, coordinates, year, month, day, mag;
   float latitude, longitude, screenX, screenY, distSquared, radius, radiusSquared;
   
-  for (int i=0; i<dataTable.getRowCount(); i++) {
+  for (int i=dataTable.getRowCount()-1; i>=0; i--) {
     rowData = dataTable.getRow(i);
     place = rowData.getString("Location name");
     coordinates = rowData.getString("Coordinates");
@@ -505,13 +533,25 @@ String[] getUnderMouse() {
   return underMouse;  
 }
 
+//Used to set renderer for GeoMap countries if using Handy
+void setHandyRenderer(){
+  DrawableFactory factory = new DrawableFactory();
+  Drawable hDraw = factory.createHandyRenderer(h);
+  
+  for(Feature feature : features.values()){
+    feature.setRenderer(hDraw);
+  }
+  
+}
+
+//To set color of countries and draw map
 void cumDeathbyYear(int year){
+
   TableRow row;
   int deaths;
   int ID;
   float lerpedDeaths;
   int firstRow = 242*(year-1950);
-
   
   for(int i = 0; i<countries.length;i++){
    row = cumDeaths.getRow(firstRow+i);
@@ -521,8 +561,10 @@ void cumDeathbyYear(int year){
    ID = countryIDs.getRow(i).getInt("id");
    
    fill(countriesScale.lookupColor(lerpedDeaths));
-
-
+   
+   //PImage img = loadImage("CrackedEarthPhoto.jpg");
    geoMap.draw(ID);
+
   }
+
 }
