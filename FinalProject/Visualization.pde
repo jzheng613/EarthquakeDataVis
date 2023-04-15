@@ -35,6 +35,8 @@ int tempMax;
 ColorMap countriesScale;
 double[] colorMapControlPts = new double[21];
 
+ColorMap circleScale;
+
 int yearValue = 1950;
 
 int minRadius = 15;
@@ -44,7 +46,7 @@ int maxRadius2 = 40;
 
 HandyRenderer h;
 java.util.Map<java.lang.Integer, Feature> features;
-int[] firstRowOfEachYear = new int[71];
+int[] firstRowOfEachYear = new int[72];
 
 // === DATA PROCESSING ROUTINES ===
 
@@ -60,12 +62,13 @@ void loadRawDataTables() {
    int y = dataTable.getRow(i).getInt("Year");
    if(y != year){
      firstRowOfEachYear[count]=i;
-     System.out.println(y + " " + i);
+//     System.out.println(y + " " + i);
      year = y;
      count++;
    }
   }
   
+  firstRowOfEachYear[71] = 665;
   
   cumDeaths = loadTable("CumDeathsbyCountry.csv", "header");
   maxDeaths = TableUtils.findMaxIntInColumn(cumDeaths, "CumulDeaths");
@@ -93,11 +96,9 @@ void setup() {
   
   h = new HandyRenderer(this);
   h.setHachureAngle(15);
- // setHandyRenderer(); //Uncomment if using handyRenderer on countries
- // h.setSeed(1234); //Uncomment if using handyRenderer on countries; should make sketchiness stand still
-  h.setOverrideFillColour(true); //Uncomment if using handRenderer on Circles
-  h.setOverrideStrokeColour(true); //Uncomment if using handRenderer on Circles
-  
+  setHandyRenderer(); //Uncomment if using handyRenderer on countries
+ 
+
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
   
@@ -151,9 +152,13 @@ void setup() {
   countries = countryIDs.getStringColumn("NAME");
  // countriesScale =  new ColorMap("div3-green-brown-div.xml"); 
   
-  countriesScale =  new ColorMap("div3-green-brown-div (1).xml"); //original colormap
+  //countriesScale =  new ColorMap("div3-green-brown-div (1).xml"); //original colormap
+  
+  countriesScale = new ColorMap("02green-9_17e.xml");
   colorMapControlPts = new double[] {0.0,0.000002,0.00008,0.0002,0.0007,0.0019,0.0023,0.0045,0.008,0.011,
                                      0.0138,0.022,0.027,0.041,0.071,0.185,0.212,0.246,0.56,0.8739,1.0};
+                                     
+  circleScale = new ColorMap("4-redsun1.xml");                                   
                                      
   //smooth();
   toggle1 = cp5.addToggle("earthquake info | death info")
@@ -168,6 +173,8 @@ void setup() {
 }
 
 void draw() {
+  h.setSeed(1234);
+  
   background(230);
   
   stroke(0,0,0);
@@ -238,9 +245,6 @@ void draw() {
     
     minMag = TableUtils.findMinFloatInColumn(dataTable, "EQ Primary");
     maxMag = TableUtils.findMaxFloatInColumn(dataTable, "EQ Primary");
-    color lowestMagnitudeColor = color(255, 224, 121);
-    color highestMagnitudeColor = color(232, 81, 21);
-    
     
     for (int i = 0; i < dataTable.getRowCount(); i++) {
       TableRow currentRow = dataTable.getRow(i);
@@ -275,11 +279,11 @@ void draw() {
               radius = lerp(minRadius2, maxRadius2, death_02);
             }
             
-            color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, mag_01);
+            color c = circleScale.lookupColor(mag_01);
             
-            //If highlighted, make color white 
+            //If highlighted, make color white
             if(highlightedQuake[0].equals(coord) || (highlightedQuake[1].equals(place) && ((highlightedQuake[2].equals(""+currentYear) && highlightedQuake[3].equals(month) && highlightedQuake[4].equals(day) && highlightedQuake[5].equals(""+currentMagnitude))))){
-              c = color(255,255,255);
+              c = color(255,255,255); 
             }
             float lat2 = currentRow.getFloat("Latitude");
             float lon2 = currentRow.getFloat("Longitude");
@@ -287,22 +291,30 @@ void draw() {
             
             // current year range's earthquakes are highlighted
             if ((currentYear == yearValue) | (currentYear > yearValue-10)) {
-           //   stroke(0);
-           //   strokeWeight(2);
-           //   fill(c);
-               
-              // h.setIsHandy(true);
-               h.setOverrideFillColour(true);
-               h.setOverrideStrokeColour(true);
-               h.setBackgroundColour(c);
-               h.setFillColour(c);
-               h.setStrokeColour(color(0));
-               h.ellipse(coord2.x, coord2.y, radius, radius);
+              stroke(0);
+              strokeWeight(2);
+              fill(c);
+              
+              //If Handy
+           //   h.setBackgroundColour(highestMagnitudeColor);
+          //    stroke(200);
+             // h.setFillWeight(4);
+            //  h.setFillGap(0);
+           //   h.ellipse(coord2.x, coord2.y, radius, radius);
             }
             else {
               stroke(200);
               fill(c);
+              
+              //If handy
+              //h.setBackgroundColour(highestMagnitudeColor);
+              //stroke(200);
+            //  h.setFillGap(mag_01);
+              //h.setFillWeight(mag_01*5);
+              //h.ellipse(coord2.x, coord2.y, radius, radius);
+            //  circle(coord2.x, coord2.y, radius);
             }
+            
             circle(coord2.x, coord2.y, radius);
             
           }
@@ -406,7 +418,7 @@ void draw() {
     int labelStep = cGradientHeight / 5;
     for (int j=0; j<cGradientHeight; j++) {
       float amt = 1.0 - (float)j/(cGradientHeight-1);
-      color c = lerpColorLab(lowestMagnitudeColor, highestMagnitudeColor, amt);
+      color c = circleScale.lookupColor(amt);
       stroke(c);
       line(1345, 660 + j, 1345+cGradientWidth, 660 + j);
       if ((j % labelStep == 0) || (j == cGradientHeight-1)) {
@@ -571,7 +583,9 @@ void setHandyRenderer(){
   
   for(Feature feature : features.values()){
     feature.setRenderer(hDraw);
+    
   }
+  
   
 }
 
@@ -593,7 +607,11 @@ void cumDeathbyYear(int year){
    
    fill(countriesScale.lookupColor(lerpedDeaths));
    
-   //PImage img = loadImage("CrackedEarthPhoto.jpg");
+   //Handy option
+  // fill(countriesScale.lookupColor(0));
+  // h.setFillGap(lerpedDeaths);
+ //  h.setFillWeight(lerpedDeaths*5);
+
    geoMap.draw(ID);
 
   }

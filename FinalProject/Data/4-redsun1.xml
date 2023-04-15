@@ -1,0 +1,12 @@
+<ColorMaps>
+<ColorMap name="yellowSun" space="RGB" interpolationspace="lab" interpolationtype="linear" creator="CCC-Tool">
+<Point x="0" o="1" r="0.9999999457813872" g="0.9055000760041142" b="0.7899999830310933" cms="1" isMoT="true"/>
+<Point x="0.25" o="1" r="0.9299998690202383" g="0.6031053711041824" b="0.3998999408157143" cms="1" isMoT="true"/>
+<Point x="0.5" o="1" r="0.8202528256586218" g="0.3494050569328158" b="0.17812585382994792" cms="1" isMoT="true"/>
+<Point x="0.75" o="1" r="0.719999940708077" g="0.09360086192204814" b="0.07199986646628434" cms="1" isMoT="true"/>
+<Point x="1" o="1" r="0.5492764014036704" g="0.008256584942809423" b="0.08797751793149633" cms="1" isMoT="true"/>
+<NaN r="0.24999997648523203" g="8.664340746405535e-8" b="0"/>
+<Above r="0" g="0" b="0"/>
+<Below r="0" g="0" b="0"/>
+</ColorMap>
+</ColorMaps>
