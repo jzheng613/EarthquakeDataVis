@@ -45,6 +45,7 @@ int minRadius2 = 31;
 int maxRadius2 = 40;
 
 HandyRenderer h;
+HandyRenderer c;
 java.util.Map<java.lang.Integer, Feature> features;
 int[] firstRowOfEachYear = new int[72];
 
@@ -96,8 +97,11 @@ void setup() {
   
   h = new HandyRenderer(this);
   h.setHachureAngle(15);
-  setHandyRenderer(); //Uncomment if using handyRenderer on countries
  
+ 
+  c = new HandyRenderer(this);
+  c.setHachureAngle(15);
+  
 
   // === SLIDER SETUP ===
   cp5 = new ControlP5(this);
@@ -173,7 +177,7 @@ void setup() {
 }
 
 void draw() {
-  h.setSeed(1234);
+  c.setSeed(1234);
   
   background(230);
   
@@ -281,10 +285,11 @@ void draw() {
             
             color c = circleScale.lookupColor(mag_01);
             
-            //If highlighted, make color white
+            //If highlighted, make color black
             if(highlightedQuake[0].equals(coord) || (highlightedQuake[1].equals(place) && ((highlightedQuake[2].equals(""+currentYear) && highlightedQuake[3].equals(month) && highlightedQuake[4].equals(day) && highlightedQuake[5].equals(""+currentMagnitude))))){
-              c = color(255,255,255); 
+              c = color(0); 
             }
+            
             float lat2 = currentRow.getFloat("Latitude");
             float lon2 = currentRow.getFloat("Longitude");
             PVector coord2 = geoMap.geoToScreen(lon2, lat2);
@@ -298,9 +303,9 @@ void draw() {
               //If Handy
            //   h.setBackgroundColour(highestMagnitudeColor);
           //    stroke(200);
-             // h.setFillWeight(4);
-            //  h.setFillGap(0);
-           //   h.ellipse(coord2.x, coord2.y, radius, radius);
+              h.setFillWeight(4);
+              h.setFillGap(0);
+              h.ellipse(coord2.x, coord2.y, radius, radius);
             }
             else {
               stroke(200);
@@ -312,10 +317,10 @@ void draw() {
             //  h.setFillGap(mag_01);
               //h.setFillWeight(mag_01*5);
               //h.ellipse(coord2.x, coord2.y, radius, radius);
-            //  circle(coord2.x, coord2.y, radius);
+              circle(coord2.x, coord2.y, radius);
             }
             
-            circle(coord2.x, coord2.y, radius);
+           // circle(coord2.x, coord2.y, radius);
             
           }
         }
@@ -535,8 +540,6 @@ float getRadius(String coord) {
 //Returns array of information about country under mouse or null if no country is available
 String[] getUnderMouse() {
   float smallestRadiusSquared = Float.MAX_VALUE;
-  //String underMouseCoord = "";
-  //String underMouseLoc = "";
   String[] underMouse = {"", "" , "", "", "", ""}; //{coordinates, location name}
   TableRow rowData;
   String place, coordinates, year, month, day, mag;
@@ -546,7 +549,6 @@ String[] getUnderMouse() {
  // System.out.println(firstRowOfEachYear[1]);
   
   for (int i=firstRowOfEachYear[yearValue-1950+1]-1; i>=0; i--) {
- //   System.out.println(firstRowOfEachYear[yearValue-1950+1]-1);
     rowData = dataTable.getRow(i);
     place = rowData.getString("Location name");
     coordinates = rowData.getString("Coordinates");
@@ -576,18 +578,7 @@ String[] getUnderMouse() {
   return underMouse;  
 }
 
-//Used to set renderer for GeoMap countries if using Handy
-void setHandyRenderer(){
-  DrawableFactory factory = new DrawableFactory();
-  Drawable hDraw = factory.createHandyRenderer(h);
-  
-  for(Feature feature : features.values()){
-    feature.setRenderer(hDraw);
-    
-  }
-  
-  
-}
+
 
 //To set color of countries and draw map
 void cumDeathbyYear(int year){
@@ -598,20 +589,52 @@ void cumDeathbyYear(int year){
   float lerpedDeaths;
   int firstRow = 242*(year-1950);
   
-  for(int i = 0; i<countries.length;i++){
-   row = cumDeaths.getRow(firstRow+i);
+//  for(int i = 0; i<countries.length;i++){
+//   row = cumDeaths.getRow(firstRow+i);
+   
+//   deaths = row.getInt("CumulDeaths");
+//   lerpedDeaths = (float(deaths)-float(minDeaths))/(float(maxDeaths)-float(minDeaths));
+//   ID = countryIDs.getRow(i).getInt("id");
+   
+//   fill(countriesScale.lookupColor(lerpedDeaths));
+   
+   
+// //  setHandyRenderer();
+//   //Handy option
+//////   fill(countriesScale.lookupColor(0));
+////   System.out.println("handy");
+////   c.setFillGap(lerpedDeaths);
+////   System.out.println("handyq");
+////   c.setFillWeight(lerpedDeaths*5);
+
+// //  System.out.println("handydraw");
+////   System.out.println(geoMap.getNumPolys());
+//   setHandyRenderer();
+//   geoMap.draw(ID);
+
+//  }
+
+  DrawableFactory factory = new DrawableFactory();
+  Drawable cDraw = factory.createHandyRenderer(c);
+  c.setFillGap(2);
+  c.setIsAlternating(false);
+  
+  for(java.util.Map.Entry<java.lang.Integer, Feature> set: features.entrySet()){
+   ID = set.getKey(); 
+   
+   row = cumDeaths.getRow(firstRow+ID-1);
    
    deaths = row.getInt("CumulDeaths");
    lerpedDeaths = (float(deaths)-float(minDeaths))/(float(maxDeaths)-float(minDeaths));
-   ID = countryIDs.getRow(i).getInt("id");
+  // ID = countryIDs.getRow(i).getInt("id");
    
-   fill(countriesScale.lookupColor(lerpedDeaths));
+   fill(countriesScale.lookupColor(0));
+  
+   c.setFillGap(deaths);
+   c.setFillWeight(deaths);
+  
+   set.getValue().setRenderer(cDraw);
    
-   //Handy option
-  // fill(countriesScale.lookupColor(0));
-  // h.setFillGap(lerpedDeaths);
- //  h.setFillWeight(lerpedDeaths*5);
-
    geoMap.draw(ID);
 
   }

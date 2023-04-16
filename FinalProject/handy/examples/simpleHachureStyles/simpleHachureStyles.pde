@@ -20,12 +20,13 @@ void draw()
   background(247,230,197);
   h.setRoughness(1);
 
-  h.setFillGap(1);
-  h.setFillWeight(0.1);
+  h.setFillGap(.2*4);
+  h.setFillWeight(0.3);
+  h.setIsAlternating(false);
   h.rect(50,30,80,50);
 
   h.setFillGap(.1);
-  h.setFillWeight(1);
+  h.setFillWeight(.3);
   h.rect(170,30,80,50);
 
   h.setFillGap(5);
