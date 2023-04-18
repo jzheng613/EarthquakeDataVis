@@ -93,7 +93,7 @@ void setup() {
   geoMap.readFile("world");
   
   features = geoMap.getFeatures();
- // System.out.println(features);
+  System.out.println(features);
   
   h = new HandyRenderer(this);
   h.setHachureAngle(15);
@@ -566,7 +566,154 @@ String[] getUnderMouse() {
   return underMouse;  
 }
 
+//Returns texture gradient
+float[] getTexture(float lerpedDeaths){
+  float[] gapWeight = {100000, 0.3};
+  
+  if(lerpedDeaths<=1.0 && lerpedDeaths>.8739){
+    gapWeight[0] = .1; 
+    gapWeight[1] = .3; 
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.56 && lerpedDeaths<=.8739){
+    gapWeight[0] = .45;
+    gapWeight[1] = 1;
+  
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.56 && lerpedDeaths>.246){
+    gapWeight[0] = .5;
+    gapWeight[1] = 1;
+  
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.246 && lerpedDeaths>.212){
+    gapWeight[0] =.2;
+    gapWeight[1] = .3;
+    
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.185 && lerpedDeaths<=.212){
+    gapWeight[0] = .5; 
+    gapWeight[1] = .7; 
 
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.185 && lerpedDeaths>.071){
+    gapWeight[0] = 1;
+    gapWeight[1] = 1;
+  
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.063 && lerpedDeaths<=.071){
+    gapWeight[0] = 2;
+    gapWeight[1] = 1.7;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.063 && lerpedDeaths>.041){
+    gapWeight[0] =2;
+    gapWeight[1] = 1;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.027 && lerpedDeaths<=.041){
+    gapWeight[0] =3;
+    gapWeight[1] = 1.2;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.027 && lerpedDeaths>.022){
+    gapWeight[0] = 4;
+    gapWeight[1] = 1.2;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.0138 && lerpedDeaths<=.022){
+    gapWeight[0] = 5.5;
+    gapWeight[1] = 1.2;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.0138 && lerpedDeaths>.011){
+    gapWeight[0] = 5.5;
+    gapWeight[1] = .8;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.008 && lerpedDeaths<=.011){
+    gapWeight[0] = 8;
+    gapWeight[1] = .8;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.008 && lerpedDeaths>.0055){
+    gapWeight[0] = 8;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.0045 && lerpedDeaths<=.0055){
+    gapWeight[0] = 10;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.0045 && lerpedDeaths>.0023){
+    gapWeight[0] = 12;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.0045 && lerpedDeaths>.0023){
+    gapWeight[0] = 15;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.0019 && lerpedDeaths<=.0023){
+    gapWeight[0] = 20;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.0019 && lerpedDeaths>.0007){
+    gapWeight[0] = 25;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>0.0002 && lerpedDeaths<=.0007){
+    gapWeight[0] = 32;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=0.0002 && lerpedDeaths>.00008){
+    gapWeight[0] = 37;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths>.00003 && lerpedDeaths<=.00008){
+    gapWeight[0] = 50;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else if(lerpedDeaths<=.00003 && lerpedDeaths>.000002){
+    gapWeight[0] = 100;
+    gapWeight[1] = .3;
+
+    return gapWeight;
+  }
+  else{
+     gapWeight[0] = 100000;
+    gapWeight[1] = .3;
+
+  }
+  return gapWeight;
+}
 
 //To set color of countries and draw map
 void cumDeathbyYear(int year){
@@ -576,7 +723,7 @@ void cumDeathbyYear(int year){
   int ID;
   float lerpedDeaths;
   int firstRow = 242*(year-1950);
-  
+  c.setBackgroundColour(12239802);
 //  for(int i = 0; i<countries.length;i++){
 //   row = cumDeaths.getRow(firstRow+i);
    
@@ -617,9 +764,9 @@ void cumDeathbyYear(int year){
   // ID = countryIDs.getRow(i).getInt("id");
    
    fill(countriesScale.lookupColor(0));
-  
-   c.setFillGap(deaths);
-   c.setFillWeight(deaths);
+   float[] gapWeight = getTexture(lerpedDeaths);
+   c.setFillGap(gapWeight[0]);
+   c.setFillWeight(gapWeight[1]);
   
    set.getValue().setRenderer(cDraw);
    

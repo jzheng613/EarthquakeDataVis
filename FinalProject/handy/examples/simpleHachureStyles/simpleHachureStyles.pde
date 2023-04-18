@@ -12,15 +12,17 @@ void setup()
   h = new HandyRenderer(this);
   fill(206,76,52);
   h.setHachurePerturbationAngle(15);
+  h.setIsAlternating(false);
   println(Version.getText());
 }
 
 void draw()
 {
   background(247,230,197);
-  h.setRoughness(1);
+//  h.setRoughness(1);
 
-  h.setFillGap(.2*4);
+  
+  h.setFillGap(20);
   h.setFillWeight(0.3);
   h.setIsAlternating(false);
   h.rect(50,30,80,50);
