@@ -723,7 +723,9 @@ void cumDeathbyYear(int year){
   int ID;
   float lerpedDeaths;
   int firstRow = 242*(year-1950);
-  c.setBackgroundColour(12239802);
+  c.setBackgroundColour(color(184,194,185));
+  
+
 //  for(int i = 0; i<countries.length;i++){
 //   row = cumDeaths.getRow(firstRow+i);
    
@@ -751,7 +753,7 @@ void cumDeathbyYear(int year){
 
   DrawableFactory factory = new DrawableFactory();
   Drawable cDraw = factory.createHandyRenderer(c);
-  c.setFillGap(2);
+ // c.setFillGap(2);
   c.setIsAlternating(false);
   
   for(java.util.Map.Entry<java.lang.Integer, Feature> set: features.entrySet()){
