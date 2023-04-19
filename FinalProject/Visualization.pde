@@ -221,13 +221,16 @@ void draw() {
     selectedRanges.put("C", new float[]{9.0, 10.0});
   }
   if (showFirst) {    
-    checkbox1.setColorActive(color(255, 219, 83));
+    //checkbox1.setColorActive(color(255, 219, 83));
+    checkbox1.setColorActive(circleScale.lookupColor(0));
   }
   if (showSecond) {    
-    checkbox1.setColorActive(color(255, 142, 39));
+ //   checkbox1.setColorActive(color(255, 142, 39));
+ checkbox1.setColorActive(circleScale.lookupColor(.5));
   }
   if (showThird) {    
-    checkbox1.setColorActive(color(253, 74, 0));
+   // checkbox1.setColorActive(color(253, 74, 0));
+   checkbox1.setColorActive(circleScale.lookupColor(1));
   }
   if (showAllMags) {
     checkbox1.setColorActive(color(0, 152, 255));
