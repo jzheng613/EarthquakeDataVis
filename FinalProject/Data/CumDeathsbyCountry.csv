@@ -43,7 +43,7 @@ Year,Country,CumulDeaths
 1950,China,0
 1950,Ivory Coast,0
 1950,Cameroon,0
-1950,Congo (Kinshasa),0
+1950,Congo,0
 1950,Congo (Brazzaville),0
 1950,Cook Is.,0
 1950,Colombia,0
@@ -285,7 +285,7 @@ Year,Country,CumulDeaths
 1951,China,0
 1951,Ivory Coast,0
 1951,Cameroon,0
-1951,Congo (Kinshasa),0
+1951,Congo,0
 1951,Congo (Brazzaville),0
 1951,Cook Is.,0
 1951,Colombia,0
@@ -527,7 +527,7 @@ Year,Country,CumulDeaths
 1952,China,0
 1952,Ivory Coast,0
 1952,Cameroon,0
-1952,Congo (Kinshasa),0
+1952,Congo,0
 1952,Congo (Brazzaville),0
 1952,Cook Is.,0
 1952,Colombia,0
@@ -769,7 +769,7 @@ Year,Country,CumulDeaths
 1953,China,0
 1953,Ivory Coast,0
 1953,Cameroon,0
-1953,Congo (Kinshasa),0
+1953,Congo,0
 1953,Congo (Brazzaville),0
 1953,Cook Is.,0
 1953,Colombia,0
@@ -1011,7 +1011,7 @@ Year,Country,CumulDeaths
 1954,China,0
 1954,Ivory Coast,0
 1954,Cameroon,0
-1954,Congo (Kinshasa),0
+1954,Congo,0
 1954,Congo (Brazzaville),0
 1954,Cook Is.,0
 1954,Colombia,0
@@ -1253,7 +1253,7 @@ Year,Country,CumulDeaths
 1955,China,39
 1955,Ivory Coast,0
 1955,Cameroon,0
-1955,Congo (Kinshasa),0
+1955,Congo,0
 1955,Congo (Brazzaville),0
 1955,Cook Is.,0
 1955,Colombia,0
@@ -1495,7 +1495,7 @@ Year,Country,CumulDeaths
 1956,China,39
 1956,Ivory Coast,0
 1956,Cameroon,0
-1956,Congo (Kinshasa),0
+1956,Congo,0
 1956,Congo (Brazzaville),0
 1956,Cook Is.,0
 1956,Colombia,0
@@ -1737,7 +1737,7 @@ Year,Country,CumulDeaths
 1957,China,39
 1957,Ivory Coast,0
 1957,Cameroon,0
-1957,Congo (Kinshasa),0
+1957,Congo,0
 1957,Congo (Brazzaville),0
 1957,Cook Is.,0
 1957,Colombia,0
@@ -1979,7 +1979,7 @@ Year,Country,CumulDeaths
 1958,China,39
 1958,Ivory Coast,0
 1958,Cameroon,0
-1958,Congo (Kinshasa),0
+1958,Congo,0
 1958,Congo (Brazzaville),0
 1958,Cook Is.,0
 1958,Colombia,111
@@ -2221,7 +2221,7 @@ Year,Country,CumulDeaths
 1959,China,39
 1959,Ivory Coast,0
 1959,Cameroon,0
-1959,Congo (Kinshasa),0
+1959,Congo,0
 1959,Congo (Brazzaville),0
 1959,Cook Is.,0
 1959,Colombia,111
@@ -2463,7 +2463,7 @@ Year,Country,CumulDeaths
 1960,China,39
 1960,Ivory Coast,0
 1960,Cameroon,0
-1960,Congo (Kinshasa),0
+1960,Congo,0
 1960,Congo (Brazzaville),0
 1960,Cook Is.,0
 1960,Colombia,111
@@ -2705,7 +2705,7 @@ Year,Country,CumulDeaths
 1961,China,39
 1961,Ivory Coast,0
 1961,Cameroon,0
-1961,Congo (Kinshasa),0
+1961,Congo,0
 1961,Congo (Brazzaville),0
 1961,Cook Is.,0
 1961,Colombia,111
@@ -2947,7 +2947,7 @@ Year,Country,CumulDeaths
 1962,China,39
 1962,Ivory Coast,0
 1962,Cameroon,0
-1962,Congo (Kinshasa),0
+1962,Congo,0
 1962,Congo (Brazzaville),0
 1962,Cook Is.,0
 1962,Colombia,111
@@ -3189,7 +3189,7 @@ Year,Country,CumulDeaths
 1963,China,39
 1963,Ivory Coast,0
 1963,Cameroon,0
-1963,Congo (Kinshasa),0
+1963,Congo,0
 1963,Congo (Brazzaville),0
 1963,Cook Is.,0
 1963,Colombia,111
@@ -3431,7 +3431,7 @@ Year,Country,CumulDeaths
 1964,China,39
 1964,Ivory Coast,0
 1964,Cameroon,0
-1964,Congo (Kinshasa),0
+1964,Congo,0
 1964,Congo (Brazzaville),0
 1964,Cook Is.,0
 1964,Colombia,111
@@ -3673,7 +3673,7 @@ Year,Country,CumulDeaths
 1965,China,39
 1965,Ivory Coast,0
 1965,Cameroon,0
-1965,Congo (Kinshasa),0
+1965,Congo,0
 1965,Congo (Brazzaville),0
 1965,Cook Is.,0
 1965,Colombia,111
@@ -3915,7 +3915,7 @@ Year,Country,CumulDeaths
 1966,China,39
 1966,Ivory Coast,0
 1966,Cameroon,0
-1966,Congo (Kinshasa),0
+1966,Congo,0
 1966,Congo (Brazzaville),0
 1966,Cook Is.,0
 1966,Colombia,111
@@ -4157,7 +4157,7 @@ Year,Country,CumulDeaths
 1967,China,39
 1967,Ivory Coast,0
 1967,Cameroon,0
-1967,Congo (Kinshasa),0
+1967,Congo,0
 1967,Congo (Brazzaville),0
 1967,Cook Is.,0
 1967,Colombia,111
@@ -4399,7 +4399,7 @@ Year,Country,CumulDeaths
 1968,China,39
 1968,Ivory Coast,0
 1968,Cameroon,0
-1968,Congo (Kinshasa),0
+1968,Congo,0
 1968,Congo (Brazzaville),0
 1968,Cook Is.,0
 1968,Colombia,111
@@ -4641,7 +4641,7 @@ Year,Country,CumulDeaths
 1969,China,39
 1969,Ivory Coast,0
 1969,Cameroon,0
-1969,Congo (Kinshasa),0
+1969,Congo,0
 1969,Congo (Brazzaville),0
 1969,Cook Is.,0
 1969,Colombia,111
@@ -4883,7 +4883,7 @@ Year,Country,CumulDeaths
 1970,China,10039
 1970,Ivory Coast,0
 1970,Cameroon,0
-1970,Congo (Kinshasa),0
+1970,Congo,0
 1970,Congo (Brazzaville),0
 1970,Cook Is.,0
 1970,Colombia,111
@@ -5125,7 +5125,7 @@ Year,Country,CumulDeaths
 1971,China,10039
 1971,Ivory Coast,0
 1971,Cameroon,0
-1971,Congo (Kinshasa),0
+1971,Congo,0
 1971,Congo (Brazzaville),0
 1971,Cook Is.,0
 1971,Colombia,111
@@ -5367,7 +5367,7 @@ Year,Country,CumulDeaths
 1972,China,10039
 1972,Ivory Coast,0
 1972,Cameroon,0
-1972,Congo (Kinshasa),0
+1972,Congo,0
 1972,Congo (Brazzaville),0
 1972,Cook Is.,0
 1972,Colombia,111
@@ -5609,7 +5609,7 @@ Year,Country,CumulDeaths
 1973,China,10039
 1973,Ivory Coast,0
 1973,Cameroon,0
-1973,Congo (Kinshasa),0
+1973,Congo,0
 1973,Congo (Brazzaville),0
 1973,Cook Is.,0
 1973,Colombia,111
@@ -5851,7 +5851,7 @@ Year,Country,CumulDeaths
 1974,China,30039
 1974,Ivory Coast,0
 1974,Cameroon,0
-1974,Congo (Kinshasa),0
+1974,Congo,0
 1974,Congo (Brazzaville),0
 1974,Cook Is.,0
 1974,Colombia,122
@@ -6093,7 +6093,7 @@ Year,Country,CumulDeaths
 1975,China,30339
 1975,Ivory Coast,0
 1975,Cameroon,0
-1975,Congo (Kinshasa),0
+1975,Congo,0
 1975,Congo (Brazzaville),0
 1975,Cook Is.,0
 1975,Colombia,122
@@ -6335,7 +6335,7 @@ Year,Country,CumulDeaths
 1976,China,273108
 1976,Ivory Coast,0
 1976,Cameroon,0
-1976,Congo (Kinshasa),0
+1976,Congo,0
 1976,Congo (Brazzaville),0
 1976,Cook Is.,0
 1976,Colombia,122
@@ -6577,7 +6577,7 @@ Year,Country,CumulDeaths
 1977,China,273108
 1977,Ivory Coast,0
 1977,Cameroon,0
-1977,Congo (Kinshasa),0
+1977,Congo,0
 1977,Congo (Brazzaville),0
 1977,Cook Is.,0
 1977,Colombia,122
@@ -6819,7 +6819,7 @@ Year,Country,CumulDeaths
 1978,China,273108
 1978,Ivory Coast,0
 1978,Cameroon,0
-1978,Congo (Kinshasa),0
+1978,Congo,0
 1978,Congo (Brazzaville),0
 1978,Cook Is.,0
 1978,Colombia,122
@@ -7061,7 +7061,7 @@ Year,Country,CumulDeaths
 1979,China,273108
 1979,Ivory Coast,0
 1979,Cameroon,0
-1979,Congo (Kinshasa),0
+1979,Congo,0
 1979,Congo (Brazzaville),0
 1979,Cook Is.,0
 1979,Colombia,722
@@ -7303,7 +7303,7 @@ Year,Country,CumulDeaths
 1980,China,273108
 1980,Ivory Coast,0
 1980,Cameroon,0
-1980,Congo (Kinshasa),0
+1980,Congo,0
 1980,Congo (Brazzaville),0
 1980,Cook Is.,0
 1980,Colombia,722
@@ -7545,7 +7545,7 @@ Year,Country,CumulDeaths
 1981,China,273108
 1981,Ivory Coast,0
 1981,Cameroon,0
-1981,Congo (Kinshasa),0
+1981,Congo,0
 1981,Congo (Brazzaville),0
 1981,Cook Is.,0
 1981,Colombia,722
@@ -7787,7 +7787,7 @@ Year,Country,CumulDeaths
 1982,China,273108
 1982,Ivory Coast,0
 1982,Cameroon,0
-1982,Congo (Kinshasa),0
+1982,Congo,0
 1982,Congo (Brazzaville),0
 1982,Cook Is.,0
 1982,Colombia,722
@@ -8029,7 +8029,7 @@ Year,Country,CumulDeaths
 1983,China,273108
 1983,Ivory Coast,0
 1983,Cameroon,0
-1983,Congo (Kinshasa),0
+1983,Congo,0
 1983,Congo (Brazzaville),0
 1983,Cook Is.,0
 1983,Colombia,722
@@ -8271,7 +8271,7 @@ Year,Country,CumulDeaths
 1984,China,273108
 1984,Ivory Coast,0
 1984,Cameroon,0
-1984,Congo (Kinshasa),0
+1984,Congo,0
 1984,Congo (Brazzaville),0
 1984,Cook Is.,0
 1984,Colombia,722
@@ -8513,7 +8513,7 @@ Year,Country,CumulDeaths
 1985,China,273179
 1985,Ivory Coast,0
 1985,Cameroon,0
-1985,Congo (Kinshasa),0
+1985,Congo,0
 1985,Congo (Brazzaville),0
 1985,Cook Is.,0
 1985,Colombia,722
@@ -8755,7 +8755,7 @@ Year,Country,CumulDeaths
 1986,China,273179
 1986,Ivory Coast,0
 1986,Cameroon,0
-1986,Congo (Kinshasa),0
+1986,Congo,0
 1986,Congo (Brazzaville),0
 1986,Cook Is.,0
 1986,Colombia,722
@@ -8997,7 +8997,7 @@ Year,Country,CumulDeaths
 1987,China,273179
 1987,Ivory Coast,0
 1987,Cameroon,0
-1987,Congo (Kinshasa),0
+1987,Congo,0
 1987,Congo (Brazzaville),0
 1987,Cook Is.,0
 1987,Colombia,722
@@ -9239,7 +9239,7 @@ Year,Country,CumulDeaths
 1988,China,273917
 1988,Ivory Coast,0
 1988,Cameroon,0
-1988,Congo (Kinshasa),0
+1988,Congo,0
 1988,Congo (Brazzaville),0
 1988,Cook Is.,0
 1988,Colombia,722
@@ -9481,7 +9481,7 @@ Year,Country,CumulDeaths
 1989,China,273917
 1989,Ivory Coast,0
 1989,Cameroon,0
-1989,Congo (Kinshasa),0
+1989,Congo,0
 1989,Congo (Brazzaville),0
 1989,Cook Is.,0
 1989,Colombia,722
@@ -9723,7 +9723,7 @@ Year,Country,CumulDeaths
 1990,China,273917
 1990,Ivory Coast,0
 1990,Cameroon,0
-1990,Congo (Kinshasa),0
+1990,Congo,0
 1990,Congo (Brazzaville),0
 1990,Cook Is.,0
 1990,Colombia,722
@@ -9965,7 +9965,7 @@ Year,Country,CumulDeaths
 1991,China,273917
 1991,Ivory Coast,0
 1991,Cameroon,0
-1991,Congo (Kinshasa),0
+1991,Congo,0
 1991,Congo (Brazzaville),0
 1991,Cook Is.,0
 1991,Colombia,722
@@ -10207,7 +10207,7 @@ Year,Country,CumulDeaths
 1992,China,273917
 1992,Ivory Coast,0
 1992,Cameroon,0
-1992,Congo (Kinshasa),0
+1992,Congo,8
 1992,Congo (Brazzaville),0
 1992,Cook Is.,0
 1992,Colombia,733
@@ -10449,7 +10449,7 @@ Year,Country,CumulDeaths
 1993,China,273917
 1993,Ivory Coast,0
 1993,Cameroon,0
-1993,Congo (Kinshasa),0
+1993,Congo,8
 1993,Congo (Brazzaville),0
 1993,Cook Is.,0
 1993,Colombia,733
@@ -10691,7 +10691,7 @@ Year,Country,CumulDeaths
 1994,China,273917
 1994,Ivory Coast,0
 1994,Cameroon,0
-1994,Congo (Kinshasa),0
+1994,Congo,8
 1994,Congo (Brazzaville),0
 1994,Cook Is.,0
 1994,Colombia,733
@@ -10933,7 +10933,7 @@ Year,Country,CumulDeaths
 1995,China,273917
 1995,Ivory Coast,0
 1995,Cameroon,0
-1995,Congo (Kinshasa),0
+1995,Congo,8
 1995,Congo (Brazzaville),0
 1995,Cook Is.,0
 1995,Colombia,733
@@ -11175,7 +11175,7 @@ Year,Country,CumulDeaths
 1996,China,273917
 1996,Ivory Coast,0
 1996,Cameroon,0
-1996,Congo (Kinshasa),0
+1996,Congo,8
 1996,Congo (Brazzaville),0
 1996,Cook Is.,0
 1996,Colombia,733
@@ -11417,7 +11417,7 @@ Year,Country,CumulDeaths
 1997,China,273917
 1997,Ivory Coast,0
 1997,Cameroon,0
-1997,Congo (Kinshasa),0
+1997,Congo,8
 1997,Congo (Brazzaville),0
 1997,Cook Is.,0
 1997,Colombia,733
@@ -11659,7 +11659,7 @@ Year,Country,CumulDeaths
 1998,China,273917
 1998,Ivory Coast,0
 1998,Cameroon,0
-1998,Congo (Kinshasa),0
+1998,Congo,8
 1998,Congo (Brazzaville),0
 1998,Cook Is.,0
 1998,Colombia,733
@@ -11901,7 +11901,7 @@ Year,Country,CumulDeaths
 1999,China,273917
 1999,Ivory Coast,0
 1999,Cameroon,0
-1999,Congo (Kinshasa),0
+1999,Congo,8
 1999,Congo (Brazzaville),0
 1999,Cook Is.,0
 1999,Colombia,733
@@ -12143,7 +12143,7 @@ Year,Country,CumulDeaths
 2000,China,273917
 2000,Ivory Coast,0
 2000,Cameroon,0
-2000,Congo (Kinshasa),0
+2000,Congo,8
 2000,Congo (Brazzaville),0
 2000,Cook Is.,0
 2000,Colombia,733
@@ -12385,7 +12385,7 @@ Year,Country,CumulDeaths
 2001,China,273917
 2001,Ivory Coast,0
 2001,Cameroon,0
-2001,Congo (Kinshasa),0
+2001,Congo,8
 2001,Congo (Brazzaville),0
 2001,Cook Is.,0
 2001,Colombia,733
@@ -12627,7 +12627,7 @@ Year,Country,CumulDeaths
 2002,China,273917
 2002,Ivory Coast,0
 2002,Cameroon,0
-2002,Congo (Kinshasa),0
+2002,Congo,8
 2002,Congo (Brazzaville),0
 2002,Cook Is.,0
 2002,Colombia,733
@@ -12869,7 +12869,7 @@ Year,Country,CumulDeaths
 2003,China,273917
 2003,Ivory Coast,0
 2003,Cameroon,0
-2003,Congo (Kinshasa),0
+2003,Congo,8
 2003,Congo (Brazzaville),0
 2003,Cook Is.,0
 2003,Colombia,733
@@ -13111,7 +13111,7 @@ Year,Country,CumulDeaths
 2004,China,273917
 2004,Ivory Coast,0
 2004,Cameroon,0
-2004,Congo (Kinshasa),0
+2004,Congo,8
 2004,Congo (Brazzaville),0
 2004,Cook Is.,0
 2004,Colombia,733
@@ -13353,7 +13353,7 @@ Year,Country,CumulDeaths
 2005,China,273917
 2005,Ivory Coast,0
 2005,Cameroon,0
-2005,Congo (Kinshasa),0
+2005,Congo,8
 2005,Congo (Brazzaville),0
 2005,Cook Is.,0
 2005,Colombia,733
@@ -13595,7 +13595,7 @@ Year,Country,CumulDeaths
 2006,China,273917
 2006,Ivory Coast,0
 2006,Cameroon,0
-2006,Congo (Kinshasa),0
+2006,Congo,8
 2006,Congo (Brazzaville),0
 2006,Cook Is.,0
 2006,Colombia,733
@@ -13837,7 +13837,7 @@ Year,Country,CumulDeaths
 2007,China,273917
 2007,Ivory Coast,0
 2007,Cameroon,0
-2007,Congo (Kinshasa),0
+2007,Congo,8
 2007,Congo (Brazzaville),0
 2007,Cook Is.,0
 2007,Colombia,733
@@ -14079,7 +14079,7 @@ Year,Country,CumulDeaths
 2008,China,361569
 2008,Ivory Coast,0
 2008,Cameroon,0
-2008,Congo (Kinshasa),0
+2008,Congo,8
 2008,Congo (Brazzaville),0
 2008,Cook Is.,0
 2008,Colombia,733
@@ -14321,7 +14321,7 @@ Year,Country,CumulDeaths
 2009,China,361569
 2009,Ivory Coast,0
 2009,Cameroon,0
-2009,Congo (Kinshasa),0
+2009,Congo,8
 2009,Congo (Brazzaville),0
 2009,Cook Is.,0
 2009,Colombia,733
@@ -14563,7 +14563,7 @@ Year,Country,CumulDeaths
 2010,China,361569
 2010,Ivory Coast,0
 2010,Cameroon,0
-2010,Congo (Kinshasa),0
+2010,Congo,8
 2010,Congo (Brazzaville),0
 2010,Cook Is.,0
 2010,Colombia,733
@@ -14805,7 +14805,7 @@ Year,Country,CumulDeaths
 2011,China,361569
 2011,Ivory Coast,0
 2011,Cameroon,0
-2011,Congo (Kinshasa),0
+2011,Congo,8
 2011,Congo (Brazzaville),0
 2011,Cook Is.,0
 2011,Colombia,733
@@ -15047,7 +15047,7 @@ Year,Country,CumulDeaths
 2012,China,361569
 2012,Ivory Coast,0
 2012,Cameroon,0
-2012,Congo (Kinshasa),0
+2012,Congo,8
 2012,Congo (Brazzaville),0
 2012,Cook Is.,0
 2012,Colombia,733
@@ -15289,7 +15289,7 @@ Year,Country,CumulDeaths
 2013,China,361569
 2013,Ivory Coast,0
 2013,Cameroon,0
-2013,Congo (Kinshasa),0
+2013,Congo,8
 2013,Congo (Brazzaville),0
 2013,Cook Is.,0
 2013,Colombia,733
@@ -15531,7 +15531,7 @@ Year,Country,CumulDeaths
 2014,China,361569
 2014,Ivory Coast,0
 2014,Cameroon,0
-2014,Congo (Kinshasa),0
+2014,Congo,8
 2014,Congo (Brazzaville),0
 2014,Cook Is.,0
 2014,Colombia,733
@@ -15773,7 +15773,7 @@ Year,Country,CumulDeaths
 2015,China,361569
 2015,Ivory Coast,0
 2015,Cameroon,0
-2015,Congo (Kinshasa),0
+2015,Congo,8
 2015,Congo (Brazzaville),0
 2015,Cook Is.,0
 2015,Colombia,733
@@ -16015,7 +16015,7 @@ Year,Country,CumulDeaths
 2016,China,361569
 2016,Ivory Coast,0
 2016,Cameroon,0
-2016,Congo (Kinshasa),0
+2016,Congo,8
 2016,Congo (Brazzaville),0
 2016,Cook Is.,0
 2016,Colombia,733
@@ -16257,7 +16257,7 @@ Year,Country,CumulDeaths
 2017,China,361569
 2017,Ivory Coast,0
 2017,Cameroon,0
-2017,Congo (Kinshasa),0
+2017,Congo,8
 2017,Congo (Brazzaville),0
 2017,Cook Is.,0
 2017,Colombia,733
@@ -16499,7 +16499,7 @@ Year,Country,CumulDeaths
 2018,China,361569
 2018,Ivory Coast,0
 2018,Cameroon,0
-2018,Congo (Kinshasa),0
+2018,Congo,8
 2018,Congo (Brazzaville),0
 2018,Cook Is.,0
 2018,Colombia,733
@@ -16741,7 +16741,7 @@ Year,Country,CumulDeaths
 2019,China,361569
 2019,Ivory Coast,0
 2019,Cameroon,0
-2019,Congo (Kinshasa),0
+2019,Congo,8
 2019,Congo (Brazzaville),0
 2019,Cook Is.,0
 2019,Colombia,733
@@ -16983,7 +16983,7 @@ Year,Country,CumulDeaths
 2020,China,361569
 2020,Ivory Coast,0
 2020,Cameroon,0
-2020,Congo (Kinshasa),0
+2020,Congo,8
 2020,Congo (Brazzaville),0
 2020,Cook Is.,0
 2020,Colombia,733
