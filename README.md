@@ -3,7 +3,7 @@
 [![Github][Github-shield]][Github-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Email][email-shield]][email-url]
-[![Personal Website][jyzheng-shield]][jyzheng-url]
+
 
 <!-- TABLE OF CONTENTS -->
 <details open>
